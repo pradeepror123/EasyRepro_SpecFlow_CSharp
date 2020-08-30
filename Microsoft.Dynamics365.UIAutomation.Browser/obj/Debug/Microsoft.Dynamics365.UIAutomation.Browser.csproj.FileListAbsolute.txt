@@ -6,6 +6,7 @@ C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation
 C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Newtonsoft.Json.xml
 C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\WebDriver.xml
 C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\WebDriver.Support.xml
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csprojAssemblyReference.cache
 C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.Properties.Resources.resources
 C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csproj.GenerateResource.cache
 C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csproj.CoreCompileInputs.cache

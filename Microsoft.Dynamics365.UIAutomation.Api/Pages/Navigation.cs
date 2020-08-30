@@ -260,6 +260,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).Click();
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).SendKeys(textToVerify);
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).SendKeys(Keys.Enter);
+                Browser.ThinkTime(2000);
                 driver.DoubleClick(driver.FindElement(By.XPath($"//div[contains(@title,'{textToVerify}')]")));
                 Browser.ThinkTime(3000);
                 //for (int i = 0; i < 3; i++)
@@ -659,13 +660,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
         public BrowserCommandResult<bool> SignOut(int thinkTime = Constants.DefaultThinkTime)
         {
             Browser.ThinkTime(thinkTime);
-
             return this.Execute(GetOptions($"SignOut"), driver =>
             {
                 driver.ClickWhenAvailable(By.XPath(Elements.Xpath[Reference.Navigation.UserInfo]));
-
                 Browser.ThinkTime(500);
-                ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();",driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.SignOut])));
+                ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", driver.FindElement(By.XPath("//span[text()='Sign out']/../..")));
                 //driver.ClickWhenAvailable(By.XPath(Elements.Xpath[Reference.Navigation.SignOut]));
                 return true;
             });

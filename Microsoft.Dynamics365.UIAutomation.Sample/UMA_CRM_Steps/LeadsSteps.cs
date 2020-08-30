@@ -8,31 +8,26 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
     public class LeadsSteps
     {
         readonly ScenarioContext scenarioContext;
+        public CreateLead createLead = null;
 
         public LeadsSteps(ScenarioContext scenarioContext)
         {
             this.scenarioContext = scenarioContext;
         }
 
-        public CreateLead createLead = new CreateLead();
-
-        [Given(@"CSA user logs-in and navigates to Lead Page")]
-        public void GivenCSAUserLogs_InAndNavigatesToLeadPage()
+        [When(@"User creates a New Lead '(.*)' Pre-Existing Employer, Contact and saves")]
+        public void WhenUserCreatesANewLeadPre_ExistingEmployerContactAndSaves(string info)
         {
-            var Browser = createLead.LoginAndNavigateToNewLeadPage();
-            scenarioContext.Add("browser", Browser);
-        }
-
-        [When(@"User creates a New Lead without Pre-Existing Employer, Contact and saves")]
-        public void WhenUserCreatesANewLeadWithoutPre_ExistingEmployerContactAndSaves()
-        {
-            createLead.FillLeadFormWithoutEmployerOrContactAndSave();
+            createLead = new CreateLead();
+            Api.Browser a = scenarioContext.Get<Api.Browser>("browser");
+            createLead.FillLeadFormAndSave(a, info);
         }
 
         [Then(@"User should be able to validate the created Lead")]
         public void ThenUserShouldBeAbleToValidateTheCreatedLead()
         {
-            createLead.ValidateCreatedLead();
+            Api.Browser a = scenarioContext.Get<Api.Browser>("browser");
+            createLead.ValidateCreatedLead(a);
         }
 
     }

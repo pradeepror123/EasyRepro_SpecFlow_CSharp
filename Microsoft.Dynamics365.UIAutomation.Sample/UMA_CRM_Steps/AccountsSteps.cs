@@ -7,17 +7,23 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
     [Binding]
     public class CreationUpdationAndDeletionOfEmployerAccountsSteps
     {
-       readonly  ScenarioContext scenarioContext;
+        readonly  ScenarioContext scenarioContext;
+        public CreateAccount createAccount = new CreateAccount();
+        public CreateLead createLead = new CreateLead();
+        public Api.Browser Browser;
+
         public CreationUpdationAndDeletionOfEmployerAccountsSteps(ScenarioContext scenarioContext) {
             this.scenarioContext = scenarioContext;
         }
 
-        public CreateAccount createAccount = new CreateAccount();
-
-        [Given(@"CSA user logs-in and navigates to Employer Account Page")]
-        public void GivenCSAUserLogs_InAndNavigatesToEmployerAccountPage()
+        [Given(@"CSA user logs-in and navigates to '(.*)' Page")]
+        public void GivenCSAUserLogs_InAndNavigatesToPage(string pageName)
         {
-            var Browser  = createAccount.LoginAndNavigateToNewEmployerPage();
+            if (pageName == "Employer")
+            {
+                Browser = createAccount.LoginAndNavigateToNewEmployerPage();
+            } else if (pageName == "Lead")
+                Browser = createLead.LoginAndNavigateToNewLeadPage();
             scenarioContext.Add("browser", Browser);
         }
 
@@ -36,7 +42,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [Then(@"User should log-out of the Application")]
         public void ThenUserShouldLog_OutOfTheApplication()
         {
-            createAccount.LogOutUser();
+            Api.Browser a = scenarioContext.Get<Api.Browser>("browser");
+            createAccount.LogOutUser(a);
         }
 
     }

@@ -101,7 +101,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
- testRunner.Given("CSA user logs-in and navigates to Employer Account Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
  testRunner.When("User creates a New Employer CAD Account Form and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7

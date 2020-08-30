@@ -75,8 +75,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [AfterScenario]
         public void AfterScenario()
         {
-           var B =  scenarioContext.Get<Api.Browser>("browser");
-            B.Dispose();
+           var browser =  scenarioContext.Get<Api.Browser>("browser");
+            if (browser != null)
+                browser.Dispose();
         }
 
         [AfterStep]

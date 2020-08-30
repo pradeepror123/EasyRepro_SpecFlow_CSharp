@@ -30,7 +30,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
 
         public String employerName;
 
-        public String FillLeadFormWithoutPreExistingEmployerOrContactAndSave(int thinkTime = Constants.DefaultThinkTime)
+        public String FillLeadFormAndSave(string info, int thinkTime = Constants.DefaultThinkTime)
         {
             string employerName = string.Empty;
             Browser.ThinkTime(thinkTime);
@@ -39,7 +39,15 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
             this.Execute("Leads", driver =>
             {
                 Browser.ThinkTime(1000);
-                // Fill form data 
+                if(info == "with")
+                {
+                    FillLookUpField("New or Existing Employer?", "a", driver);
+                    FillLookUpField("New or Existing Contact?", "a", driver);
+                    driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save]));
+                    driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save])).Click();
+                    Browser.ThinkTime(2000);
+                    return true;
+                }
                 String xpath = Elements.Xpath[Reference.Entity.FormTxtField];
                 employerName = "Test_LeadEmployer_" + num;
                 Thread.Sleep(1000);
@@ -56,6 +64,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
                 return true;
             });
             return employerName;
+        }
+
+        public void FillLookUpField(string fieldLabel, string fieldValue, IWebDriver driver)
+        {
+            driver.FindElement(By.XPath($"//input[contains(@aria-label,'{fieldLabel}')]")).Click();
+            Thread.Sleep(1000);
+            driver.FindElement(By.XPath($"//input[contains(@aria-label,'{fieldLabel}')]")).SendKeys(fieldValue, true);
+            Thread.Sleep(1000);
+            driver.Inivisibility(By.XPath("//label[text()='Loading...']"), 30);
+            driver.Click(driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")));
+            Thread.Sleep(500);
         }
 
     }

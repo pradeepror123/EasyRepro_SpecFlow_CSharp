@@ -12,7 +12,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
     [TestClass]
     public class CreateAccount
     {
-        public Api.Browser xrmBrowser;
+        public Api.Browser xrmBrowser = new Api.Browser(TestSettings.Options);
         public String employerName;
         private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
         private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
@@ -21,12 +21,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         //[TestMethod]
         public Api.Browser LoginAndNavigateToNewEmployerPage()
         {
-           xrmBrowser = new Api.Browser(TestSettings.Options);
             xrmBrowser.LoginPage.Login(_xrmUri, _username, _password);
             xrmBrowser.GuidedHelp.CloseGuidedHelp();
             xrmBrowser.Dialogs.CloseWarningDialog();
             xrmBrowser.ThinkTime(500);
-            xrmBrowser.Navigation.NavigateToEmployersPage(1000);
+            xrmBrowser.Navigation.NavigateToEmployersPage(500);
             xrmBrowser.Navigation.NavigateToNewForm(1000);
             return xrmBrowser;
         }
@@ -46,8 +45,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         }
 
         //[TestMethod]
-        public void LogOutUser()
+        public void LogOutUser(Api.Browser xrmBrowser)
         {
+            this.xrmBrowser = xrmBrowser;
             xrmBrowser.Navigation.SignOut(1000);
         }
 
