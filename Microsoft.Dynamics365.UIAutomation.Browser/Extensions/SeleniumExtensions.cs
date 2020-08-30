@@ -14,19 +14,22 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Web.Script.Serialization;
 
 namespace Microsoft.Dynamics365.UIAutomation.Browser
 {
-    public static class v
+    public static class SeleniumExtensions
     {
 
-        #region Actions
+        #region CustomActions
 
-        public static void EnterTextAndTab(this IWebDriver driver,By by,string value, TimeSpan timeout)
+        public static void EnterTextAndTab(this IWebDriver driver, By by, string value, TimeSpan timeout)
         {
-            System.Threading.Thread.Sleep((int)timeout.TotalMilliseconds);
-            driver.WaitUntilAvailable(by,"Unable to Wait Until "+ timeout);
+            Thread.Sleep((int)timeout.TotalMilliseconds);
+            driver.ScrollElement(by);
+            driver.ScrollUntilElementVisible(by);
             var element = driver.FindElement(by);
             element.Click();
             driver.DoubleClick(element);
@@ -36,17 +39,83 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
             element.SendKeys(Keys.Tab);           
         }
 
-        public static void SelectDropDownValue(this IWebDriver driver, By by, string value, TimeSpan timeout)
+        public static void SelectDropDownValue(this IWebDriver driver, By by, string value, TimeSpan timeout,bool click = true)
         {
             driver.WaitUntilAvailable(by, "Unable to Wait Until " + timeout);
-            System.Threading.Thread.Sleep((int)timeout.TotalMilliseconds);
+            if (click)
+                driver.FindElement(by).Click();
+
+            Thread.Sleep((int)timeout.TotalMilliseconds);
+            driver.ScrollElement(by);
             var element = driver.FindElement(by);
             SelectElement select = new SelectElement(element);
             select.SelectByText(value);
         }
 
+        public static void Wait<TResult>(this IWebDriver driver, Func<IWebDriver, TResult> condition, int seconds = 20)
+        {
+            try
+            {
+                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds));
+                wait.PollingInterval = TimeSpan.FromMilliseconds(500);
+                wait.IgnoreExceptionTypes(typeof(Exception));
+                wait.Until(condition);
+            }
+            catch (Exception)
+            {
+                Regex rx = new Regex(@"<(.*?)>");
+                string expectedCondition = rx.Match(condition.Method.Name).Groups[1].Value;
+                object locator = (condition.Target.GetType().GetFields()[0]).GetValue(condition.Target);
+                Console.WriteLine($"** [Faied] while waiting for Locator '{locator}' till {expectedCondition}");
+                throw new WebDriverException($"** [Faied] while waiting for Locator '{locator}' till {expectedCondition}");
+            }
+        }
+
+        public static void ScrollElement(this IWebDriver driver, By by)
+        {
+            try
+            {
+                Thread.Sleep(1000);
+                var element = driver.FindElement(by);
+                ((IJavaScriptExecutor)driver).ExecuteScript(JSOperator.ScrollToElement, element);
+                Thread.Sleep(1000);
+            }
+            catch
+            {
+
+            }
+        }
+
+        public static void ScrollUntilElementVisible(this IWebDriver driver,By by,int iteration = 5)
+        {
+            for(int i = 1; i <= iteration; i++)
+            {
+                driver.ScrollByWindow(0, 1000);
+                try
+                {
+                    if (i == iteration)
+                        throw new WebDriverException($"Unable to find the element with {by}, after [{iteration}]: time scrolls");
+                    if (driver.FindElement(by).Displayed)
+                        break;
+                }
+                catch { }
+            }
+        }
+
+        public static Actions Actions(this IWebDriver driver) { return new Actions(driver); }
+
+        public static void ScrollByWindow(this IWebDriver driver, int x, int y)
+        {
+            ((IJavaScriptExecutor)driver).ExecuteScript($"window.scrollBy({x},{y})","");
+        }
+
+        public static void WaitForSpinner(this IWebDriver driver, string spinnerXpath)
+        {
+            driver.Wait(SeleniumExtras.WaitHelpers.ExpectedConditions.InvisibilityOfElementLocated(By.XPath(spinnerXpath)));
+        }
+
         #endregion
-              
+
 
         #region Click
 
@@ -682,5 +751,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
         }
 
         #endregion Args / Tracing
+
+        private static class JSOperator
+        {
+            public static string Click { get { return "arguments[0].click();"; } }
+            public static string Clear { get { return "arguments[0].value = '';"; } }
+            public static string SetValue { get { return "arguments[0].value = '{0}';"; } }
+            public static string IsDisplayed { get { return "if(parseInt(arguments[0].offsetHeight) > 0 && parseInt(arguments[0].offsetWidth) > 0) return true; return false;"; } }
+            public static string ValidateAttribute { get { return "return arguments[0].getAttribute('{0}');"; } }
+            public static string ScrollToElement { get { return "arguments[0].scrollIntoView(true);"; } }
+            public static string DropDown { get { return "var length = arguments[0].options.length;  for (var i=0; i<length; i++){{  if (arguments[0].options[i].text == '{0}'){{ arguments[0].selectedIndex = i; break; }} }}"; } }
+
+        }
     }
 }

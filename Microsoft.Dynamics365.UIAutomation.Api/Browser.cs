@@ -50,6 +50,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
 
         #endregion Lead
 
+        #region Job Order
+
+        public JobOrder JobOrder => this.GetPage<JobOrder>();
+
+        #endregion Job Order
+
         #region Navigation
 
         public Navigation Navigation => this.GetPage<Navigation>();

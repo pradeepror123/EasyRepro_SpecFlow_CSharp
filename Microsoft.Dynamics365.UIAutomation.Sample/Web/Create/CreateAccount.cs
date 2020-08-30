@@ -9,45 +9,56 @@ using System.Security;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    [TestClass]
+    //[TestClass]
     public class CreateAccount
-    {
-        public Api.Browser xrmBrowser;
+    {                    
+        public Api.Browser xrmBrowser = new Api.Browser(TestSettings.Options);
         public String employerName;
-        private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
-        private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
-        private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
+        private readonly SecureString _umaUsername = (System.Configuration.ConfigurationManager.AppSettings["PowerAppsUsername"].ToString()).ToSecureString();
+        private readonly SecureString _umaPassword =(System.Configuration.ConfigurationManager.AppSettings["PowerAppsPassword"].ToString()).ToSecureString();
+        private Uri _umaXrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["UMACrmUrl"].ToString());
 
         //[TestMethod]
-        public Api.Browser LoginAndNavigateToNewEmployerPage()
+        public Api.Browser Login()
         {
-           xrmBrowser = new Api.Browser(TestSettings.Options);
-            xrmBrowser.LoginPage.Login(_xrmUri, _username, _password);
+            xrmBrowser.LoginPage.Login(_umaXrmUri, _umaUsername, _umaPassword);
             xrmBrowser.GuidedHelp.CloseGuidedHelp();
-            xrmBrowser.Dialogs.CloseWarningDialog();
-            xrmBrowser.ThinkTime(500);
-            xrmBrowser.Navigation.NavigateToEmployersPage(1000);
-            xrmBrowser.Navigation.NavigateToNewForm(1000);
             return xrmBrowser;
         }
 
         //[TestMethod]
-        public void FillCADEmployerFormAndSave()
+        public void NavigateToNewEmployerPage()
+        {
+            xrmBrowser.Navigation.NavigateToEmployersPage(500);
+            xrmBrowser.Navigation.NavigateToNewForm(1000);
+        }
+
+        //[TestMethod]
+        public string FillCADEmployerFormAndSave()
         {
             xrmBrowser.ThinkTime(1500);
             employerName = xrmBrowser.Navigation.FillCADAccountFormAndSave();
+            return employerName;
+        }
+
+        public string FillPBIEmployerFormAndSave()
+        {
+            xrmBrowser.ThinkTime(1500);
+            employerName = xrmBrowser.Navigation.FillPBIAccountFormAndSave();
+            return employerName;
         }
 
         //[Test Method]
-        public void ValidateCreatedCADAccount()
+        public void ValidateCreatedAccount()
         {
             xrmBrowser.Navigation.NavigateToEmployersPage();
             xrmBrowser.Navigation.ValidateTextFromGrid(employerName);
         }
 
         //[TestMethod]
-        public void LogOutUser()
+        public void LogOutUser(Api.Browser xrmBrowser)
         {
+            this.xrmBrowser = xrmBrowser;
             xrmBrowser.Navigation.SignOut(1000);
         }
 

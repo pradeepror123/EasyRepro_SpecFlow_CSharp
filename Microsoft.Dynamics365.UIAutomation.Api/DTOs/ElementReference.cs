@@ -9,9 +9,15 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
     {
         public static Dictionary<string, string> Xpath = new Dictionary<string, string>()
         {
-            { "Employers","//span[text()='Employers']"},
+            { "Employers", "//span[text()='Employers']"},
             { "NewButton", "//button//span[contains(text(),'New')]"},
-            { "Leads","//span[text()='Leads']" },
+            { "Leads", "//span[text()='Leads']" },
+            { "JobOrders", "//span[text()='Job Orders']" },
+
+            // Common Xpath's 
+            { "SelectIDContains", "//select[contains(@id,'arg')]"},
+            { "InputIDContains", "//input[contains(@id,'arg')]"},
+
 
             //Business Process Flow
             { "BPF_NextStage"       , "id(\"stageAdvanceActionContainer\")/div"},
@@ -77,6 +83,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             { "Frame_WizardFrame"       , "id(\"wizardpageframe\")"},
 
             //Navigation
+            { "Nav_UMA_PowerFlows", "//a[contains(text(), 'UMA Power Automate Flows')]"},
+            { "Nav_PowerFlow_Search", "//input[@aria-label='Search solutions']" },
             { "Nav_ActionGroup"       , "id(\"actionGroupControl\")"},
             { "Nav_SubActionGroup"       , "id(\"actionGroupControl\")"},
             { "Nav_SubActionGroupContainer"       , "id(\"detailActionGroupControl\")"},
@@ -91,8 +99,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             { "Nav_AboutVersionText"       , "//span[contains(text(), 'Version')]"},
             { "Nav_OptOutLP"       , "id(\"navTabButtonSettingsGuidedHelpId\")"},
             { "Nav_Privacy"       , "id(\"NodeSettingsPrivacyStatementId\")"},
-            { "Nav_UserInfo"       , "//button[contains(@title,'User Information')]"},
-            { "Nav_SignOut"       , "//*[contains(text(),'Sign Out')]"},
+            { "Nav_UserInfo"       , "//button[@id='mectrl_main_trigger']"},
+            { "Nav_SignOut"       , "//button[@id='mectrl_body_signOut']"},
             { "Nav_TabGlobalMruNode"       , "id(\"TabGlobalMruNode\")"},
             { "Nav_GlobalCreate"       , "id(\"navTabGlobalCreateImage\")"},
             { "Nav_AdvFindSearch"       , "id(\"AdvFindSearch\")"},
@@ -136,11 +144,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             { "Grid_FirstRow", "id(\"gridBodyTable\")/tbody/tr[1]"},
 
             //Entity
+
             {"Entity_SaveAndClose", "//button[contains(@title, 'Save & Close')]"},
             {"Entity_BtnSave", "//button[contains(@title, 'Save (CTRL+S)')]"},
             {"Entity_QuickFind","//input[contains(@id, 'quickFind')]"},
             {"Entity_TxtField", "//label[text()='[NAME]']/parent::span/parent::div/following-sibling::div//input"},
             {"Entity_DD_Field", "//label[text()='[NAME]']/parent::span/parent::div/following-sibling::div//select"},
+            {"Entity_UMA_App", "//div[text()='UMA']"},
             {"Entity_EmployersDD_OptionField", "//label[text()='[NAME]']/parent::span/parent::div/following-sibling::div//select//option[text()='[OPTION]']"},
             { "Entity_Form"       , "id(\"tab0\")"},
             { "Entity_Close"       , "id(\"closeButton\")"},
@@ -598,7 +608,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
         {
             public static string Employers = "Employers";
             public static string Leads = "Leads";
+            public static string JobOrders = "JobOrders";
             public static string HomeTab = "Nav_HomeTab";
+            public static string UMA_PowerFlows = "Nav_UMA_PowerFlows";
+            public static string PowerFlow_Search = "Nav_PowerFlow_Search";
             public static string TopLevelItem = "Nav_TopLevelItemClass";
             public static string ActionGroup = "Nav_ActionGroup";
             public static string ActionButtonContainer = "Nav_ActionButtonContainerClass";
@@ -674,6 +687,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             public static string Txt_QuickFind = "Entity_QuickFind";
             public static string FormTxtField = "Entity_TxtField";
             public static string FormDDField = "Entity_DD_Field";
+            public static string UMA_App = "Entity_UMA_App";
             public static string EmployersDD_OptionField = "Entity_EmployersDD_OptionField";
             public static string Form = "Entity_Form";
             public static string Close = "Entity_Close";

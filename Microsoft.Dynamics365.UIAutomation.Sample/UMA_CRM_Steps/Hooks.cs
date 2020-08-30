@@ -2,6 +2,7 @@
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
 using AventStack.ExtentReports.Reporter.Configuration;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,6 +21,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static string htmlFile;
+        static string folderLocation;
 
         private readonly ScenarioContext scenarioContext;
         static new FeatureContext FeatureContext { get; set; }
@@ -33,7 +35,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public static void InitializeReport()
         {
             //var HtmlBaseDirectory = Path.Combine((new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent).Parent.FullName, "Reports");
-           var  folderLocation = Path.Combine(new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent.FullName, "Reports", "Log_" + DateTime.Now.ToString("MM_dd_yyyy"));
+            folderLocation = Path.Combine(new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent.FullName, "Reports", "Log_" + DateTime.Now.ToString("MM_dd_yyyy"));
             if (!Directory.Exists(folderLocation))
                 Directory.CreateDirectory(folderLocation);          
             htmlFile = Path.Combine(folderLocation, "Reports", "index.html");
@@ -52,9 +54,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [AfterTestRun]
         public static void TearDownReport()
         {
-            _extent.Flush();
-            using (var a = Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", $"file:///{htmlFile}"))
-            { }
+            _extent.Flush();            
+           // Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", string.Format("\"{0}\"", htmlFile));            
         }
 
         [BeforeFeature]
@@ -75,8 +76,15 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [AfterScenario]
         public void AfterScenario()
         {
-           var B =  scenarioContext.Get<Api.Browser>("browser");
-            B.Dispose();
+            try
+            {
+                var browser = scenarioContext.Get<Api.Browser>("browser");
+                if (browser != null)
+                    browser.Dispose();
+            }
+            catch { }
+          
+
         }
 
         [AfterStep]
@@ -95,10 +103,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                 else if (stepType == "And")
                     scenario.CreateNode<And>(stepDesc);
             }
-            else
+            else if(scenarioContext.TestError!=null)
             {
                 string errorMessage = scenarioContext.TestError.Message;
-                    if (stepType == "Given")
+                if (stepType == "Given")
                     scenario.CreateNode<Given>(stepDesc).Fail(errorMessage);
                 else if (stepType == "When")
                     scenario.CreateNode<When>(stepDesc).Fail(errorMessage);
@@ -106,6 +114,15 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                     scenario.CreateNode<Then>(stepDesc).Fail(errorMessage);
                 else if (stepType == "And")
                     scenario.CreateNode<And>(stepDesc).Fail(errorMessage);
+
+                var browser = scenarioContext.Get<Api.Browser>("browser");
+                var filename = new StringBuilder(folderLocation + "\\");
+                filename.Append(scenarioContext.ScenarioInfo.Title);
+                filename.Append(DateTime.Now.ToString("dd-mm-yyyy HH_mm_ss"));
+                filename.Append(".png");
+
+                // browser.TakeWindowScreenShot(filename.ToString(), ScreenshotImageFormat.Png);
+                //scenario.CreateNode($"<div><span><a href='{@filename.ToString()}' target='_blank'>Screen Shot</a></span></div>"+ " ", errorMessage);
             }
         }
     }

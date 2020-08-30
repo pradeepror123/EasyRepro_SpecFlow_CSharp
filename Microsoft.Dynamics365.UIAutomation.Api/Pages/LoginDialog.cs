@@ -140,20 +140,20 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                         if (driver.HasElement(By.XPath(Elements.Xpath[Reference.Login.StaySignedIn])))
                             driver.FindElement(By.XPath(Elements.Xpath[Reference.Login.StaySignedIn])).Submit();
                     }
-
-                    driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.CrmMainPage])
-                        , new TimeSpan(0, 0, 90),
-                        e =>
-                        {
-                            driver.WaitForPageToLoad();
-                            MarkOperation(driver);
-                            driver.SwitchTo().Frame(0);
-                            driver.WaitForPageToLoad();
-                        },
-                        "Login page failed."
-                    );
+                    //driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.CrmMainPage])
+                    //   , new TimeSpan(0, 0, 90),
+                    //    e =>
+                    //    {
+                    //        driver.WaitForPageToLoad();
+                    //        MarkOperation(driver);
+                    //        driver.SwitchTo().Frame(0);
+                    //        driver.WaitForPageToLoad();
+                    //    },
+                    //    "Login page failed."
+                    //);
                 }
             }
+            Thread.Sleep(5000);
 
             return redirect ? LoginResult.Redirect : LoginResult.Success;
         }

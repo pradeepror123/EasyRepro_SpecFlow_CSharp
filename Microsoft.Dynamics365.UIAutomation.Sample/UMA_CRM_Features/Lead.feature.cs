@@ -44,7 +44,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creation, updation and deletion of  Leads", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creation, updation and deletion of Leads", null, ProgrammingLanguage.CSharp, new string[] {
+                        "Lead"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,7 +60,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creation, updation and deletion of  Leads")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creation, updation and deletion of Leads")))
             {
                 global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.CreationUpdationAndDeletionOfLeadsFeature.FeatureSetup(null);
             }
@@ -88,22 +89,177 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead with Pre-Existing Employer & Contact")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_PreEx")]
+        public virtual void CreateLeadWithPre_ExistingEmployerContact()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Lead with Pre-Existing Employer & Contact", null, new string[] {
+                        "LeadCreation_PreEx"});
+#line 5
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 6
+ testRunner.Given("CSA user logs-in and navigates to \'Lead\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+ testRunner.When("User creates a New Lead \'with Pre-Existing\' Employer, Contact and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.Then("User should be able to validate the created Lead", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 9
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead without Pre-Existing Employer & Contact")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of  Leads")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_NoPreEx")]
         public virtual void CreateLeadWithoutPre_ExistingEmployerContact()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Lead without Pre-Existing Employer & Contact", null, new string[] {
-                        "LeadCreation"});
-#line 4
+                        "LeadCreation_NoPreEx"});
+#line 12
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
- testRunner.Given("CSA user logs-in and navigates to Lead Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
- testRunner.When("User creates a New Lead without Pre-Existing Employer, Contact and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 7
+#line 13
+ testRunner.Given("CSA user logs-in and navigates to \'Lead\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 14
+ testRunner.When("User creates a New Lead \'without Pre-Existing\' Employer, Contact and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
  testRunner.Then("User should be able to validate the created Lead", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead with Generated PBI Employer & Contact")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_PBI")]
+        public virtual void CreateLeadWithGeneratedPBIEmployerContact()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Lead with Generated PBI Employer & Contact", null, new string[] {
+                        "LeadCreation_PBI"});
+#line 19
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 20
+ testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+ testRunner.When("User creates a New Employer \'PBI\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
+ testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 23
+ testRunner.And("CSA user navigates to \'Lead\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+ testRunner.When("User creates a New Lead \'with  Generated\' Employer, Contact and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
+ testRunner.Then("User should be able to validate the created Lead", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 26
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead with Generated CAD Employer & Contact")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_CAD")]
+        public virtual void CreateLeadWithGeneratedCADEmployerContact()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Lead with Generated CAD Employer & Contact", null, new string[] {
+                        "LeadCreation_CAD"});
+#line 29
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 30
+ testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 33
+ testRunner.And("CSA user navigates to \'Lead\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.When("User creates a New Lead \'with Generated\' Employer, Contact and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+ testRunner.Then("User should be able to validate the created Lead", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 36
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create and Qualify a Lead to convert to Job Order with Pre-Existing PBI Employer " +
+            "& Contact")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadToJobOrder_PBI")]
+        public virtual void CreateAndQualifyALeadToConvertToJobOrderWithPre_ExistingPBIEmployerContact()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create and Qualify a Lead to convert to Job Order with Pre-Existing PBI Employer " +
+                    "& Contact", null, new string[] {
+                        "LeadToJobOrder_PBI"});
+#line 39
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 40
+ testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 41
+ testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
+ testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 43
+ testRunner.And("CSA user navigates to \'Lead\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
+ testRunner.When("User creates a New Lead \'with Generated\' Employer, Contact and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
+ testRunner.And("User fills \'Qualifying Questions\' and Qualifies the Lead to Job Order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+ testRunner.Then("User should be able to validate the created Job Order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 47
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create and Qualify a Lead to convert to Job Order with Pre-Existing CAD Employer " +
+            "& Contact")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadToJobOrder_CAD")]
+        public virtual void CreateAndQualifyALeadToConvertToJobOrderWithPre_ExistingCADEmployerContact()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create and Qualify a Lead to convert to Job Order with Pre-Existing CAD Employer " +
+                    "& Contact", null, new string[] {
+                        "LeadToJobOrder_CAD"});
+#line 50
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 51
+ testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 52
+ testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 53
+ testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 54
+ testRunner.And("CSA user navigates to \'Lead\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 55
+ testRunner.When("User creates a New Lead \'with Generated\' Employer, Contact and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 56
+ testRunner.And("User fills \'Qualifying Questions\' and Qualifies the Lead to Job Order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
+ testRunner.Then("User should be able to validate the created Job Order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 58
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
