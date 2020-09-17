@@ -11,16 +11,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
     class CreateJobOrder
     {
         public Api.Browser xrmBrowser = null;
-        public String employerName;
+        String employerName;
         private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
         private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
         private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
 
-        internal void FillJobOrderFormAndSave(Api.Browser xrmBrowser, String info)
+        internal void FillJobOrderFormAndSave(Api.Browser xrmBrowser, String employerName, String info)
         {
             this.xrmBrowser = xrmBrowser;
             xrmBrowser.ThinkTime(1500);
-            employerName = xrmBrowser.JobOrder.FillJobOrderFormAndSave(info, 2000);
+            this.employerName = employerName;
+            employerName = xrmBrowser.JobOrder.FillJobOrderFormAndSave(employerName, info, 2000);
         }
 
         //[TestMethod]
@@ -40,7 +41,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
         public void ValidateCreatedJobOrder(Api.Browser xrmBrowser)
         {
             this.xrmBrowser = xrmBrowser;
-            xrmBrowser.Navigation.NavigateToLeadsPage(1000);
+            xrmBrowser.Navigation.NavigateToJobOrdersPage(1000);
             xrmBrowser.Navigation.ValidateTextFromGrid(employerName);
         }
     }

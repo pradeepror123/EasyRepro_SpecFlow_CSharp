@@ -20,25 +20,29 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
             this.scenarioContext = scenarioContext;
         }
 
-        [When(@"User creates a New Job Order with created Account")]
-        public void WhenUserCreatesANewJobOrderWithCreatedAccount()
+        [When(@"User creates a New Job Order '(.*)' created Account")]
+        public void WhenUserCreatesANewJobOrderWithCreatedAccount(string info)
         {
-            createJobOrder.FillJobOrderFormAndSave(Browser, "sample");
+            Browser = scenarioContext.Get<Api.Browser>("browser");
+            Browser.Navigation.NavigateToNewForm(1000);
+            var employerName = scenarioContext.Get<string>("EmployerName");
+            createJobOrder.FillJobOrderFormAndSave(Browser, employerName, info);
         }
         
         [Then(@"CSA user navigates to '(.*)' Page")]
         public void ThenCSAUserNavigatesToPage(string pageName)
         {
             Browser = scenarioContext.Get<Api.Browser>("browser");
-
-            Browser.Navigation.NavigateToJobOrdersPage(500);
-            Browser.Navigation.NavigateToNewForm(1000);
+            if (pageName == "Job Order")
+                Browser.Navigation.NavigateToJobOrdersPage(500);
+            else if (pageName == "Lead")
+                Browser.Navigation.NavigateToLeadsPage(500);
         }
         
         [Then(@"User should be able to validate the created Job Order")]
         public void ThenUserShouldBeAbleToValidateTheCreatedJobOrder()
         {
-            ScenarioContext.Current.Pending();
+            createJobOrder.ValidateCreatedJobOrder(scenarioContext.Get<Api.Browser>("browser"));
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         public String employerName;
         private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
         private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
-        private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
+        private  Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
 
         //[TestMethod]
         public Api.Browser LoginAndNavigateToNewEmployerPage()
@@ -32,16 +32,18 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         }
 
         //[TestMethod]
-        public void FillCADEmployerFormAndSave()
+        public string FillCADEmployerFormAndSave()
         {
             xrmBrowser.ThinkTime(1500);
             employerName = xrmBrowser.Navigation.FillCADAccountFormAndSave();
+            return employerName;
         }
 
-        public void FillPBIEmployerFormAndSave()
+        public string FillPBIEmployerFormAndSave()
         {
             xrmBrowser.ThinkTime(1500);
             employerName = xrmBrowser.Navigation.FillPBIAccountFormAndSave();
+            return employerName;
         }
 
         //[Test Method]

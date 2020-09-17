@@ -1,6 +1,8 @@
-﻿using Microsoft.Dynamics365.UIAutomation.Sample.Web;
+﻿using Microsoft.Dynamics365.UIAutomation.Browser;
+using Microsoft.Dynamics365.UIAutomation.Sample.Web;
 using Microsoft.Dynamics365.UIAutomation.Sample.Web.Create;
 using System;
+using System.Security;
 using TechTalk.SpecFlow;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
@@ -34,10 +36,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [When(@"User creates a New Employer '(.*)' Account and saves")]
         public void WhenUserCreatesANewEmployerAccountFormAndSaves(string formName)
         {
+            string empName = "";
             if (formName == "PBI")
-                createAccount.FillPBIEmployerFormAndSave();
+                empName = createAccount.FillPBIEmployerFormAndSave();
             else
-                createAccount.FillCADEmployerFormAndSave();
+                empName = createAccount.FillCADEmployerFormAndSave();
+            scenarioContext.Add("EmployerName", empName);
         }
 
 
@@ -53,40 +57,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
             Api.Browser a = scenarioContext.Get<Api.Browser>("browser");
             createAccount.LogOutUser(a);
         }
-
-        //#@LeadToJobOrder_PBI
-        //# Scenario: Create and Qualify a Lead to convert to Job Order with Pre-Existing PBI Employer & Contact
-        //# Given CSA user logs-in and navigates to 'Lead' Page
-        //# When User creates a New Lead 'with' Pre-Existing Employer, Contact and saves
-        //# Then User should be able to validate the created Lead
-        //# And User should log-out of the Application
-        //#
-        //#@LeadToJobOrder_CAD
-        //# Scenario: Create and Qualify a Lead to convert to Job Order with Pre-Existing CAD Employer & Contact
-        //# Given CSA user logs-in and navigates to 'Lead' Page
-        //# When User creates a New Lead 'with' Pre-Existing Employer, Contact and saves
-        //# Then User should be able to validate the created Lead
-        //# And User should log-out of the Application
-        //#
-        //#@LeadCreation_PBI
-        //# Scenario: Create Lead with Pre-Existing PBI Employer & Contact
-        //# Given CSA user logs-in and navigates to 'Employer' Page
-        //# When User creates a New Employer 'PBI' Account and saves
-        //# Then User should be able to validate the created Account 
-        //# And CSA user navigates to 'Lead' Page
-        //# When User creates a New Lead 'with' Pre-Existing Employer, Contact and saves
-        //# Then User should be able to validate the created Lead
-        //# And User should log-out of the Application
-        //#
-        //#@LeadCreation_CAD
-        //# Scenario: Create Lead with Pre-Existing CAD Employer & Contact
-        //# Given CSA user logs-in and navigates to 'Employer' Page
-        //# When User creates a New Employer 'CAD' Account and saves
-        //# Then User should be able to validate the created Account
-        //# And CSA user navigates to 'Lead' Page
-        //# When User creates a New Lead 'with' Pre-Existing Employer, Contact and saves
-        //# Then User should be able to validate the created Lead
-        //# And User should log-out of the Application
 
     }
 }

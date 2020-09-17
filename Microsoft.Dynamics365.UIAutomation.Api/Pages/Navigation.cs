@@ -241,26 +241,23 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             {
                 Browser.ThinkTime(1000);
                 // Fill form data 
-                String xpath = Elements.Xpath[Reference.Entity.FormTxtField];
                 employerName = "Employer_" + num;
                 Thread.Sleep(1000);
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Employers Name")), employerName, TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Phone")), "12312" + num, TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Address 1: Street Address/P.O. Box")), "123 New Ste", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "City")), "San Antonio", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "State")), "Texas", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "ZIP")), "78234", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Country/Region")), "USA", TimeSpan.FromSeconds(2));
-                driver.FindElement(By.XPath(xpath)).Click();
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name") + "[@aria-label='Employers Name']"), employerName, TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "telephone1")), "12345" + num, TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_line1")), "123 New St", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_city")), "San Antonio", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_stateorprovince")), "Texas", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_postalcode")), "78234", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_country")), "USA", TimeSpan.FromSeconds(1));
+                driver.FindElement(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name") + "[@aria-label='Employers Name']")).Click();
                 // All Drop Downs
-                xpath = Elements.Xpath[Reference.Entity.FormDDField];
                 Thread.Sleep(500);
-                var e = driver.FindElement(By.XPath(xpath));
                 ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0,document.body.scrollHeight)");
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "Account Type")), "CAD", TimeSpan.FromSeconds(2));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "CAD Type")), "Premier", TimeSpan.FromSeconds(2));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "Employment Type")), "Work From Home", TimeSpan.FromSeconds(2));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "Types of Position the Office Hires For")), "Admin", TimeSpan.FromSeconds(2));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "accounttype")), "CAD", TimeSpan.FromSeconds(2));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "cadtype")), "Premier", TimeSpan.FromSeconds(2));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "employmenttype")), "Work From Home", TimeSpan.FromSeconds(2));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "typesofpositiontheofficehiresfor")), "Admin", TimeSpan.FromSeconds(2));
                 // LookUp Fields
                 driver.FindElement(By.XPath("//input[contains(@aria-label,'National Director')]")).Click();
                 Thread.Sleep(1000);
@@ -285,24 +282,19 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             this.Execute("Employers", driver =>
             {
                 Browser.ThinkTime(1000);
-                // Fill form data 
-                String xpath = Elements.Xpath[Reference.Entity.FormTxtField];
                 employerName = "Employer_" + num;
                 Thread.Sleep(1000);
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Employers Name")), employerName, TimeSpan.FromSeconds(1));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Phone")), "12345" + num, TimeSpan.FromSeconds(1));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Address 1: Street Address/P.O. Box")), "123 New St", TimeSpan.FromSeconds(1));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "City")), "San Antonio", TimeSpan.FromSeconds(1));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "State")), "Texas", TimeSpan.FromSeconds(1));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "ZIP")), "78234", TimeSpan.FromSeconds(1));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Country/Region")), "USA", TimeSpan.FromSeconds(1));
-                // All Drop Downs
-                xpath = Elements.Xpath[Reference.Entity.FormDDField];
-
-                driver.ClickWhenAvailable(By.XPath(xpath.Replace("[NAME]", "Employment Type")));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "Employment Type")), "Work From Home", TimeSpan.FromSeconds(2));
-                driver.ClickWhenAvailable(By.XPath(xpath.Replace("[NAME]", "Types of Position the Office Hires For")));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "Types of Position the Office Hires For")), "Admin", TimeSpan.FromSeconds(2));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name")+ "[@aria-label='Employers Name']"), employerName, TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "telephone1")), "12345" + num, TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_line1")), "123 New St", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_city")), "San Antonio", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_stateorprovince")), "Texas", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_postalcode")), "78234", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_country")), "USA", TimeSpan.FromSeconds(1));
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0,document.body.scrollHeight)");
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "employmenttype")), "Work From Home", TimeSpan.FromSeconds(2));
+                //driver.ClickWhenAvailable(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "typesofpositiontheofficehiresfor")));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "typesofpositiontheofficehiresfor")), "Admin", TimeSpan.FromSeconds(2));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save])).Click();
                 Browser.ThinkTime(5000);
@@ -332,13 +324,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 Browser.ThinkTime(3000);
                 var e = driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind]));
                 ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", e);
-                driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind]));
+                driver.Wait(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])));
+                //driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).Click();
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).SendKeys(textToVerify);
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).SendKeys(Keys.Enter);
-                Browser.ThinkTime(1000);
+                driver.Wait(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath($"//*[normalize-space(text())='{textToVerify.Trim()}']")));
                 driver.FindElement(By.XPath($"//*[normalize-space(text())='{textToVerify.Trim()}']")).Displayed.Should().BeTrue(textToVerify+" element not displayed");
-                //textToVerify.Should().Contain("Pradeep", textToVerify + " is not matched");
                 return true;
             });
             return true;

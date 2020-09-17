@@ -28,43 +28,36 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
             SwitchToDefault();
         }
 
-        public String employerName;
-
-        public String FillJobOrderFormAndSave(string info, int thinkTime = Constants.DefaultThinkTime)
+        public String FillJobOrderFormAndSave(string empName, string info, int thinkTime = Constants.DefaultThinkTime)
         {
-            string employerName = string.Empty;
             Browser.ThinkTime(thinkTime);
             Random rand = new Random();
             int num = rand.Next(10000, 100000);
+            String jobTitleText = "Test_JobOrder_" + num;
             String xpath = Elements.Xpath[Reference.Entity.FormTxtField];
+            var time = TimeSpan.FromSeconds(2);
             this.Execute("JobOrders", driver =>
             {
                 Browser.ThinkTime(1000);
                 if (info == "with")
                 {
-                    FillLookUpField("New or Existing Employer?", "a", driver);
-                    FillLookUpField("New or Existing Contact?", "a", driver);
-                    employerName = driver.FindElement(By.XPath(xpath.Replace("[NAME]", "Account Name"))).GetAttribute("value");
-                    driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save]));
-                    driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save])).Click();
-                    Browser.ThinkTime(2000);
-                    return true;
+                    var jobTitle = By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "jobtitle"));
+                    driver.EnterTextAndTab(jobTitle, jobTitleText, time);
+                    FillLookUpField("Employer", empName, driver);
+                    driver.Actions().MoveToElement(driver.FindElement(jobTitle)). SendKeys(Keys.PageDown).SendKeys(Keys.PageDown).Build().Perform();
+                    driver.ScrollUntilElementVisible(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "DatePicker") + "[@aria-label='Job Start Date']"));
+                    string currentDate = DateTime.Now.ToString(@"M/dd/yyyy");
+                    var datePicker = By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "DatePicker") + "[@aria-label='Job Start Date']");
+                    Browser.ThinkTime(1000);
+                    driver.Actions().MoveToElement(driver.FindElement(datePicker)).DoubleClick().SendKeys(currentDate).SendKeys(Keys.Tab).Build().Perform();
+                    //driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "DatePicker") + "[@aria-label='Job Start Date']"), currentDate, time);
                 }
-                employerName = "Test_LeadEmployer_" + num;
-                Thread.Sleep(1000);
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Employer Name")), employerName, TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Phone")), "12312" + num, TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Street/P.O. Box")), "123 New St", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "City")), "San Antonio", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "State/Province")), "Texas", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "ZIP/Postal Code")), "78234", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Job Title")), "Test Lead " + num, TimeSpan.FromSeconds(2));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save])).Click();
                 Browser.ThinkTime(5000);
                 return true;
             });
-            return employerName;
+            return jobTitleText;
         }
 
         public void FillLookUpField(string fieldLabel, string fieldValue, IWebDriver driver)

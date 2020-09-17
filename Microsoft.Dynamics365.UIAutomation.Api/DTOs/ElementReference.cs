@@ -14,6 +14,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             { "Leads", "//span[text()='Leads']" },
             { "JobOrders", "//span[text()='Job Orders']" },
 
+            // Common Xpath's 
+            { "SelectIDContains", "//select[contains(@id,'arg')]"},
+            { "InputIDContains", "//input[contains(@id,'arg')]"},
+
+
             //Business Process Flow
             { "BPF_NextStage"       , "id(\"stageAdvanceActionContainer\")/div"},
             { "BPF_NextStageMenu"       , "id(\"stageNavigateActionContainer\")/div"},
@@ -137,6 +142,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             { "Grid_FirstRow", "id(\"gridBodyTable\")/tbody/tr[1]"},
 
             //Entity
+
             {"Entity_SaveAndClose", "//button[contains(@title, 'Save & Close')]"},
             {"Entity_BtnSave", "//button[contains(@title, 'Save (CTRL+S)')]"},
             {"Entity_QuickFind","//input[contains(@id, 'quickFind')]"},

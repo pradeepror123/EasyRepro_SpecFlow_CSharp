@@ -117,11 +117,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AzureDevOps\UCI\CreateAccount.cs" />
-    <Compile Include="UMA_CRM_Features\JobOrder.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JobOrder.feature</DependentUpon>
-    </Compile>
     <Compile Include="SharedAPI\AzureInsights\UploadTelemetryUCI.cs" />
     <Compile Include="SharedAPI\AzureInsights\OpenLead.cs" />
     <Compile Include="SharedAPI\BrowserTests\BrowserTests.cs" />
@@ -129,6 +124,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Account.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UMA_CRM_Features\JobOrders.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobOrders.feature</DependentUpon>
     </Compile>
     <Compile Include="UMA_CRM_Features\Lead.feature.cs">
       <AutoGen>True</AutoGen>
@@ -295,10 +295,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="AzureDevOps\EasyRepro.runsettings" />
-    <None Include="UMA_CRM_Features\JobOrder.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>JobOrder.feature.cs</LastGenOutput>
-    </None>
     <None Include="UMA_CRM_Features\Account.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Account.feature.cs</LastGenOutput>
@@ -307,6 +303,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="UCI\UnifiedInterface.orderedtest" />
+    <None Include="UMA_CRM_Features\JobOrders.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>JobOrders.feature.cs</LastGenOutput>
+    </None>
     <None Include="UMA_CRM_Features\Lead.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Lead.feature.cs</LastGenOutput>

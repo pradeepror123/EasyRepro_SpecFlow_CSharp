@@ -116,7 +116,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                 filename.Append(DateTime.Now.ToString("dd-mm-yyyy HH_mm_ss"));
                 filename.Append(".png");
 
-                browser.TakeWindowScreenShot(filename.ToString(), ScreenshotImageFormat.Png);
+                // browser.TakeWindowScreenShot(filename.ToString(), ScreenshotImageFormat.Png);
                 //scenario.CreateNode($"<div><span><a href='{@filename.ToString()}' target='_blank'>Screen Shot</a></span></div>"+ " ", errorMessage);
             }
         }

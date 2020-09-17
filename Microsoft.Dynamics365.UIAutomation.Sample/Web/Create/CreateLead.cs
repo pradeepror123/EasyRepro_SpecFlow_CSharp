@@ -20,11 +20,14 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
         private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
 
-        internal void FillLeadFormAndSave(Api.Browser xrmBrowser, String info)
+        public String FillLeadFormAndSave(String employerName, Api.Browser xrmBrowser, String info)
         {
             this.xrmBrowser = xrmBrowser;
-            xrmBrowser.ThinkTime(1500);
-            employerName = xrmBrowser.LeadPage.FillLeadFormAndSave(info, 2000);
+            xrmBrowser.ThinkTime(1000);
+            xrmBrowser.Navigation.NavigateToNewForm(1000);
+            this.employerName = xrmBrowser.LeadPage.FillLeadFormAndSave(employerName, info, 1000);
+            return this.employerName;
+
         }
 
         //[TestMethod]
@@ -41,13 +44,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             return xrmBrowser;
         }
 
-        public void ValidateCreatedLead(Api.Browser xrmBrowser)
+        public void ValidateCreatedLead(Api.Browser xrmBrowser, String employerName)
         {
             this.xrmBrowser = xrmBrowser;
             xrmBrowser.Navigation.NavigateToLeadsPage(1000);
             xrmBrowser.Navigation.ValidateTextFromGrid(employerName);
         }
-
-
     }
 }
