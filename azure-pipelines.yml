@@ -43,5 +43,7 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     uiTests: true
     vsTestVersion: 'toolsInstaller'
+    runSettingsFile: 'Microsoft.Dynamics365.UIAutomation.Sample/AzureDevOps/EasyRepro.runsettings'
+    codeCoverageEnabled: false
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
