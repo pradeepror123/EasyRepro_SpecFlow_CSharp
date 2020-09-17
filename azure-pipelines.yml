@@ -44,6 +44,7 @@ steps:
     uiTests: true
     vsTestVersion: 'toolsInstaller'
     runSettingsFile: 'Microsoft.Dynamics365.UIAutomation.Sample/AzureDevOps/EasyRepro.runsettings'
+    runInParallel: true
     codeCoverageEnabled: false
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
