@@ -19,7 +19,7 @@ steps:
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
-    versionSelector: 'latestPreRelease'
+    versionSelector: 'latestStable'
 
 - task: NuGetCommand@2
   inputs:
