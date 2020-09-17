@@ -117,6 +117,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AzureDevOps\UCI\CreateAccount.cs" />
+    <Compile Include="UMA_CRM_Features\JobOrder.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobOrder.feature</DependentUpon>
+    </Compile>
     <Compile Include="SharedAPI\AzureInsights\UploadTelemetryUCI.cs" />
     <Compile Include="SharedAPI\AzureInsights\OpenLead.cs" />
     <Compile Include="SharedAPI\BrowserTests\BrowserTests.cs" />
@@ -124,11 +129,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Account.feature</DependentUpon>
-    </Compile>
-    <Compile Include="UMA_CRM_Features\JobOrders.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JobOrders.feature</DependentUpon>
     </Compile>
     <Compile Include="UMA_CRM_Features\Lead.feature.cs">
       <AutoGen>True</AutoGen>
@@ -294,7 +294,13 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="AzureDevOps\EasyRepro.runsettings" />
+    <None Include="AzureDevOps\EasyRepro.runsettings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UMA_CRM_Features\JobOrder.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>JobOrder.feature.cs</LastGenOutput>
+    </None>
     <None Include="UMA_CRM_Features\Account.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Account.feature.cs</LastGenOutput>
@@ -303,10 +309,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="UCI\UnifiedInterface.orderedtest" />
-    <None Include="UMA_CRM_Features\JobOrders.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>JobOrders.feature.cs</LastGenOutput>
-    </None>
     <None Include="UMA_CRM_Features\Lead.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Lead.feature.cs</LastGenOutput>
@@ -352,11 +354,11 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets'))" />
-    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
     <Error Condition="!Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.0\build\SpecFlow.targets'))" />
   </Target>
   <Import Project="..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" />
-  <Import Project="..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" />
   <Import Project="..\packages\SpecFlow.2.4.0\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
