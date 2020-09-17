@@ -19,7 +19,7 @@ steps:
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
-    versionSelector: 'latestPreRelease'
+    versionSelector: 'latestStable'
 
 - task: NuGetCommand@2
   inputs:
@@ -34,10 +34,14 @@ steps:
 
 - task: VSTest@2
   inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+      **\*UIAutomation*.dll
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    uiTests: true
+    vsTestVersion: 'toolsInstaller'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'VSTest'
-    testResultsFiles: '**/TEST-*.xml'
