@@ -39,6 +39,7 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
+      **\*UIAutomation*.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
     uiTests: true
     vsTestVersion: 'toolsInstaller'
