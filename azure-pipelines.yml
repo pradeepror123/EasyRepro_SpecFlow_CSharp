@@ -49,3 +49,4 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     diagnosticsEnabled: true
+    collectDumpOn: 'always'
