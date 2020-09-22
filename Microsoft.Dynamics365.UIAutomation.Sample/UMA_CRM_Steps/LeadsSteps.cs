@@ -27,10 +27,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         }
 
         [Then(@"User should be able to validate the created Lead")]
-        public void ThenUserShouldBeAbleToValidateTheCreatedLead()
+        public void ThenUserShouldBeAbleToValidateTheCreated()
         {
             createLead.ValidateCreatedLead(scenarioContext.Get<Api.Browser>("browser"), accountName);
         }
+
+        [When(@"User fills '(.*)' and Qualifies the Lead to Job Order")]
+        public void WhenUserFillsAndQualifiesTheLeadToJobOrder(string tabName)
+        {
+            // ScenarioContext.Current.Pending();
+        }
+
 
     }
 }

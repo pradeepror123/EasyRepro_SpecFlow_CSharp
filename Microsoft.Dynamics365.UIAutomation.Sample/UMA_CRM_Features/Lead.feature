@@ -27,24 +27,32 @@ Scenario: Create Lead with Generated PBI Employer & Contact
 
 @LeadCreation_CAD
 Scenario: Create Lead with Generated CAD Employer & Contact
-	Given CSA user logs-in and navigates to 'Employer' Page
+	Given CSA user logs-in and navigates to 'Employer' Page                  
 	When User creates a New Employer 'CAD' Account and saves
 	Then User should be able to validate the created Account
 	And CSA user navigates to 'Lead' Page
 	When User creates a New Lead 'with Generated' Employer, Contact and saves
 	Then User should be able to validate the created Lead
-	And User should log-out of the Application
+	And  User should log-out of the Application
 
 #@LeadToJobOrder_PBI
-# Scenario: Create and Qualify a Lead to convert to Job Order with Pre-Existing PBI Employer & Contact
-	# Given CSA user logs-in and navigates to 'Lead' Page
-	# When User creates a New Lead 'with' Pre-Existing Employer, Contact and saves
-	# Then User should be able to validate the created Lead
-	# And User should log-out of the Application
-
+#Scenario: Create and Qualify a Lead to convert to Job Order with Pre-Existing PBI Employer & Contact
+#	Given CSA user logs-in and navigates to 'Employer' Page
+#	When User creates a New Employer 'CAD' Account and saves
+#	Then User should be able to validate the created Account
+#	And CSA user navigates to 'Lead' Page
+#	When User creates a New Lead 'with Generated' Employer, Contact and saves
+#	And  User fills 'Qualifying Questions' and Qualifies the Lead to Job Order
+#	Then User should be able to validate the created Job Order
+#	And  User should log-out of the Application
+#
 #@LeadToJobOrder_CAD
-# Scenario: Create and Qualify a Lead to convert to Job Order with Pre-Existing CAD Employer & Contact
-	# Given CSA user logs-in and navigates to 'Lead' Page
-	# When User creates a New Lead 'with' Pre-Existing Employer, Contact and saves
-	# Then User should be able to validate the created Lead
-	# And User should log-out of the Application
+#Scenario: Create and Qualify a Lead to convert to Job Order with Pre-Existing CAD Employer & Contact
+#	Given CSA user logs-in and navigates to 'Employer' Page
+#	When User creates a New Employer 'CAD' Account and saves
+#	Then User should be able to validate the created Account
+#	And CSA user navigates to 'Lead' Page
+#	When User creates a New Lead 'with Generated' Employer, Contact and saves
+#	And  User fills 'Qualifying Questions' and Qualifies the Lead to Job Order
+#	Then User should be able to validate the created Job Order
+#	And  User should log-out of the Application
