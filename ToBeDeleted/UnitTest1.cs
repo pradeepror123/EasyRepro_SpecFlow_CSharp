@@ -15,8 +15,8 @@ namespace ToBeDeleted
         [TestMethod]
         public void TestMethod1()
         {
-            var option = TestSettings.Options;
-            var xrmBrowser = new Microsoft.Dynamics365.UIAutomation.Api.Browser(TestSettings.Options);
+           // var option = TestSettings.Options;
+            var xrmBrowser = new Microsoft.Dynamics365.UIAutomation.Api.Browser(null);
             Thread.Sleep(5000);
             xrmBrowser.Dispose();
 

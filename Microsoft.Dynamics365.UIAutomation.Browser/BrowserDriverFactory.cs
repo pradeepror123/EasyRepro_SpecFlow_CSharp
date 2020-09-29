@@ -23,7 +23,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
                 case BrowserType.Chrome:
                     var chromeService = ChromeDriverService.CreateDefaultService(options.DriversPath);
                     chromeService.HideCommandPromptWindow = options.HideDiagnosticWindow;
-                    driver = new ChromeDriver(chromeService, options.ToChrome());
+                    driver = new ChromeDriver(chromeService);
                     break;
                 case BrowserType.IE:
                     var ieService = InternetExplorerDriverService.CreateDefaultService(options.DriversPath);

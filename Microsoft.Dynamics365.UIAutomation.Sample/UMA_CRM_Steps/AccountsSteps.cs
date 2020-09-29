@@ -26,12 +26,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [Given(@"Sample Step")]
         public void SampleStep()
         {
-            var driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://docs.microsoft.com/en-us/");
-            driver.Manage().Window.Maximize();
-            Thread.Sleep(5000);
-            driver.Quit();
-            Console.WriteLine("driver opened and closed");
+            //var driver = new ChromeDriver();
+            //driver.Navigate().GoToUrl("https://docs.microsoft.com/en-us/");
+            //driver.Manage().Window.Maximize();
+            //Thread.Sleep(5000);
+            //driver.Quit();
+            //Console.WriteLine("driver opened and closed");
         }
 
         [Given(@"User logs-in with (.*) and (.*) and navigates to '(.*)' Page")]
