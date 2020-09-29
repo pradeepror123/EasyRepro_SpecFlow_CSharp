@@ -36,10 +36,9 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*test*.dll
+      **\*UIAutomation.Sample.dll
       !**\*TestAdapter.dll
-      !**\obj\**
-      **\*UIAutomation*.dll
+      !**\obj\**      
     searchFolder: '$(System.DefaultWorkingDirectory)'
     uiTests: true
     vsTestVersion: 'toolsInstaller'
