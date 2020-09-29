@@ -36,10 +36,12 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*ToBeDeleted.dll
+      **\*test*.dll
       !**\*TestAdapter.dll
-      !**\obj\**      
+      !**\obj\**
+      **\*UIAutomation*.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    testFiltercriteria: 'TestCategory=EmployerAccounts'
     uiTests: true
     vsTestVersion: 'toolsInstaller'
     runSettingsFile: 'Microsoft.Dynamics365.UIAutomation.Sample/AzureDevOps/EasyRepro.runsettings'
