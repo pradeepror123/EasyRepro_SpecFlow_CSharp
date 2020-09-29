@@ -55,7 +55,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public static void TearDownReport()
         {
             _extent.Flush();            
-            Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", string.Format("\"{0}\"", htmlFile));            
+           // Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", string.Format("\"{0}\"", htmlFile));            
         }
 
         [BeforeFeature]
