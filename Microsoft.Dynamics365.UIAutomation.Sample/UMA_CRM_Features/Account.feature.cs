@@ -92,9 +92,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Sample Scenario")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Sample")]
         public virtual void SampleScenario()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sample Scenario", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sample Scenario", null, new string[] {
+                        "Sample"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
