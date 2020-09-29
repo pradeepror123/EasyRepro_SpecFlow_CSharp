@@ -87,64 +87,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         {
             testRunner.CollectScenarioErrors();
         }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Job Order on PBI Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Job Orders")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrders_PBI")]
-        public virtual void CreateJobOrderOnPBIAccount()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Job Order on PBI Account", null, new string[] {
-                        "JobOrders_PBI"});
-#line 5
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
- testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 7
- testRunner.When("User creates a New Employer \'PBI\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 8
- testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 9
- testRunner.And("CSA user navigates to \'Job Order\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
- testRunner.When("User creates a New Job Order \'with\' created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
- testRunner.Then("User should be able to validate the created Job Order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
- testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Job Order on CAD Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Job Orders")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrders_CAD")]
-        public virtual void CreateJobOrderOnCADAccount()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Job Order on CAD Account", null, new string[] {
-                        "JobOrders_CAD"});
-#line 15
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 16
- testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 17
- testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
- testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
- testRunner.And("CSA user navigates to \'Job Order\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
- testRunner.When("User creates a New Job Order \'with\' created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
- testRunner.Then("User should be able to validate the created Job Order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
     }
 }
 #pragma warning restore

@@ -1,8 +1,10 @@
 ﻿using Microsoft.Dynamics365.UIAutomation.Browser;
 using Microsoft.Dynamics365.UIAutomation.Sample.Web;
 using Microsoft.Dynamics365.UIAutomation.Sample.Web.Create;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Security;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
@@ -19,6 +21,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
 
         public CreationUpdationAndDeletionOfEmployerAccountsSteps(ScenarioContext scenarioContext) {
             this.scenarioContext = scenarioContext;
+        }
+
+        [Given(@"Sample Step")]
+        public void SampleStep()
+        {
+            var driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://docs.microsoft.com/en-us/");
+            driver.Manage().Window.Maximize();
+            Thread.Sleep(5000);
+            driver.Quit();
+            Console.WriteLine("driver opened and closed");
         }
 
         [Given(@"User logs-in with (.*) and (.*) and navigates to '(.*)' Page")]
