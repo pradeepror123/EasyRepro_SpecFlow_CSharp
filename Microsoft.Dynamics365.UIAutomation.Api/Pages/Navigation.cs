@@ -164,6 +164,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             {
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.Leads]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Leads]));
+                Browser.ThinkTime(thinkTime);
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.Leads])).Click();
                 driver.WaitForPageToLoad();
                 return true;
@@ -243,8 +244,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 // Fill form data 
                 employerName = "Employer_" + num;
                 Thread.Sleep(1000);
-                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name") + "[@aria-label='Employers Name']"), employerName, TimeSpan.FromSeconds(1));
-                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "telephone1")), "12345" + num, TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name") + "[@aria-label='Employers Name']"), employerName, TimeSpan.FromSeconds(2));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "telephone1")), "12345" + num, TimeSpan.FromSeconds(2));
                 driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_line1")), "123 New St", TimeSpan.FromSeconds(1));
                 driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_city")), "San Antonio", TimeSpan.FromSeconds(1));
                 driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_stateorprovince")), "Texas", TimeSpan.FromSeconds(1));
@@ -305,7 +306,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
 
         public BrowserCommandResult<bool> Logout()
         {
-            this.Execute("Employers", driver =>
+            this.Execute("Logout", driver =>
             {
                 Browser.ThinkTime(3000);
                 driver.WaitUntilVisible(By.XPath("//button[contains(@title, 'User Information')]"));

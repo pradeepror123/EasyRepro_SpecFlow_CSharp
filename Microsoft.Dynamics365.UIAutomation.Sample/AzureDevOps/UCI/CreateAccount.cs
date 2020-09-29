@@ -39,7 +39,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.AzureDevOps.UCI
             var client = new WebClient(TestSettings.Options);
             using (var xrmApp = new XrmApp(client))
             {
-                xrmApp.OnlineLogin.Login(_xrmUri, _username.ToSecureString(), _password.ToSecureString());
+                xrmApp.OnlineLogin.Login(_xrmUri, _username.Trim().ToSecureString(), _password.Trim().ToSecureString());
 
                 xrmApp.Navigation.OpenApp(UCIAppName.Sales);
 

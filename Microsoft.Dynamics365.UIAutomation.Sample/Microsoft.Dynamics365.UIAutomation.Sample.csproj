@@ -205,6 +205,7 @@
     <Compile Include="UCI\Update\UpdateOpportunity.cs" />
     <Compile Include="Web\BusinessProcessFlow\BusinessProcessFlow.cs" />
     <Compile Include="Web\CommandBar\CommandButton.cs" />
+    <Compile Include="Web\Create\TestBase.cs" />
     <Compile Include="Web\Create\CreateJobOrder.cs" />
     <Compile Include="Web\Delete\DeleteAccount.cs" />
     <Compile Include="Web\Delete\DeleteCase.cs" />

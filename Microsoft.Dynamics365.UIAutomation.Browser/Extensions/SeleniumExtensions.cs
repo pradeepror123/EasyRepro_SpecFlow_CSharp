@@ -27,8 +27,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
 
         public static void EnterTextAndTab(this IWebDriver driver, By by, string value, TimeSpan timeout)
         {
-            System.Threading.Thread.Sleep((int)timeout.TotalMilliseconds);
-            driver.WaitUntilAvailable(by,"Unable to Wait Until "+ timeout);
+            Thread.Sleep((int)timeout.TotalMilliseconds);
+            driver.ScrollElement(by);
+            driver.ScrollUntilElementVisible(by);
             var element = driver.FindElement(by);
             element.Click();
             driver.DoubleClick(element);
@@ -44,7 +45,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
             if (click)
                 driver.FindElement(by).Click();
 
-            System.Threading.Thread.Sleep((int)timeout.TotalMilliseconds);
+            Thread.Sleep((int)timeout.TotalMilliseconds);
+            driver.ScrollElement(by);
             var element = driver.FindElement(by);
             SelectElement select = new SelectElement(element);
             select.SelectByText(value);

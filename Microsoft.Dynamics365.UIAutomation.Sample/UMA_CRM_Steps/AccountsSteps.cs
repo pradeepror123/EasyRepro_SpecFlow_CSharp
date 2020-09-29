@@ -21,16 +21,30 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
             this.scenarioContext = scenarioContext;
         }
 
+        [Given(@"User logs-in with (.*) and (.*) and navigates to '(.*)' Page")]
+        public void GivenCSAUserLogs_InAndNavigatesToPage(String usrname, String pswd, string pageName)
+        {
+            Browser = createAccount.Login();
+            scenarioContext.Add("browser", Browser);
+            if (pageName == "Employer")
+                createAccount.NavigateToNewEmployerPage();
+            else if (pageName == "Lead")
+                createLead.NavigateToNewLeadPage(Browser);
+            else if (pageName == "Job Order")
+                createJobOrder.NavigateToNewJobOrderPage(Browser);
+        }
+
         [Given(@"CSA user logs-in and navigates to '(.*)' Page")]
         public void GivenCSAUserLogs_InAndNavigatesToPage(string pageName)
         {
-            if (pageName == "Employer")
-                Browser = createAccount.LoginAndNavigateToNewEmployerPage();
-            else if (pageName == "Lead")
-                Browser = createLead.LoginAndNavigateToNewLeadPage();
-            else if (pageName == "Job Order")
-                Browser = createJobOrder.LoginAndNavigateToJobOrderPage();
+            Browser = createAccount.Login();
             scenarioContext.Add("browser", Browser);
+            if (pageName == "Employer")
+                createAccount.NavigateToNewEmployerPage();
+            else if (pageName == "Lead")
+                createLead.NavigateToNewLeadPage(Browser);
+            else if (pageName == "Job Order")
+                createJobOrder.NavigateToNewJobOrderPage(Browser);
         }
 
         [When(@"User creates a New Employer '(.*)' Account and saves")]

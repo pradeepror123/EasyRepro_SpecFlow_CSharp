@@ -25,17 +25,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
         }
 
         //[TestMethod]
-        public Api.Browser LoginAndNavigateToJobOrderPage()
+        public void NavigateToNewJobOrderPage(Api.Browser xrmBrowser)
         {
-            xrmBrowser = new Api.Browser(TestSettings.Options);
-            xrmBrowser.LoginPage.Login(_xrmUri, _username, _password);
-            xrmBrowser.GuidedHelp.CloseGuidedHelp();
-            xrmBrowser.Dialogs.CloseWarningDialog();
-            // xrmBrowser.ThinkTime(500);
-            xrmBrowser.Navigation.NavigateToUMAApp(500);
+            this.xrmBrowser = xrmBrowser;
             xrmBrowser.Navigation.NavigateToJobOrdersPage(500);
             xrmBrowser.Navigation.NavigateToNewForm(1000);
-            return xrmBrowser;
         }
 
         public void ValidateCreatedJobOrder(Api.Browser xrmBrowser)

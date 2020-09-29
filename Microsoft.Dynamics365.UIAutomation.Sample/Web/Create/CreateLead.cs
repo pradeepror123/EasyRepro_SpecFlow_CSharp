@@ -31,17 +31,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         }
 
         //[TestMethod]
-        public Api.Browser LoginAndNavigateToNewLeadPage()
+        public void NavigateToNewLeadPage(Api.Browser xrmBrowser)
         {
-            xrmBrowser = new Api.Browser(TestSettings.Options);
-            xrmBrowser.LoginPage.Login(_xrmUri, _username, _password);
-            xrmBrowser.GuidedHelp.CloseGuidedHelp();
-            // xrmBrowser.Dialogs.CloseWarningDialog();
-            // xrmBrowser.ThinkTime(500);
-            xrmBrowser.Navigation.NavigateToUMAApp(500);
+            this.xrmBrowser = xrmBrowser;
+
             xrmBrowser.Navigation.NavigateToLeadsPage(500);
             xrmBrowser.Navigation.NavigateToNewForm(1000);
-            return xrmBrowser;
         }
 
         public void ValidateCreatedLead(Api.Browser xrmBrowser, String employerName)

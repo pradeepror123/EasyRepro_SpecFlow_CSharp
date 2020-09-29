@@ -15,20 +15,32 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         public Api.Browser xrmBrowser = new Api.Browser(TestSettings.Options);
         public String employerName;
         private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
-        private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
+        // private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
+        SecureString _password = "eyed--5T&tZ".ToString().ToSecureString();
         private  Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
 
         //[TestMethod]
-        public Api.Browser LoginAndNavigateToNewEmployerPage()
+        public Api.Browser Login() 
         {
             xrmBrowser.LoginPage.Login(_xrmUri, _username, _password);
             xrmBrowser.GuidedHelp.CloseGuidedHelp();
-            xrmBrowser.Dialogs.CloseWarningDialog();
-            xrmBrowser.ThinkTime(500);
             xrmBrowser.Navigation.NavigateToUMAApp(500);
+            return xrmBrowser;
+        }
+
+        public Api.Browser Login(SecureString _username, SecureString _password)
+        {
+            xrmBrowser.LoginPage.Login(_xrmUri, _username, _password);
+            xrmBrowser.GuidedHelp.CloseGuidedHelp();
+            xrmBrowser.Navigation.NavigateToUMAApp(500);
+            return xrmBrowser;
+        }
+
+        //[TestMethod]
+        public void NavigateToNewEmployerPage()
+        {
             xrmBrowser.Navigation.NavigateToEmployersPage(500);
             xrmBrowser.Navigation.NavigateToNewForm(1000);
-            return xrmBrowser;
         }
 
         //[TestMethod]
