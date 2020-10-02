@@ -39,9 +39,9 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
-      **\*ToBeDeleted*.dll
+      **\*Microsoft.Dynamics365.UIAutomation.Sample*.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: 'TestCategory=Tobe'
+    testFiltercriteria: 'TestCategory=CAD_Account'
     uiTests: true
     vsTestVersion: 'toolsInstaller'
     runSettingsFile: 'Microsoft.Dynamics365.UIAutomation.Sample/AzureDevOps/EasyRepro.runsettings'
