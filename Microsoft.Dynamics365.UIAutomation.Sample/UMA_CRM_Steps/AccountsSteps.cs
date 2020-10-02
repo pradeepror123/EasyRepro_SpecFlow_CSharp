@@ -49,10 +49,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                 createJobOrder.NavigateToNewJobOrderPage(Browser);
         }
 
+        [Given(@"Sample Step")]
+        public void GivenSampleStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
         [Given(@"CSA user logs-in and navigates to '(.*)' Page")]
         public void GivenCSAUserLogs_InAndNavigatesToPage(string pageName)
         {
             Browser = createAccount.Login();
+            Browser.Navigation.NavigateToUMAApp();
             scenarioContext.Add("browser", Browser);
             if (pageName == "Employer")
                 createAccount.NavigateToNewEmployerPage();

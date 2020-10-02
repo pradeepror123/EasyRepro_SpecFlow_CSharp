@@ -130,15 +130,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Application.feature</DependentUpon>
     </Compile>
+    <Compile Include="UMA_CRM_Features\JobOrder.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobOrder.feature</DependentUpon>
+    </Compile>
     <Compile Include="UMA_CRM_Features\Lead.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lead.feature</DependentUpon>
     </Compile>
-    <Compile Include="UMA_CRM_Features\JobOrder.feature.cs">
+    <Compile Include="UMA_CRM_Features\PowerAppsFlows.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>JobOrder.feature</DependentUpon>
+      <DependentUpon>PowerAppsFlows.feature</DependentUpon>
     </Compile>
     <Compile Include="UMA_CRM_Steps\ApplicationsSteps.cs" />
     <Compile Include="UMA_CRM_Steps\JobOrdersSteps.cs" />
@@ -207,9 +212,11 @@
     <Compile Include="TestSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedAPI\AzureInsights\UploadTelemetry.cs" />
+    <Compile Include="UMA_CRM_Steps\PowerAppsRunsSteps.cs" />
     <Compile Include="Web\AddConnection.cs" />
     <Compile Include="Web\BusinessProcessFlow\BusinessProcessFlow.cs" />
     <Compile Include="Web\CommandBar\CommandButton.cs" />
+    <Compile Include="Web\Create\PowerAppsFlows.cs" />
     <Compile Include="Web\Create\CreateAccount.cs" />
     <Compile Include="Web\Create\CreateCase.cs" />
     <Compile Include="Web\Create\CreateContact.cs" />
@@ -323,6 +330,10 @@
     <None Include="UMA_CRM_Features\JobOrder.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>JobOrder.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UMA_CRM_Features\PowerAppsFlows.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PowerAppsFlows.feature.cs</LastGenOutput>
     </None>
     <None Include="Web\WebClient.orderedtest" />
   </ItemGroup>

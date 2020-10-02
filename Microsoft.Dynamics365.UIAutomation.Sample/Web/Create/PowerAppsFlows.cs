@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
 {
-    class PowerApps
+    class PowerAppsFlows
     {
         public String employerName;
         public Api.Browser xrmBrowser = new Api.Browser(TestSettings.Options);
@@ -30,7 +30,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
 
         public void CheckStatus()
         {
-            
+
         }
 
     }

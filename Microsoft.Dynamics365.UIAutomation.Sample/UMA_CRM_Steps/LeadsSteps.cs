@@ -19,7 +19,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         }
 
         [When(@"User creates a New Lead '(.*)' Employer, Contact and saves")]
-        public void WhenUserCreatesANewLeadPre_ExistingEmployerContactAndSaves(string info)
+        public void WhenUserCreatesANewLeadEmployerContactAndSaves(string info)
         {
             createLead = new CreateLead();
             empName = (scenarioContext.Count == 1) ? "a" : scenarioContext.Get<string>("EmployerName");
@@ -27,7 +27,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         }
 
         [Then(@"User should be able to validate the created Lead")]
-        public void ThenUserShouldBeAbleToValidateTheCreated()
+        public void ThenUserShouldBeAbleToValidateTheCreatedLead()
         {
             createLead.ValidateCreatedLead(scenarioContext.Get<Api.Browser>("browser"), accountName);
         }
@@ -37,7 +37,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         {
             // ScenarioContext.Current.Pending();
         }
-
 
     }
 }

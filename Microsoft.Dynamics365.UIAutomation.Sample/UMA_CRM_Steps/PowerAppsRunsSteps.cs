@@ -11,7 +11,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
     public class PowerAppsRunsSteps
     {
         readonly ScenarioContext scenarioContext;
-        PowerApps powerApps = new PowerApps();
+        PowerAppsFlows powerApps = new PowerAppsFlows();
         UMAPowerApps umaPowerApps;
         public Api.Browser Browser;
 

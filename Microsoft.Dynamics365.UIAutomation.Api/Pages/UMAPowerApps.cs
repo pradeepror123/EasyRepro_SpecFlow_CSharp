@@ -33,15 +33,19 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
                 foreach (var flow in allFlows)
                 {
                     if (flow.Text.ToLower().Contains("off"))
-                        flow.FindElement(By.XPath("//parent::div//div[@data-automation-key='displayName']//a")).Click();
-                    Thread.Sleep(2000);
-                    driver.SwitchTo().Window(driver.WindowHandles.Last());
-                    Thread.Sleep(5000);
-
+                        NavigateToFlowAndRun(driver, flow);
                 }
                 return true;
             });
             return true;
+        }
+
+        public void NavigateToFlowAndRun(IWebDriver driver, IWebElement flow)
+        {
+            flow.FindElement(By.XPath("//parent::div//div[@data-automation-key='displayName']//a")).Click();
+            Thread.Sleep(2000);
+            driver.SwitchTo().Window(driver.WindowHandles.Last());
+            Thread.Sleep(5000);
         }
     }
 }
