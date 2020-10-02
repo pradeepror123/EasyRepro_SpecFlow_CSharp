@@ -41,7 +41,7 @@ steps:
       !**\obj\**
       **\*Microsoft.Dynamics365.UIAutomation.Sample*.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: 'TestCategory=CAD_Account'
+    testFiltercriteria: 'TestCategory=CAD_Account1'
     uiTests: true
     vsTestVersion: 'toolsInstaller'
     runSettingsFile: 'Microsoft.Dynamics365.UIAutomation.Sample/AzureDevOps/EasyRepro.runsettings'
