@@ -230,6 +230,32 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             return true;
         }
 
+        public BrowserCommandResult<bool> NavigateToPowerAutomateFlows(int thinkTime = Constants.DefaultThinkTime)
+        {
+            this.Execute("App", driver =>
+            {
+                Browser.ThinkTime(thinkTime);
+                Thread.Sleep(2000);
+                driver.WaitUntilAvailable(By.XPath("//span[text()='Solutions']"));
+                driver.FindElement(By.XPath("//span[text()='Solutions']")).Click();
+                Thread.Sleep(4000);
+                if (driver.FindElements(By.XPath("//span[text()='Submit']")).Count > 0)
+                    driver.FindElement(By.XPath("//span[text()='Submit']")).Click();
+                Thread.Sleep(1000);
+                driver.WaitUntilClickable(By.XPath("//input[@aria-label='Search solutions']"));              
+                driver.FindElement(By.XPath("//input[@aria-label='Search solutions']")).Click();
+                driver.FindElement(By.XPath("//input[@aria-label='Search solutions']")).SendKeys("UMA Power Automate Flows");
+                driver.FindElement(By.XPath("//input[@aria-label='Search solutions']")).SendKeys(Keys.Enter);
+                Thread.Sleep(1000);
+                driver.WaitUntilClickable(By.XPath("//a[contains(text(), 'UMA Power Automate Flows')]"));
+                driver.FindElement(By.XPath("//a[contains(text(), 'UMA Power Automate Flows')]")).Click();
+                Thread.Sleep(3000);
+                driver.WaitForPageToLoad();
+                return true;
+            });
+            return true;    
+        }
+
         public String employerName;
 
         public String FillCADAccountFormAndSave(int thinkTime = Constants.DefaultThinkTime)

@@ -122,7 +122,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
 
             if (this.PrivateMode)
             {
-                options.AddArgument("--incognito");
+                //options.AddArgument("--incognito");
             }
 
             if (this.Headless)

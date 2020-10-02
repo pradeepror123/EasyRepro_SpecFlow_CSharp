@@ -1,5 +1,5 @@
 ﻿@JobOrder
-Feature: Creation, updation and deletion of Job Orders
+F eature: Creation, updation and deletion of Job Orders
 
 #@JobOrders_PBI
 #Scenario: Create Job Order on PBI Account

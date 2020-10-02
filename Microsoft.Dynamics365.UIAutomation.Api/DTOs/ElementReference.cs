@@ -83,6 +83,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             { "Frame_WizardFrame"       , "id(\"wizardpageframe\")"},
 
             //Navigation
+            { "Nav_UMA_PowerFlows", "//a[contains(text(), 'UMA Power Automate Flows')]"},
+            { "Nav_PowerFlow_Search", "//input[@aria-label='Search solutions']" },
             { "Nav_ActionGroup"       , "id(\"actionGroupControl\")"},
             { "Nav_SubActionGroup"       , "id(\"actionGroupControl\")"},
             { "Nav_SubActionGroupContainer"       , "id(\"detailActionGroupControl\")"},
@@ -608,6 +610,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             public static string Leads = "Leads";
             public static string JobOrders = "JobOrders";
             public static string HomeTab = "Nav_HomeTab";
+            public static string UMA_PowerFlows = "Nav_UMA_PowerFlows";
+            public static string PowerFlow_Search = "Nav_PowerFlow_Search";
             public static string TopLevelItem = "Nav_TopLevelItemClass";
             public static string ActionGroup = "Nav_ActionGroup";
             public static string ActionButtonContainer = "Nav_ActionButtonContainerClass";

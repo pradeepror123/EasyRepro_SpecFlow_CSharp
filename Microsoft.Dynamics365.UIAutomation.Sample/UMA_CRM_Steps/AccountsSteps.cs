@@ -1,4 +1,5 @@
-﻿using Microsoft.Dynamics365.UIAutomation.Browser;
+﻿using Microsoft.Dynamics365.UIAutomation.Api;
+using Microsoft.Dynamics365.UIAutomation.Browser;
 using Microsoft.Dynamics365.UIAutomation.Sample.Web;
 using Microsoft.Dynamics365.UIAutomation.Sample.Web.Create;
 using OpenQA.Selenium.Chrome;
@@ -38,6 +39,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public void GivenCSAUserLogs_InAndNavigatesToPage(String usrname, String pswd, string pageName)
         {
             Browser = createAccount.Login();
+            Browser.Navigation.NavigateToUMAApp();
             scenarioContext.Add("browser", Browser);
             if (pageName == "Employer")
                 createAccount.NavigateToNewEmployerPage();

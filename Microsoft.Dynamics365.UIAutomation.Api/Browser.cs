@@ -56,6 +56,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
 
         #endregion Job Order
 
+        #region UMA Power Apps
+
+        public UMAPowerApps UMAPowerApps => this.GetPage<UMAPowerApps>();
+
+        #endregion UMA Power Apps
+
         #region Navigation
 
         public Navigation Navigation => this.GetPage<Navigation>();
