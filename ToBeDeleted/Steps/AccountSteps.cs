@@ -11,11 +11,11 @@ namespace ToBeDeleted.Steps
         [Given(@"user opened browser")]
         public void GivenUserOpenedBrowser()
         {
-            var driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://docs.microsoft.com/en-us/");
-            driver.Manage().Window.Maximize();
-            Thread.Sleep(5000);
-            driver.Quit();
+            //var driver = new ChromeDriver();
+            //driver.Navigate().GoToUrl("https://docs.microsoft.com/en-us/");
+            //driver.Manage().Window.Maximize();
+            //Thread.Sleep(5000);
+            //driver.Quit();
         }
     }
 }
