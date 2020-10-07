@@ -14,8 +14,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
     {                    
         public Api.Browser xrmBrowser = new Api.Browser(TestSettings.Options);
         public String employerName;
-        private readonly SecureString _umaUsername = (System.Configuration.ConfigurationManager.AppSettings["PowerAppsUsername"].ToString()).ToSecureString();
-        private readonly SecureString _umaPassword =(System.Configuration.ConfigurationManager.AppSettings["PowerAppsPassword"].ToString()).ToSecureString();
+        private readonly SecureString _umaUsername = (System.Configuration.ConfigurationManager.AppSettings["UMAUsername"].ToString()).ToSecureString();
+        private readonly SecureString _umaPassword =(System.Configuration.ConfigurationManager.AppSettings["UMAPassword"].ToString()).ToSecureString();
         private Uri _umaXrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["UMACrmUrl"].ToString());
 
         //[TestMethod]
@@ -23,6 +23,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         {
             xrmBrowser.LoginPage.Login(_umaXrmUri, _umaUsername, _umaPassword);
             xrmBrowser.GuidedHelp.CloseGuidedHelp();
+            return xrmBrowser;
+        }
+
+        public Api.Browser Login(SecureString username)
+        {
+            xrmBrowser.LoginPage.Login(_umaXrmUri, username, _umaPassword);
+            // xrmBrowser.GuidedHelp.CloseGuidedHelp();
             return xrmBrowser;
         }
 

@@ -2,12 +2,14 @@
 // Licensed under the MIT license.
 
 using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Dynamics365.UIAutomation.Browser;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using FluentAssertions.Execution;
 
 namespace Microsoft.Dynamics365.UIAutomation.Api
 {
@@ -217,6 +219,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             this.Execute("App", driver =>
             {
                 Browser.ThinkTime(thinkTime);
+                Thread.Sleep(2000);
                 driver.SwitchTo().Frame(driver.FindElement(By.Id("AppLandingPage")));
                 driver.FindElement(By.Id("app-search-input")).Click();
                 driver.FindElement(By.Id("app-search-input")).SendKeys("UMA");
@@ -224,10 +227,39 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 Browser.ThinkTime(thinkTime);
                 driver.FindElement(By.XPath("//div[text()='UMA']")).Click();
                 driver.WaitForPageToLoad();
-                Browser.ThinkTime(thinkTime);
                 return true;
             });
             return true;
+        }
+
+        public BrowserCommandResult<bool> NavigateToQuickCreate(string windowName, int thinkTime = Constants.DefaultThinkTime)
+        {
+            this.Execute("QuickCreate", driver =>
+            {
+                Thread.Sleep(2000);
+                driver.WaitUntilClickable(By.XPath("//button[@data-id='quickCreateLauncher']")).Click();
+                Thread.Sleep(1000);
+                var element = driver.FindAvailable(By.XPath($"//ul[contains(@id,'crm_header_global_MenuSectionItemsquickCreateLauncher')]//button[span/span[text()='{windowName}']]"));
+                element.Click();
+                Browser.ThinkTime(thinkTime);
+                if (windowName == "Resource Address")
+                {
+                    FillLookUpField("Address", "a", driver);
+                    FillLookUpField("Address Type", "a", driver);
+                }
+                return true;
+            });
+            return true;
+        }
+
+        public void FillLookUpField(String field, String text, IWebDriver driver)
+        {
+            driver.FindAvailable(By.XPath($"//input[@aria-label='{field}, Lookup']")).Click();
+            Thread.Sleep(1000);
+            driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(text, true);
+            Thread.Sleep(1000);
+            if (driver.FindElement(By.XPath("//div[contains(@aria-label, 'Lookup results')]//label[contains(text(), 'Insufficient Permissions')]")).IsVisible())
+                Assert.Fail($"User has Insufficient Permissions on {field} field");
         }
 
         public BrowserCommandResult<bool> NavigateToPowerAutomateFlows(int thinkTime = Constants.DefaultThinkTime)

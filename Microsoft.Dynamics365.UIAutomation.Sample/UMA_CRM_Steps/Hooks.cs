@@ -34,7 +34,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [BeforeTestRun]
         public static void InitializeReport()
         {
-            //var HtmlBaseDirectory = Path.Combine((new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent).Parent.FullName, "Reports");
+            // var HtmlBaseDirectory = Path.Combine((new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent).Parent.FullName, "Reports");
             folderLocation = Path.Combine(new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent.FullName, "Reports", "Log_" + DateTime.Now.ToString("MM_dd_yyyy"));
             if (!Directory.Exists(folderLocation))
                 Directory.CreateDirectory(folderLocation);          
@@ -55,7 +55,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public static void TearDownReport()
         {
             _extent.Flush();            
-           // Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", string.Format("\"{0}\"", htmlFile));            
+            // Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", string.Format("\"{0}\"", htmlFile));            
         }
 
         [BeforeFeature]
@@ -83,8 +83,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                     browser.Dispose();
             }
             catch { }
-          
-
         }
 
         [AfterStep]
@@ -121,8 +119,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                 filename.Append(DateTime.Now.ToString("dd-mm-yyyy HH_mm_ss"));
                 filename.Append(".png");
 
-                // browser.TakeWindowScreenShot(filename.ToString(), ScreenshotImageFormat.Png);
-                //scenario.CreateNode($"<div><span><a href='{@filename.ToString()}' target='_blank'>Screen Shot</a></span></div>"+ " ", errorMessage);
+                browser.TakeWindowScreenShot(filename.ToString(), ScreenshotImageFormat.Png);
+                scenario.CreateNode($"<div><span><a href='{@filename.ToString()}' target='_blank'>Screen Shot</a></span></div>"+ " ", errorMessage);
             }
         }
     }
