@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@Account
 Feature: Creation, updation and deletion of Employer Accounts
 
@@ -67,3 +68,13 @@ Scenario Outline: Create Employer CAD Account with multiple Users
        | CRMTest_WAS@ultimatemedical.edu | eyed--5T&tZ |
        | CRMTest_ViPr@ultimatemedical.edu | eyed--5T&tZ |
        | CRMTest_AViPR@ultimatemedical.edu | eyed--5T&tZ |    
+=======
+﻿Feature: Creation, updation and deletion of  Employer Accounts
+
+@EmployerAccounts @CAD_Account
+Scenario: Create Employer CAD Account
+	Given CSA user logs-in and navigates to 'Employer' Page
+	When User creates a New Employer CAD Account Form and saves
+	Then User should be able to validate the created CAD Account
+	And User should log-out of the Application
+>>>>>>> b4589918429bcaf5363d6c258fe7888cd78a7df2

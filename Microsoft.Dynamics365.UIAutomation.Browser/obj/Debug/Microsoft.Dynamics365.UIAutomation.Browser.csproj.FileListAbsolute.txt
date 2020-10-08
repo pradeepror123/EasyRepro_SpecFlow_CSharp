@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\pradeep.chinthala\Downloads\EasyRepro_SpecFlow_CSharp-Temp\EasyRepro_SpecFlow_CSharp-Temp\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Microsoft.Dynamics365.UIAutomation.Browser.dll
 C:\Users\pradeep.chinthala\Downloads\EasyRepro_SpecFlow_CSharp-Temp\EasyRepro_SpecFlow_CSharp-Temp\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Microsoft.Dynamics365.UIAutomation.Browser.pdb
 C:\Users\pradeep.chinthala\Downloads\EasyRepro_SpecFlow_CSharp-Temp\EasyRepro_SpecFlow_CSharp-Temp\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Newtonsoft.Json.dll
@@ -13,3 +14,20 @@ C:\Users\pradeep.chinthala\Downloads\EasyRepro_SpecFlow_CSharp-Temp\EasyRepro_Sp
 C:\Users\pradeep.chinthala\Downloads\EasyRepro_SpecFlow_CSharp-Temp\EasyRepro_SpecFlow_CSharp-Temp\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csproj.CopyComplete
 C:\Users\pradeep.chinthala\Downloads\EasyRepro_SpecFlow_CSharp-Temp\EasyRepro_SpecFlow_CSharp-Temp\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.dll
 C:\Users\pradeep.chinthala\Downloads\EasyRepro_SpecFlow_CSharp-Temp\EasyRepro_SpecFlow_CSharp-Temp\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.pdb
+=======
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Microsoft.Dynamics365.UIAutomation.Browser.dll
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Microsoft.Dynamics365.UIAutomation.Browser.pdb
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\WebDriver.dll
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\WebDriver.Support.dll
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\WebDriver.xml
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\bin\Debug\WebDriver.Support.xml
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csprojAssemblyReference.cache
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.Properties.Resources.resources
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csproj.GenerateResource.cache
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csproj.CoreCompileInputs.cache
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.csproj.CopyComplete
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.dll
+C:\Users\pravella\source\repos\UMA_Automation\Microsoft.Dynamics365.UIAutomation.Browser\obj\Debug\Microsoft.Dynamics365.UIAutomation.Browser.pdb
+>>>>>>> b4589918429bcaf5363d6c258fe7888cd78a7df2
