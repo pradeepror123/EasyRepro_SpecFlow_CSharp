@@ -4,7 +4,6 @@
 using FluentAssertions;
 using Microsoft.Dynamics365.UIAutomation.Browser;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +45,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                     "The Global Search button is not available.");
 
                 driver.ClickWhenAvailable(By.XPath(Elements.Xpath[Reference.Navigation.SearchLabel]), TimeSpan.FromSeconds(1));
-                
+
                 driver.WaitUntilClickable(By.XPath(Elements.Xpath[Reference.Navigation.Search]),
                     new TimeSpan(0, 0, 5),
                     e =>
@@ -56,7 +55,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                         e.SendKeys(Keys.Enter);
                     },
                     "The Global Search text field is not available."
-                    ); 
+                    );
 
                 return true;
             });
@@ -161,9 +160,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
         public BrowserCommandResult<bool> NavigateToLeadsPage(int thinkTime = Constants.DefaultThinkTime)
         {
             Browser.ThinkTime(thinkTime);
-            return this.Execute("Leads", driver => {
+            return this.Execute("Leads", driver =>
+            {
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.Leads]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Leads]));
+                Browser.ThinkTime(thinkTime);
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.Leads])).Click();
                 driver.WaitForPageToLoad();
                 return true;
@@ -173,10 +174,24 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
         public BrowserCommandResult<bool> NavigateToEmployersPage(int thinkTime = Constants.DefaultThinkTime)
         {
             Browser.ThinkTime(thinkTime);
-            return this.Execute("Employers", driver => {
+            return this.Execute("Employers", driver =>
+            {
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.Employers]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Employers]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.Employers])).Click();
+                driver.WaitForPageToLoad();
+                return true;
+            });
+        }
+
+        public BrowserCommandResult<bool> NavigateToJobOrdersPage(int thinkTime = Constants.DefaultThinkTime)
+        {
+            Browser.ThinkTime(thinkTime);
+            return this.Execute("JobOrders", driver =>
+            {
+                driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders]));
+                driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders]));
+                driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders])).Click();
                 driver.WaitForPageToLoad();
                 return true;
             });
@@ -197,36 +212,84 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             return true;
         }
 
+        public BrowserCommandResult<bool> NavigateToUMAApp(int thinkTime = Constants.DefaultThinkTime)
+        {
+            Thread.Sleep(2000);
+            this.Execute("App", driver =>
+            {
+                Browser.ThinkTime(thinkTime);
+                driver.SwitchTo().Frame(driver.FindElement(By.Id("AppLandingPage")));
+                driver.FindElement(By.Id("app-search-input")).Click();
+                driver.FindElement(By.Id("app-search-input")).SendKeys("UMA");
+                driver.FindElement(By.Id("app-search-input")).SendKeys(Keys.Tab);
+                Browser.ThinkTime(thinkTime);
+                driver.FindElement(By.XPath("//div[text()='UMA']")).Click();
+                driver.WaitForPageToLoad();
+                Browser.ThinkTime(thinkTime);
+                return true;
+            });
+            return true;
+        }
+
+        public BrowserCommandResult<bool> NavigateToPowerAutomateFlows(int thinkTime = Constants.DefaultThinkTime)
+        {
+            this.Execute("App", driver =>
+            {
+                Browser.ThinkTime(thinkTime);
+                Thread.Sleep(2000);
+                driver.WaitUntilAvailable(By.XPath("//span[text()='Solutions']"));
+                driver.FindElement(By.XPath("//span[text()='Solutions']")).Click();
+                Thread.Sleep(4000);
+                if (driver.FindElements(By.XPath("//span[text()='Submit']")).Count > 0)
+                    driver.FindElement(By.XPath("//span[text()='Submit']")).Click();
+                Thread.Sleep(1000);
+                driver.WaitUntilClickable(By.XPath("//input[@aria-label='Search solutions']"));              
+                driver.FindElement(By.XPath("//input[@aria-label='Search solutions']")).Click();
+                driver.FindElement(By.XPath("//input[@aria-label='Search solutions']")).SendKeys("UMA Power Automate Flows");
+                driver.FindElement(By.XPath("//input[@aria-label='Search solutions']")).SendKeys(Keys.Enter);
+                Thread.Sleep(1000);
+                driver.WaitUntilClickable(By.XPath("//a[contains(text(), 'UMA Power Automate Flows')]"));
+                driver.FindElement(By.XPath("//a[contains(text(), 'UMA Power Automate Flows')]")).Click();
+                Thread.Sleep(3000);
+                driver.WaitForPageToLoad();
+                return true;
+            });
+            return true;    
+        }
+
         public String employerName;
 
         public String FillCADAccountFormAndSave(int thinkTime = Constants.DefaultThinkTime)
         {
             string employerName = string.Empty;
-           Browser.ThinkTime(thinkTime);
+            Browser.ThinkTime(thinkTime);
             Random rand = new Random();
-            int num = rand.Next(100, 1000);
+            int num = rand.Next(10000, 100000);
             this.Execute("Employers", driver =>
             {
                 Browser.ThinkTime(1000);
                 // Fill form data 
-                String xpath = Elements.Xpath[Reference.Entity.FormTxtField];
                 employerName = "Employer_" + num;
                 Thread.Sleep(1000);
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Employers Name")), employerName, TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Phone")), "1231231"+num, TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Address 1: Street Address/P.O. Box")), "123 New Ste", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "City")), "San Antonio", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "State")), "Texas", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "ZIP")), "78234", TimeSpan.FromSeconds(2));
-                driver.EnterTextAndTab(By.XPath(xpath.Replace("[NAME]", "Country/Region")), "USA", TimeSpan.FromSeconds(2));
-                xpath = Elements.Xpath[Reference.Entity.FormDDField];
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "Account Type")), "CAD", TimeSpan.FromSeconds(2));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]", "CAD Type")), "Premier", TimeSpan.FromSeconds(2));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]","Employment Type")), "Work From Home", TimeSpan.FromSeconds(2));
-                driver.SelectDropDownValue(By.XPath(xpath.Replace("[NAME]","Types of Position the Office Hires For")), "Admin", TimeSpan.FromSeconds(2));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name") + "[@aria-label='Employers Name']"), employerName, TimeSpan.FromSeconds(2));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "telephone1")), "12345" + num, TimeSpan.FromSeconds(2));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_line1")), "123 New St", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_city")), "San Antonio", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_stateorprovince")), "Texas", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_postalcode")), "78234", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_country")), "USA", TimeSpan.FromSeconds(1));
+                driver.FindElement(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name") + "[@aria-label='Employers Name']")).Click();
+                // All Drop Downs
+                Thread.Sleep(500);
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0,document.body.scrollHeight)");
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "accounttype")), "CAD", TimeSpan.FromSeconds(2));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "cadtype")), "Premier", TimeSpan.FromSeconds(2));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "employmenttype")), "Work From Home", TimeSpan.FromSeconds(2));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "typesofpositiontheofficehiresfor")), "Admin", TimeSpan.FromSeconds(2));
+                // LookUp Fields
                 driver.FindElement(By.XPath("//input[contains(@aria-label,'National Director')]")).Click();
                 Thread.Sleep(1000);
-                driver.FindElement(By.XPath("//input[contains(@aria-label,'National Director')]")).SendKeys("a",true);
+                driver.FindElement(By.XPath("//input[contains(@aria-label,'National Director')]")).SendKeys("a", true);
                 Thread.Sleep(1000);
                 driver.Inivisibility(By.XPath("//label[text()='Loading...']"), 30);
                 driver.Click(driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")));
@@ -238,13 +301,45 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             return employerName;
         }
 
+        public String FillPBIAccountFormAndSave(int thinkTime = Constants.DefaultThinkTime)
+        {
+            string employerName = string.Empty;
+            Browser.ThinkTime(thinkTime);
+            Random rand = new Random();
+            int num = rand.Next(10000, 100000);
+            this.Execute("Employers", driver =>
+            {
+                Browser.ThinkTime(1000);
+                employerName = "Employer_" + num;
+                Thread.Sleep(1000);
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name")+ "[@aria-label='Employers Name']"), employerName, TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "telephone1")), "12345" + num, TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_line1")), "123 New St", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_city")), "San Antonio", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_stateorprovince")), "Texas", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_postalcode")), "78234", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_country")), "USA", TimeSpan.FromSeconds(1));
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0,document.body.scrollHeight)");
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "employmenttype")), "Work From Home", TimeSpan.FromSeconds(2));
+                //driver.ClickWhenAvailable(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "typesofpositiontheofficehiresfor")));
+                driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "typesofpositiontheofficehiresfor")), "Admin", TimeSpan.FromSeconds(2));
+                driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save]));
+                driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Btn_Save])).Click();
+                Browser.ThinkTime(5000);
+                return true;
+            });
+            return employerName;
+        }
+
         public BrowserCommandResult<bool> Logout()
         {
-            this.Execute("Employers", driver =>
+            this.Execute("Logout", driver =>
             {
                 Browser.ThinkTime(3000);
                 driver.WaitUntilVisible(By.XPath("//button[contains(@title, 'User Information')]"));
                 driver.FindElement(By.XPath("//button[contains(@title, 'User Information')]")).Click();
+                Browser.ThinkTime(2000);
+                driver.WaitForPageToLoad();
                 return true;
             });
             return true;
@@ -255,35 +350,15 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             this.Execute("Grid", driver =>
             {
                 Browser.ThinkTime(3000);
-                IWebElement e = null;
-                driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind]));
+                var e = driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind]));
+                ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", e);
+                driver.Wait(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])));
+                //driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).Click();
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).SendKeys(textToVerify);
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Entity.Txt_QuickFind])).SendKeys(Keys.Enter);
-                Browser.ThinkTime(2000);
-                driver.DoubleClick(driver.FindElement(By.XPath($"//div[contains(@title,'{textToVerify}')]")));
-                Browser.ThinkTime(3000);
-                //for (int i = 0; i < 3; i++)
-                //{
-                //    try
-                //    {
-                //        e = driver.FindElement(By.XPath($"//div[contains(@title,'{textToVerify}')]"));
-                //        ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", e);
-                //        (new Actions(driver)).MoveToElement(e).Click().Build().Perform();
-                //        Browser.ThinkTime(3000);
-                //        break;
-                //    }
-                //    catch
-                //    {
-                //        (new Actions(driver)).MoveToElement(e).Click().Build().Perform();
-                //    }
-                //}               
-
-               // ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();",driver.FindElement(By.XPath($"//a[contains(text(),'{textToVerify}')]")));
-                //driver.WaitUntilVisible(By.XPath($"//div/a[contains(text(),'{textToVerify}')]"));
-                //var bln = driver.FindElement(By.XPath($"//a[contains(text(),'{textToVerify}')]")).Displayed;
-                //bln.Should().BeTrue($"{textToVerify} is not dispalyed in the Result Grid");
-                //driver.FindElement(By.XPath($"//a[contains(text(),'{textToVerify}')]")).Click();
+                driver.Wait(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath($"//*[normalize-space(text())='{textToVerify.Trim()}']")));
+                driver.FindElement(By.XPath($"//*[normalize-space(text())='{textToVerify.Trim()}']")).Displayed.Should().BeTrue(textToVerify+" element not displayed");
                 return true;
             });
             return true;
@@ -662,9 +737,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             Browser.ThinkTime(thinkTime);
             return this.Execute(GetOptions($"SignOut"), driver =>
             {
-                driver.ClickWhenAvailable(By.XPath(Elements.Xpath[Reference.Navigation.UserInfo]));
-                Browser.ThinkTime(500);
-                ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", driver.FindElement(By.XPath("//span[text()='Sign out']/../..")));
+                //driver.ClickWhenAvailable(By.XPath(Elements.Xpath[Reference.Navigation.UserInfo]));
+                driver.ClickWhenAvailable(By.Id("mectrl_headerPicture"));
+                Browser.ThinkTime(1000);
+                ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", driver.FindElement(By.XPath("(//*[normalize-space(text())='Sign out']) | (//span[normalize-space(text())='Sign out']/../..)")));
+                Browser.ThinkTime(2000);
                 //driver.ClickWhenAvailable(By.XPath(Elements.Xpath[Reference.Navigation.SignOut]));
                 return true;
             });

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿@Lead
 Feature: Creation, updation and deletion of Leads
 
@@ -57,19 +56,3 @@ Scenario: Create and Qualify a Lead to convert to Job Order with Pre-Existing CA
 	And  User fills 'Qualifying Questions' and Qualifies the Lead to Job Order
 	Then User should be able to validate the created Job Order
 	And  User should log-out of the Application
-=======
-﻿Feature: Creation, updation and deletion of Leads
-
-@LeadCreation_NoPreEx
-Scenario: Create Lead without Pre-Existing Employer & Contact
-	Given CSA user logs-in and navigates to 'Lead' Page
-	When User creates a New Lead 'without' Pre-Existing Employer, Contact and saves
-	Then User should be able to validate the created Lead
-	And User should log-out of the Application
-
-@LeadCreation_PreEx
-Scenario: Create Lead with Pre-Existing Employer & Contact
-	Given CSA user logs-in and navigates to 'Lead' Page
-	When User creates a New Lead 'with' Pre-Existing Employer, Contact and saves
-	And User should log-out of the Application
->>>>>>> b4589918429bcaf5363d6c258fe7888cd78a7df2
