@@ -219,8 +219,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             this.Execute("App", driver =>
             {
                 Browser.ThinkTime(thinkTime);
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 driver.SwitchTo().Frame(driver.FindElement(By.Id("AppLandingPage")));
+                Thread.Sleep(1000);
                 driver.FindElement(By.Id("app-search-input")).Click();
                 driver.FindElement(By.Id("app-search-input")).SendKeys("UMA");
                 driver.FindElement(By.Id("app-search-input")).SendKeys(Keys.Tab);
@@ -242,24 +243,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 var element = driver.FindAvailable(By.XPath($"//ul[contains(@id,'crm_header_global_MenuSectionItemsquickCreateLauncher')]//button[span/span[text()='{windowName}']]"));
                 element.Click();
                 Browser.ThinkTime(thinkTime);
-                if (windowName == "Resource Address")
-                {
-                    FillLookUpField("Address", "a", driver);
-                    FillLookUpField("Address Type", "a", driver);
-                }
                 return true;
             });
             return true;
-        }
-
-        public void FillLookUpField(String field, String text, IWebDriver driver)
-        {
-            driver.FindAvailable(By.XPath($"//input[@aria-label='{field}, Lookup']")).Click();
-            Thread.Sleep(1000);
-            driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(text, true);
-            Thread.Sleep(1000);
-            if (driver.FindElement(By.XPath("//div[contains(@aria-label, 'Lookup results')]//label[contains(text(), 'Insufficient Permissions')]")).IsVisible())
-                Assert.Fail($"User has Insufficient Permissions on {field} field");
         }
 
         public BrowserCommandResult<bool> NavigateToPowerAutomateFlows(int thinkTime = Constants.DefaultThinkTime)

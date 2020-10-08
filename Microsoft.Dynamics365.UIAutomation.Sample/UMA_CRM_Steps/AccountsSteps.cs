@@ -39,8 +39,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public void GivenCSAUserLogs_InAndNavigatesToPage(String usrname, String pswd, string pageName)
         {
             Browser = createAccount.Login();
-            Browser.Navigation.NavigateToUMAApp();
             scenarioContext.Add("browser", Browser);
+            Browser.Navigation.NavigateToUMAApp();
             if (pageName == "Employer")
                 createAccount.NavigateToNewEmployerPage();
             else if (pageName == "Lead")
@@ -58,6 +58,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [Given(@"CSA user logs-in and navigates to '(.*)' Page")]
         public void GivenCSAUserLogs_InAndNavigatesToPage(string pageName)
         {
+            
             Browser = createAccount.Login();
             Browser.Navigation.NavigateToUMAApp();
             scenarioContext.Add("browser", Browser);

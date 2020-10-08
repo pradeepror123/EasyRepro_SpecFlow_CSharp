@@ -102,7 +102,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  testRunner.Given(string.Format("{0} logs-in and navigates to Quick Create \'Resource Address\' Window", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.Then("User should be able to create and save a new \'Address Type\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("User should be able to create and save a new \'Address Type\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

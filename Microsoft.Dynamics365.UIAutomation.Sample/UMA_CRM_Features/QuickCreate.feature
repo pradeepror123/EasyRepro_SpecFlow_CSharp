@@ -3,7 +3,7 @@
 @AddressQuickCreate
 Scenario Outline: Quick Create Address Type
 	Given <User> logs-in and navigates to Quick Create 'Resource Address' Window
-	Then  User should be able to create and save a new 'Address Type'
+	Then  User should be able to create and save a new 'Address Type' record
 	Examples:
 	| User |
 	| CRMTest_BDR@ultimatemedical.edu |

@@ -10,7 +10,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
 {
     class PowerAppsFlows
     {
-        public String employerName;
+        //public String employerName;
         public Api.Browser xrmBrowser = new Api.Browser(TestSettings.Options);
         private readonly SecureString _pwUsername = (System.Configuration.ConfigurationManager.AppSettings["PowerAppsUsername"].ToString()).ToSecureString();
         private readonly SecureString _pwPassword = (System.Configuration.ConfigurationManager.AppSettings["PowerAppsPassword"].ToString()).ToSecureString();

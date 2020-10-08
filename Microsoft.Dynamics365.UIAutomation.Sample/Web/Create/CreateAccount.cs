@@ -21,8 +21,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         //[TestMethod]
         public Api.Browser Login()
         {
-            xrmBrowser.LoginPage.Login(_umaXrmUri, _umaUsername, _umaPassword);
-            xrmBrowser.GuidedHelp.CloseGuidedHelp();
+            try
+            {
+                xrmBrowser.LoginPage.Login(_umaXrmUri, _umaUsername, _umaPassword);
+                xrmBrowser.GuidedHelp.CloseGuidedHelp();
+            }
+            catch{ }
+            
             return xrmBrowser;
         }
 

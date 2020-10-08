@@ -350,7 +350,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
             WebDriverWait wait = new WebDriverWait(driver, timeout);
             try
             {
-                wait.Until(ExpectedConditions.AlertIsPresent());
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.AlertIsPresent());
                 return true;
             }
             catch (NoSuchElementException) { }
@@ -554,7 +554,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(time));
             wait.IgnoreExceptionTypes(typeof(Exception));
-            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(by));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.InvisibilityOfElementLocated(by));
         }
 
         public static IWebElement WaitUntilAvailable(this ISearchContext driver, By by,

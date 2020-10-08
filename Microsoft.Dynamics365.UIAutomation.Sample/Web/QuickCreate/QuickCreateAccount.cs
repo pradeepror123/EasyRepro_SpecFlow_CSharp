@@ -13,9 +13,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
     public class QuickCreateAccount
     {
 
-        private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
-        private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
-        private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
+        private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["UMAUsername"].ToSecureString();
+        private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["UMAPassword"].ToSecureString();
+        private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["UMACrmUrl"].ToString());
 
         [TestMethod]
         public void WEBTestQuickCreateNewAccount()
