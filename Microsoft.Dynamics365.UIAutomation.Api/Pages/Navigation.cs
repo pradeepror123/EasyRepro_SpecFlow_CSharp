@@ -218,8 +218,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
         {
             this.Execute("App", driver =>
             {
-                Browser.ThinkTime(thinkTime);
-                Thread.Sleep(1000);
+                Browser.ThinkTime(3000);
                 driver.SwitchTo().Frame(driver.FindElement(By.Id("AppLandingPage")));
                 Thread.Sleep(1000);
                 driver.FindElement(By.Id("app-search-input")).Click();

@@ -260,7 +260,7 @@
     <Compile Include="Web\Navigation\GuidedHelp.cs" />
     <Compile Include="Web\Navigation\Options.cs" />
     <Compile Include="Web\Navigation\Portal.cs" />
-    <Compile Include="Web\Navigation\QuickCreate.cs" />
+    <Compile Include="Web\Navigation\QuickCreateOpen.cs" />
     <Compile Include="Web\Navigation\SignOut.cs" />
     <Compile Include="Web\NegativeScenarios\BusinessProcessFlow\InvalidBusinessProcessFlow.cs" />
     <Compile Include="Web\NegativeScenarios\BusinessProcessFlow\InvalidNextStage.cs" />
@@ -290,8 +290,8 @@
     <Compile Include="Web\NegativeScenarios\RelatedGrid\InvalidRelatedSort.cs" />
     <Compile Include="Web\NegativeScenarios\RelatedGrid\InvalidRelatedSwitchView.cs" />
     <Compile Include="Web\Notification\Notifications.cs" />
-    <Compile Include="Web\QuickCreate\QuickCreateResourceAddress.cs" />
-    <Compile Include="Web\QuickCreate\QuickCreateAccount.cs" />
+    <Compile Include="Web\QuickCreateAll\QuickCreateResourceAddress.cs" />
+    <Compile Include="Web\QuickCreateAll\QuickCreateAccount.cs" />
     <Compile Include="Web\Read\OpenAccount.cs" />
     <Compile Include="Web\Read\OpenCase.cs" />
     <Compile Include="Web\Read\OpenContact.cs" />

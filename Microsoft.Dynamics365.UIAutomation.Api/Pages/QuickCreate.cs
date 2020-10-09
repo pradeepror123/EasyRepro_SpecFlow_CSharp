@@ -2,6 +2,7 @@
 // Licensed under the MIT license.
 
 using Microsoft.Dynamics365.UIAutomation.Browser;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System;
 using System.Linq;
@@ -21,7 +22,37 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
         public QuickCreate(InteractiveBrowser browser)
             : base(browser)
         {
-            SwitchToQuickCreate();
+            // SwitchToQuickCreate();
+        }
+
+        public BrowserCommandResult<bool> FillLookUpField(String field, String text)
+        {
+            this.Execute("QuickCreate", driver =>
+            {
+                Browser.ThinkTime(1000);
+                driver.FindAvailable(By.XPath($"//input[@aria-label='{field}, Lookup']")).Click();
+                Browser.ThinkTime(1000);
+                driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(text, true);
+                Browser.ThinkTime(1000);
+                if (driver.FindElements(By.XPath("//div[contains(@aria-label, 'Lookup results')]//label[contains(text(), 'Insufficient Permissions')]")).Count > 0)
+                    Assert.Fail($"User has Insufficient Permissions on {field} field");
+                else
+                    driver.Click(driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")));
+                return true;
+            });
+            return true;
+
+        }
+
+        public BrowserCommandResult<bool> SaveAndClose()
+        {
+           this.Execute("SaveClose", driver =>
+           {
+               Browser.ThinkTime(1000);
+               driver.FindAvailable(By.XPath("//button[@id='quickCreateSaveAndCloseBtn']")).Click();
+               return true;
+           });
+            return true;
         }
 
         /// <summary>

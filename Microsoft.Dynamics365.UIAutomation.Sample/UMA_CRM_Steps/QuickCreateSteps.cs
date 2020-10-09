@@ -13,7 +13,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         CreateAccount createAccount = new CreateAccount();
         CreateLead createLead = new CreateLead();
         CreateJobOrder createJobOrder = new CreateJobOrder();
-        QuickCreateResourceAddress quickCreateResourceAddress = new QuickCreateResourceAddress();
+        QuickCreateResourceAddress quickCRA = new QuickCreateResourceAddress();
 
 
         public Api.Browser Browser;
@@ -32,11 +32,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
             Browser.Navigation.NavigateToQuickCreate(windowName);
         }
 
-        [Then(@"User should be able to create and save a new '(.*)' record")]
-        public void ThenUserShouldBeAbleToCreateAndSaveANew(string field)
+        [Then(@"User should be able to create '(.*)' with pre-existing data")]
+        public void ThenUserShouldBeAbleToCreateWithPre_ExistingData(string quickCreateFormName)
         {
-            // quickCreateResourceAddress.FillLookUpField(field, "a", driver);
-
+            if (quickCreateFormName == "Resource Address")
+            {
+                Browser = scenarioContext.Get<Api.Browser>("browser");
+                quickCRA.FillQuickCreateField(Browser, "Address Type");
+                quickCRA.FillQuickCreateField(Browser, "Address");
+                quickCRA.QuickCreateSaveAndClose(Browser);
+            }
         }
+
     }
 }
