@@ -75,10 +75,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
         {
             try
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 var element = driver.FindElement(by);
                 ((IJavaScriptExecutor)driver).ExecuteScript(JSOperator.ScrollToElement, element);
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
             }
             catch
             {

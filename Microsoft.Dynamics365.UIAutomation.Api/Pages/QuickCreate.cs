@@ -30,14 +30,16 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             this.Execute("QuickCreate", driver =>
             {
                 Browser.ThinkTime(1000);
-                driver.FindAvailable(By.XPath($"//input[@aria-label='{field}, Lookup']")).Click();
+                driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).Click();
                 Browser.ThinkTime(1000);
                 driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(text, true);
-                Browser.ThinkTime(1000);
+                Browser.ThinkTime(2000);
                 if (driver.FindElements(By.XPath("//div[contains(@aria-label, 'Lookup results')]//label[contains(text(), 'Insufficient Permissions')]")).Count > 0)
                     Assert.Fail($"User has Insufficient Permissions on {field} field");
-                else
-                    driver.Click(driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")));
+                // driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(Keys.Escape);
+                String resultList = driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")).Text;
+                Assert.AreEqual(driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).Text, resultList);
+                Browser.ThinkTime(2000);
                 return true;
             });
             return true;

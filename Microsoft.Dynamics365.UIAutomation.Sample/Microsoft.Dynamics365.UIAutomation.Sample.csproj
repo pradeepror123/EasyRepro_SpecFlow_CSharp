@@ -151,6 +151,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuickCreate.feature</DependentUpon>
     </Compile>
+    <Compile Include="UMA_CRM_Features\StudentEnrollment.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentEnrollment.feature</DependentUpon>
+    </Compile>
     <Compile Include="UMA_CRM_Steps\ApplicationsSteps.cs" />
     <Compile Include="UMA_CRM_Steps\JobOrdersSteps.cs" />
     <Compile Include="UMA_CRM_Steps\LeadsSteps.cs" />
@@ -220,9 +225,11 @@
     <Compile Include="SharedAPI\AzureInsights\UploadTelemetry.cs" />
     <Compile Include="UMA_CRM_Steps\PowerAppsRunsSteps.cs" />
     <Compile Include="UMA_CRM_Steps\QuickCreateSteps.cs" />
+    <Compile Include="UMA_CRM_Steps\StudentEnrollmentsSteps.cs" />
     <Compile Include="Web\AddConnection.cs" />
     <Compile Include="Web\BusinessProcessFlow\BusinessProcessFlow.cs" />
     <Compile Include="Web\CommandBar\CommandButton.cs" />
+    <Compile Include="Web\Create\CreateStudentEnrollment.cs" />
     <Compile Include="Web\Create\PowerAppsFlows.cs" />
     <Compile Include="Web\Create\CreateAccount.cs" />
     <Compile Include="Web\Create\CreateCase.cs" />
@@ -346,6 +353,10 @@
     <None Include="UMA_CRM_Features\QuickCreate.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuickCreate.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UMA_CRM_Features\StudentEnrollment.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>StudentEnrollment.feature.cs</LastGenOutput>
     </None>
     <None Include="Web\WebClient.orderedtest" />
   </ItemGroup>

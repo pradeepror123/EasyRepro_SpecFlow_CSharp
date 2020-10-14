@@ -62,6 +62,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
 
         #endregion Navigation
 
+        #region Student Enrollment
+
+        public StudentEnrollment StudentEnrollment => this.GetPage<StudentEnrollment>();
+
+        #endregion Student Enrollment
+
         #region CommandBar
 
         public CommandBar CommandBar => this.GetPage<CommandBar>();

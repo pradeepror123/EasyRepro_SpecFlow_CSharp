@@ -92,6 +92,7 @@
     <Compile Include="DTOs\PerformanceMarker.cs" />
     <Compile Include="LoginRedirectEventArgs.cs" />
     <Compile Include="Office365Browser.cs" />
+    <Compile Include="Pages\StudentEnrollment.cs" />
     <Compile Include="Pages\UMAPowerApps.cs" />
     <Compile Include="Pages\JobOrder.cs" />
     <Compile Include="Pages\Lead.cs" />

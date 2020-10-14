@@ -159,10 +159,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             throw new NotImplementedException();
         }
 
-        public BrowserCommandResult<bool> NavigateToLeadsPage(int thinkTime = Constants.DefaultThinkTime)
+        public void NavigateToLeadsPage(int thinkTime = Constants.DefaultThinkTime)
         {
             Browser.ThinkTime(thinkTime);
-            return this.Execute("Leads", driver =>
+            this.Execute("Leads", driver =>
             {
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.Leads]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Leads]));
@@ -173,10 +173,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             });
         }
 
-        public BrowserCommandResult<bool> NavigateToEmployersPage(int thinkTime = Constants.DefaultThinkTime)
+        public void NavigateToEmployersPage(int thinkTime = Constants.DefaultThinkTime)
         {
             Browser.ThinkTime(thinkTime);
-            return this.Execute("Employers", driver =>
+            this.Execute("Employers", driver =>
             {
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.Employers]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Employers]));
@@ -186,10 +186,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             });
         }
 
-        public BrowserCommandResult<bool> NavigateToJobOrdersPage(int thinkTime = Constants.DefaultThinkTime)
+        public void NavigateToJobOrdersPage(int thinkTime = Constants.DefaultThinkTime)
         {
             Browser.ThinkTime(thinkTime);
-            return this.Execute("JobOrders", driver =>
+            this.Execute("JobOrders", driver =>
             {
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders]));
@@ -199,7 +199,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             });
         }
 
-        public BrowserCommandResult<bool> NavigateToNewForm(int thinkTime = Constants.DefaultThinkTime)
+        public void NavigateToNewForm(int thinkTime = Constants.DefaultThinkTime)
         {
             Browser.ThinkTime(thinkTime);
             this.Execute("Form", driver =>
@@ -211,21 +211,38 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 Browser.ThinkTime(thinkTime);
                 return true;
             });
-            return true;
         }
 
-        public BrowserCommandResult<bool> NavigateToUMAApp(int thinkTime = Constants.DefaultThinkTime)
+        public void NavigateToUMAApp(int thinkTime = Constants.DefaultThinkTime)
         {
             this.Execute("App", driver =>
             {
-                Browser.ThinkTime(3000);
-                driver.SwitchTo().Frame(driver.FindElement(By.Id("AppLandingPage")));
-                Thread.Sleep(1000);
-                driver.FindElement(By.Id("app-search-input")).Click();
-                driver.FindElement(By.Id("app-search-input")).SendKeys("UMA");
-                driver.FindElement(By.Id("app-search-input")).SendKeys(Keys.Tab);
-                Browser.ThinkTime(thinkTime);
-                driver.FindElement(By.XPath("//div[text()='UMA']")).Click();
+                Browser.ThinkTime(4000);
+                if (driver.FindElements(By.XPath("//a[@data-id='appBreadCrumb']/span[text()='UMA']")).Count == 0)
+                {
+                    Browser.ThinkTime(3000);
+                    driver.Inivisibility(By.XPath("//span[contains(@id, 'notificationWrapperglobal')]"));
+                    driver.SwitchTo().Frame(driver.FindAvailable(By.Id("AppLandingPage")));
+                    Thread.Sleep(2000);
+                    driver.FindAvailable(By.Id("app-search-input")).Click();
+                    driver.FindAvailable(By.Id("app-search-input")).SendKeys("UMA");
+                    driver.FindAvailable(By.Id("app-search-input")).SendKeys(Keys.Tab);
+                    Browser.ThinkTime(thinkTime);
+                    driver.FindAvailable(By.XPath("//div[text()='UMA']")).Click();
+                    Browser.ThinkTime(3000);
+                    driver.WaitForPageToLoad();
+                    Assert.IsTrue(driver.IsVisible(By.XPath("//button[@title='Dynamics 365']")));
+                }
+                return true;
+            });
+        }
+        public BrowserCommandResult<bool> NavigateToStudentEnrollment(int thinkTime = Constants.DefaultThinkTime)
+        {
+            this.Execute("StudentEnrollment", driver =>
+            {
+                driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.StudentEnrollments]));
+                driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.StudentEnrollments]));
+                driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.StudentEnrollments])).Click();
                 driver.WaitForPageToLoad();
                 return true;
             });
@@ -236,12 +253,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
         {
             this.Execute("QuickCreate", driver =>
             {
-                Thread.Sleep(2000);
-                driver.WaitUntilClickable(By.XPath("//button[@data-id='quickCreateLauncher']")).Click();
-                Thread.Sleep(1000);
+                Browser.ThinkTime(6000);
+                driver.WaitUntilClickable(By.XPath("//button[@data-id='quickCreateLauncher']"));
+                driver.FindAvailable(By.XPath("//button[@data-id='quickCreateLauncher']")).Click();
+                Browser.ThinkTime(thinkTime);
                 var element = driver.FindAvailable(By.XPath($"//ul[contains(@id,'crm_header_global_MenuSectionItemsquickCreateLauncher')]//button[span/span[text()='{windowName}']]"));
                 element.Click();
-                Browser.ThinkTime(thinkTime);
+                Browser.ThinkTime(3000);
                 return true;
             });
             return true;

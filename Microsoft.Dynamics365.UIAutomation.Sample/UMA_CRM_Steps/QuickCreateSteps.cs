@@ -14,6 +14,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         CreateLead createLead = new CreateLead();
         CreateJobOrder createJobOrder = new CreateJobOrder();
         QuickCreateResourceAddress quickCRA = new QuickCreateResourceAddress();
+        CreateStudentEnrollment createStudentEnrollment = new CreateStudentEnrollment();
 
 
         public Api.Browser Browser;
@@ -27,17 +28,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         public void GivenCMRTest_BDRLogs_InAndNavigatesToQuickCreateWindow(string username, string windowName)
         {
             Browser = createAccount.Login(username.ToSecureString());
-            Browser.Navigation.NavigateToUMAApp();
             scenarioContext.Add("browser", Browser);
+            Browser.Navigation.NavigateToUMAApp();
             Browser.Navigation.NavigateToQuickCreate(windowName);
         }
 
         [Then(@"User should be able to create '(.*)' with pre-existing data")]
-        public void ThenUserShouldBeAbleToCreateWithPre_ExistingData(string quickCreateFormName)
+        public void ThenUserShouldBeAbleToCreateWithPre_ExistingData(string newFormName)
         {
-            if (quickCreateFormName == "Resource Address")
+            Browser = scenarioContext.Get<Api.Browser>("browser");
+            if (newFormName == "Resource Address")
             {
-                Browser = scenarioContext.Get<Api.Browser>("browser");
                 quickCRA.FillQuickCreateField(Browser, "Address Type");
                 quickCRA.FillQuickCreateField(Browser, "Address");
                 quickCRA.QuickCreateSaveAndClose(Browser);

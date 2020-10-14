@@ -17,6 +17,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         CreateAccount createAccount = new CreateAccount();
         CreateLead createLead = new CreateLead();
         CreateJobOrder createJobOrder = new CreateJobOrder();
+        CreateStudentEnrollment createStudentEnrollment = new CreateStudentEnrollment();
 
         public Api.Browser Browser;
 
@@ -49,25 +50,36 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                 createJobOrder.NavigateToNewJobOrderPage(Browser);
         }
 
-        [Given(@"Sample Step")]
-        public void GivenSampleStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
         [Given(@"CSA user logs-in and navigates to '(.*)' Page")]
         public void GivenCSAUserLogs_InAndNavigatesToPage(string pageName)
         {
             
             Browser = createAccount.Login();
-            Browser.Navigation.NavigateToUMAApp();
             scenarioContext.Add("browser", Browser);
+            Browser.Navigation.NavigateToUMAApp();
             if (pageName == "Employer")
                 createAccount.NavigateToNewEmployerPage();
             else if (pageName == "Lead")
                 createLead.NavigateToNewLeadPage(Browser);
             else if (pageName == "Job Order")
                 createJobOrder.NavigateToNewJobOrderPage(Browser);
+        }
+
+        [Given(@"(.*) logs-in and navigates to '(.*)' Page")]
+        public void GivenCRMTest_BDRUltimatemedical_EduLogs_InAndNavigatesToPage(string username, string pageName)
+        {
+            Browser = createAccount.Login(username.ToSecureString());
+            scenarioContext.Add("user", username);
+            scenarioContext.Add("browser", Browser);
+            Browser.Navigation.NavigateToUMAApp();
+            if (pageName == "Employer")
+                createAccount.NavigateToNewEmployerPage();
+            else if (pageName == "Lead")
+                createLead.NavigateToNewLeadPage(Browser);
+            else if (pageName == "Job Order")
+                createJobOrder.NavigateToNewJobOrderPage(Browser);
+            else if (pageName == "Student Enrollment")
+                Browser.Navigation.NavigateToStudentEnrollment();
         }
 
         [When(@"User creates a New Employer '(.*)' Account and saves")]
