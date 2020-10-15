@@ -19,7 +19,7 @@ Scenario: Create Employer PBI Account
 	Then User should be able to validate the created Account
 	And User should log-out of the Application
 
-@EmployerAccounts @CAD_Account
+@EmployerAccounts @Multiple_CADAccounts @10104 
 Scenario Outline: Create Employer CAD Account with multiple Users
        Given <User> logs-in and navigates to 'Employer' Page
        When User creates a New Employer 'CAD' Account and saves
