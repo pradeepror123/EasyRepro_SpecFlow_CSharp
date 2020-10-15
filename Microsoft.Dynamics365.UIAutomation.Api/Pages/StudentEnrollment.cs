@@ -80,6 +80,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
                 Thread.Sleep(2000);
                 driver.FindElement(By.XPath("//a[contains(text(),'Advanced')]")).Click();
                 Thread.Sleep(3000);
+                Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'Advanced Elementary')]")), "Cannot navigate to Advanced Elementary Student Enrollment Record");
                 return true;
             });
         }

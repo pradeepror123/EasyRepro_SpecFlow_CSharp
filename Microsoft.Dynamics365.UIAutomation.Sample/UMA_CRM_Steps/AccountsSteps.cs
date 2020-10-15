@@ -72,7 +72,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [When(@"User creates a New Employer '(.*)' Account and saves")]
         public void WhenUserCreatesANewEmployerAccountFormAndSaves(string formName)
         {
-            string empName = "";
+            string empName;
             if (formName == "PBI")
                 empName = createAccount.FillPBIEmployerFormAndSave();
             else

@@ -35,7 +35,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public static void InitializeReport()
         {
             // var HtmlBaseDirectory = Path.Combine((new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent).Parent.FullName, "Reports");
-            folderLocation = Path.Combine(new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent.FullName, "Reports", "Log_" + DateTime.Now.ToString("MM_dd_yyyy"));
+            folderLocation = Path.Combine(new FileInfo(AppDomain.CurrentDomain.BaseDirectory).Directory.Parent.FullName, "Reports", "Log_" + DateTime.Now.ToString("MM_dd_yyyy_H_mm_ss"));
             if (!Directory.Exists(folderLocation))
                 Directory.CreateDirectory(folderLocation);          
             htmlFile = Path.Combine(folderLocation, "Reports", "index.html");
