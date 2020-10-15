@@ -101,13 +101,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
- testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
  testRunner.When("User creates a New Employer \'PBI\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
  testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 9
- testRunner.And("CSA user navigates to \'Job Order\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("User navigates to \'Job Order\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
  testRunner.When("User creates a New Job Order \'with\' created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
@@ -131,13 +131,13 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 16
- testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
  testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
  testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 19
- testRunner.And("CSA user navigates to \'Job Order\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("User navigates to \'Job Order\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
  testRunner.When("User creates a New Job Order \'with\' created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21

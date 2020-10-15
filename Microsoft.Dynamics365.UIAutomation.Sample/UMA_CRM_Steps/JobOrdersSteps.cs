@@ -29,7 +29,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
             createJobOrder.FillJobOrderFormAndSave(Browser, employerName, info);
         }
         
-        [Then(@"CSA user navigates to '(.*)' Page")]
+        [Then(@"User navigates to '(.*)' Page")]
         public void ThenCSAUserNavigatesToPage(string pageName)
         {
             Browser = scenarioContext.Get<Api.Browser>("browser");

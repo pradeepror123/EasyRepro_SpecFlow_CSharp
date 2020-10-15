@@ -99,7 +99,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
- testRunner.Given("CSA User logs-in and navigates to UMA Power Automate Flows page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs-in and navigates to UMA Power Automate Flows page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
  testRunner.Then("loop through all the Flows and run them", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

@@ -36,24 +36,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
             //Console.WriteLine("driver opened and closed");
         }
 
-        [Given(@"User logs-in with (.*) and (.*) and navigates to '(.*)' Page")]
-        public void GivenCSAUserLogs_InAndNavigatesToPage(String usrname, String pswd, string pageName)
-        {
-            Browser = createAccount.Login();
-            scenarioContext.Add("browser", Browser);
-            Browser.Navigation.NavigateToUMAApp();
-            if (pageName == "Employer")
-                createAccount.NavigateToNewEmployerPage();
-            else if (pageName == "Lead")
-                createLead.NavigateToNewLeadPage(Browser);
-            else if (pageName == "Job Order")
-                createJobOrder.NavigateToNewJobOrderPage(Browser);
-        }
-
         [Given(@"CSA user logs-in and navigates to '(.*)' Page")]
         public void GivenCSAUserLogs_InAndNavigatesToPage(string pageName)
         {
-            
             Browser = createAccount.Login();
             scenarioContext.Add("browser", Browser);
             Browser.Navigation.NavigateToUMAApp();
@@ -63,12 +48,14 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                 createLead.NavigateToNewLeadPage(Browser);
             else if (pageName == "Job Order")
                 createJobOrder.NavigateToNewJobOrderPage(Browser);
+            else if (pageName == "Student Enrollment")
+                Browser.Navigation.NavigateToStudentEnrollment();
         }
 
         [Given(@"(.*) logs-in and navigates to '(.*)' Page")]
-        public void GivenCRMTest_BDRUltimatemedical_EduLogs_InAndNavigatesToPage(string username, string pageName)
+        public void GivenUserLogs_InAndNavigatesToPage(string username, string pageName)
         {
-            Browser = createAccount.Login(username.ToSecureString());
+            Browser = (username == "User") ? createAccount.Login() : createAccount.Login(username.ToSecureString());
             scenarioContext.Add("user", username);
             scenarioContext.Add("browser", Browser);
             Browser.Navigation.NavigateToUMAApp();

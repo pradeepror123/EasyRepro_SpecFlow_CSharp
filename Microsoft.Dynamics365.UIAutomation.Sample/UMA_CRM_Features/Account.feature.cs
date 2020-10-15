@@ -121,7 +121,13 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 10
- testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 11
+ testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.Then("User should be able to validate the created Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 13
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -141,7 +147,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 17
- testRunner.Given("CSA user logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
  testRunner.When("User creates a New Employer \'PBI\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
@@ -152,7 +158,7 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        public virtual void CreateEmployerCADAccountWithMultipleUsers(string username, string password, string[] exampleTags)
+        public virtual void CreateEmployerCADAccountWithMultipleUsers(string user, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "EmployerAccounts",
@@ -166,7 +172,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 24
-       testRunner.Given(string.Format("User logs-in with {0} and {1} and navigates to \'Employer\' Page", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+       testRunner.Given(string.Format("{0} logs-in and navigates to \'Employer\' Page", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 25
        testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
@@ -178,101 +184,17 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_ALMGR@ultimatemedical.ed" +
-            "u")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CAR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_ALMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ALMGRUltimatemedical_Edu()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CARUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ALMGR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ARUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_AR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_ART@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_ART@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ARTUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ART@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_ASDCAD@ultimatemedical.e" +
-            "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_ASDCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ASDCADUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ASDCAD@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_BDRUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_BDR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CADMGR@ultimatemedical.e" +
-            "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_CADMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CADMGRUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CADMGR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CAR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -284,79 +206,43 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CADMGR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_CAAM@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CAAMUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CAAM@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CAAM@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CADMGR@ultimatemedical.e" +
+            "du")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_CAR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CARUltimatemedical_Edu()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CADMGRUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CAR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CADMGR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CertS@ultimatemedical.ed" +
-            "u")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_ASDCAD@ultimatemedical.e" +
+            "du")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_CertS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CertSUltimatemedical_Edu()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ASDCADUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CertS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CSMGR@ultimatemedical.ed" +
-            "u")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_CSMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CSMGRUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CSMGR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_DIRAL@ultimatemedical.ed" +
-            "u")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_DIRAL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_DIRALUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRAL@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ASDCAD@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -368,12 +254,120 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRAL@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_DIRCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_DIRCADUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRCAD@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_ALMGR@ultimatemedical.ed" +
+            "u")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ALMGRUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ALMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ARUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ARTUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_BDRUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CertS@ultimatemedical.ed" +
+            "u")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CertSUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CSMGR@ultimatemedical.ed" +
+            "u")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CSMGRUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CSMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_DIRAL@ultimatemedical.ed" +
+            "u")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_DIRALUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRAL@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -385,12 +379,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRCAD@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_DIRCOMPLUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRCOMPL@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -402,12 +395,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIRCOMPL@ultimatemedical
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_DIROPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_DIROPSUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIROPS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIROPS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -418,12 +410,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_DIROPS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_Dir@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_DirUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_Dir@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_Dir@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -434,12 +425,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_Dir@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_EXA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_EXAUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXA@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXA@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -450,12 +440,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXA@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_EXC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_EXCUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXC@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXC@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -467,12 +456,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXC@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_EXTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_EXTMGRUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXTMGR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXTMGR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -483,12 +471,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_EXTMGR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_FD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_FDUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_FD@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_FD@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -499,12 +486,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_FD@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GDS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_GDS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GDS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_GDSUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GDS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GDS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -515,12 +501,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GDS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_GFR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_GFRUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GFR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GFR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -531,12 +516,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GFR@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_GSC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_GSCUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSC@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSC@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -548,12 +532,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSC@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_GSTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_GSTMGRUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSTMGR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSTMGR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -565,12 +548,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSTMGR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_GSTP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_GSTPUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSTP@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSTP@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -581,12 +563,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_GSTP@ultimatemedical.edu
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_IMS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_IMSUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_IMS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_IMS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -598,12 +579,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_IMS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_IntPrep@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_IntPrepUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_IntPrep@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_IntPrep@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -614,12 +594,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_IntPrep@ultimatemedical.
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_ISP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ISPUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ISP@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ISP@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -630,12 +609,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ISP@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_MIS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_MISUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_MIS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_MIS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -646,12 +624,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_MIS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_OBS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_OBSUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_OBS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_OBS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -662,12 +639,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_OBS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_OPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_OPSUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_OPS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_OPS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -679,12 +655,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_OPS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_PHTCSA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_PHTCSAUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_PHTCSA@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_PHTCSA@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -695,12 +670,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_PHTCSA@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_RS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_RSUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_RS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_RS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -711,12 +685,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_RS@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RW@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_RW@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RW@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_RWUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_RW@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_RW@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -728,12 +701,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_RW@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_SrViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_SrViPrUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_SrViPr@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_SrViPr@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -745,12 +717,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_SrViPr@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_VERMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_VERMGRUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VERMGR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VERMGR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -761,12 +732,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VERMGR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_VP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_VPUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VP@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VP@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -777,12 +747,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VP@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_VS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_VSUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -793,12 +762,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_VS@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_WAS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_WASUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_WAS@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_WAS@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -810,12 +778,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_WAS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_ViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ViPrUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ViPr@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ViPr@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
         
@@ -827,12 +794,11 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ViPr@ultimatemedical.edu
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:username", "CRMTest_AViPR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:password", "eyed--5T&tZ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPR@ultimatemedical.edu")]
         public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_AViPRUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_AViPR@ultimatemedical.edu", "eyed--5T&tZ", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_AViPR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
     }

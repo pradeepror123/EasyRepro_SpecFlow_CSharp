@@ -7,63 +7,63 @@ Scenario: Sample Scenario
 
 @EmployerAccounts @CAD_Account1
 Scenario: Create Employer CAD Account
-	Given CSA user logs-in and navigates to 'Employer' Page
-	#When User creates a New Employer 'CAD' Account and saves
-	#Then User should be able to validate the created Account
-	#And User should log-out of the Application
+	Given User logs-in and navigates to 'Employer' Page
+	When User creates a New Employer 'CAD' Account and saves
+	Then User should be able to validate the created Account
+	And User should log-out of the Application
 
 @EmployerAccounts @PBI_Account
 Scenario: Create Employer PBI Account
-	Given CSA user logs-in and navigates to 'Employer' Page
+	Given User logs-in and navigates to 'Employer' Page
 	When User creates a New Employer 'PBI' Account and saves
 	Then User should be able to validate the created Account
 	And User should log-out of the Application
 
 @EmployerAccounts @CAD_Account
 Scenario Outline: Create Employer CAD Account with multiple Users
-       Given User logs-in with <username> and <password> and navigates to 'Employer' Page
+       Given <User> logs-in and navigates to 'Employer' Page
        When User creates a New Employer 'CAD' Account and saves
        Then User should be able to validate the created Account
        And User should log-out of the Application
        Examples:
-       | username | password |
-       | CRMTest_ALMGR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_AR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_ART@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_ASDCAD@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_BDR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_CADMGR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_CAAM@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_CAR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_CertS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_CSMGR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_DIRAL@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_DIRCAD@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_DIRCOMPL@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_DIROPS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_Dir@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_EXA@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_EXC@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_EXTMGR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_FD@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_GDS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_GFR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_GSC@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_GSTMGR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_GSTP@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_IMS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_IntPrep@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_ISP@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_MIS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_OBS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_OPS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_PHTCSA@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_RS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_RW@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_SrViPr@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_VERMGR@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_VP@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_VS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_WAS@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_ViPr@ultimatemedical.edu | eyed--5T&tZ |
-       | CRMTest_AViPR@ultimatemedical.edu | eyed--5T&tZ |    
+       | User |
+       | CRMTest_CAR@ultimatemedical.edu |
+       | CRMTest_CAAM@ultimatemedical.edu |
+       | CRMTest_CADMGR@ultimatemedical.edu |
+       | CRMTest_ASDCAD@ultimatemedical.edu |
+       | CRMTest_DIRCAD@ultimatemedical.edu |
+	   | CRMTest_ALMGR@ultimatemedical.edu |
+	   | CRMTest_AR@ultimatemedical.edu |
+       | CRMTest_ART@ultimatemedical.edu |
+       | CRMTest_BDR@ultimatemedical.edu |
+       | CRMTest_CertS@ultimatemedical.edu |
+       | CRMTest_CSMGR@ultimatemedical.edu |
+       | CRMTest_DIRAL@ultimatemedical.edu |
+       | CRMTest_DIRCOMPL@ultimatemedical.edu |
+       | CRMTest_DIROPS@ultimatemedical.edu |
+       | CRMTest_Dir@ultimatemedical.edu |
+       | CRMTest_EXA@ultimatemedical.edu |
+       | CRMTest_EXC@ultimatemedical.edu |
+       | CRMTest_EXTMGR@ultimatemedical.edu |
+       | CRMTest_FD@ultimatemedical.edu |
+       | CRMTest_GDS@ultimatemedical.edu |
+       | CRMTest_GFR@ultimatemedical.edu |
+       | CRMTest_GSC@ultimatemedical.edu |
+       | CRMTest_GSTMGR@ultimatemedical.edu |
+       | CRMTest_GSTP@ultimatemedical.edu |
+       | CRMTest_IMS@ultimatemedical.edu |
+       | CRMTest_IntPrep@ultimatemedical.edu |
+       | CRMTest_ISP@ultimatemedical.edu |
+       | CRMTest_MIS@ultimatemedical.edu |
+       | CRMTest_OBS@ultimatemedical.edu |
+       | CRMTest_OPS@ultimatemedical.edu |
+       | CRMTest_PHTCSA@ultimatemedical.edu |
+       | CRMTest_RS@ultimatemedical.edu |
+       | CRMTest_RW@ultimatemedical.edu |
+       | CRMTest_SrViPr@ultimatemedical.edu |
+       | CRMTest_VERMGR@ultimatemedical.edu |
+       | CRMTest_VP@ultimatemedical.edu |
+       | CRMTest_VS@ultimatemedical.edu |
+       | CRMTest_WAS@ultimatemedical.edu |
+       | CRMTest_ViPr@ultimatemedical.edu |
+       | CRMTest_AViPR@ultimatemedical.edu |

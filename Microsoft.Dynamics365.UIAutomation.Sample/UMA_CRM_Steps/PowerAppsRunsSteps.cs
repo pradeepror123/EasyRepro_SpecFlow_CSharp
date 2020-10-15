@@ -20,7 +20,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
             this.scenarioContext = scenarioContext;
         }
 
-        [Given(@"CSA User logs-in and navigates to UMA Power Automate Flows page")]
+        [Given(@"User logs-in and navigates to UMA Power Automate Flows page")]
         public void GivenCSAUserLogs_InAndNavigatesToUMAPowerAutomateFlowsPage()
         {
             Browser = powerApps.LoginPowerApps();

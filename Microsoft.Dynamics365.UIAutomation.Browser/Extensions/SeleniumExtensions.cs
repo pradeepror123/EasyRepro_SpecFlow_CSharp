@@ -27,6 +27,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
 
         public static void EnterTextAndTab(this IWebDriver driver, By by, string value, TimeSpan timeout)
         {
+            ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight)");
             Thread.Sleep((int)timeout.TotalMilliseconds);
             driver.ScrollElement(by);
             driver.ScrollUntilElementVisible(by);
