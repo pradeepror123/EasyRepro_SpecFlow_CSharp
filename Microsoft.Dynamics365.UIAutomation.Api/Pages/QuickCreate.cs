@@ -34,11 +34,14 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 Browser.ThinkTime(1000);
                 driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(text, true);
                 Browser.ThinkTime(2000);
-                if (driver.FindElements(By.XPath("//div[contains(@aria-label, 'Lookup results')]//label[contains(text(), 'Insufficient Permissions')]")).Count > 0)
+                if (driver.FindElements(By.XPath("//div[contains(@aria-label, 'Lookup results')]//span[contains(text(), 'Insufficient Permissions')]")).Count > 0)
                     Assert.Fail($"User has Insufficient Permissions on {field} field");
+                Browser.ThinkTime(1000);
                 // driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(Keys.Escape);
                 String resultList = driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")).Text;
-                Assert.AreEqual(driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).Text, resultList);
+                driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")).Click();
+                Browser.ThinkTime(1000);
+                Assert.IsTrue(driver.IsVisible(By.XPath($"//div[@title='{resultList}']")));
                 Browser.ThinkTime(2000);
                 return true;
             });
@@ -46,15 +49,15 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
 
         }
 
-        public BrowserCommandResult<bool> SaveAndClose()
+        public void SaveAndClose()
         {
            this.Execute("SaveClose", driver =>
            {
                Browser.ThinkTime(1000);
-               driver.FindAvailable(By.XPath("//button[@id='quickCreateSaveAndCloseBtn']")).Click();
+               driver.FindAvailable(By.XPath("//button[@aria-label='Save & Close']")).Click();
+               Browser.ThinkTime(2000);
                return true;
            });
-            return true;
         }
 
         /// <summary>

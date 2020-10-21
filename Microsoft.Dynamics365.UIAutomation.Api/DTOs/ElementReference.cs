@@ -14,8 +14,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             { "Leads", "//span[text()='Leads']" },
             { "JobOrders", "//span[text()='Job Orders']" },
             { "StudentEnrollments", "//span[text()='Student Enrollments']" },
+            { "ResourceRequests", "//li[@aria-label='Resource Requests']" },
 
-            // Common Xpath's 
+            // Common Xpath's s
             { "SelectIDContains", "//select[contains(@id,'arg')]"},
             { "InputIDContains", "//input[contains(@id,'arg')]"},
 
@@ -611,6 +612,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             public static string Leads = "Leads";
             public static string JobOrders = "JobOrders";
             public static string StudentEnrollments = "StudentEnrollments";
+            public static string ResourceRequests = "ResourceRequests";
             public static string HomeTab = "Nav_HomeTab";
             public static string UMA_PowerFlows = "Nav_UMA_PowerFlows";
             public static string PowerFlow_Search = "Nav_PowerFlow_Search";

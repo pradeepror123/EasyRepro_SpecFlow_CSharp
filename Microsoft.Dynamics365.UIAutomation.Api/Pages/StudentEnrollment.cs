@@ -75,12 +75,39 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
 
         public void NavigateToEnrollmentRecord()
         {
-            this.Execute("LockedFields", driver =>
+            this.Execute("EnrollmentRecord", driver =>
             {
                 Thread.Sleep(2000);
+                driver.WaitUntilClickable(By.XPath("//a[contains(text(),'Advanced')]"));
                 driver.FindElement(By.XPath("//a[contains(text(),'Advanced')]")).Click();
                 Thread.Sleep(3000);
                 Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'Advanced Elementary')]")), "Cannot navigate to Advanced Elementary Student Enrollment Record");
+                return true;
+            });
+        }
+
+        public void NavigateToResourceUMARecord()
+        {
+            this.Execute("ResourceUMA", driver =>
+            {
+                Thread.Sleep(2000);
+                driver.FindElement(By.XPath("//a[contains(text(),'Advanced')]")).Click();
+                Thread.Sleep(4000);
+                Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'Advanced Elementary')]")), "Cannot navigate to Advanced Elementary Student Enrollment Record");
+                return true;
+            });
+        }
+
+        public void NavigateToNewResourceAddress()
+        {
+            this.Execute("ResourceAddress", driver =>
+            {
+                Thread.Sleep(2000);
+                driver.FindElement(By.XPath("//li[@aria-label='Addresses']")).Click();
+                Thread.Sleep(2000);
+                driver.FindElement(By.XPath("//button[@aria-label='New Resource Address']")).Click();
+                Thread.Sleep(4000);
+                Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'New Resource Address')]")), "Cannot navigate to 'New Resource Address'");
                 return true;
             });
         }
@@ -89,7 +116,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
         {
             this.Execute("EditableFields", driver =>
             {
-
+                // code to fill all editable fields
                 return true;
             });
         }

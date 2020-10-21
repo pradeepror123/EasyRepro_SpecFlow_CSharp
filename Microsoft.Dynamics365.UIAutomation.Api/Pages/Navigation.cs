@@ -205,7 +205,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             this.Execute("Form", driver =>
             {
                 Thread.Sleep(3000);
-                Assert.IsTrue(driver.FindElements(By.XPath(Elements.Xpath[Reference.CommandBar.NewButton])).Count() > 0, "Cannot find '+ New' Account Button");
+                Assert.IsTrue(driver.FindElements(By.XPath(Elements.Xpath[Reference.CommandBar.NewButton])).Count > 0, "Cannot find '+ New' Account Button");
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.CommandBar.NewButton]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.CommandBar.NewButton])).Click();
                 driver.WaitForPageToLoad();
@@ -222,7 +222,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 if (driver.FindElements(By.XPath("//a[@data-id='appBreadCrumb']/span[text()='UMA']")).Count == 0)
                 {
                     Browser.ThinkTime(5000);
-                    driver.Inivisibility(By.XPath("//span[contains(@id, 'notificationWrapperglobal')]"));
+                    // driver.Inivisibility(By.XPath("//span[contains(@id, 'notificationWrapperglobal')]"));
                     driver.SwitchTo().Frame(driver.FindAvailable(By.Id("AppLandingPage")));
                     Thread.Sleep(2000);
                     driver.FindAvailable(By.Id("app-search-input")).Click();
@@ -237,7 +237,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 return true;
             });
         }
-        public BrowserCommandResult<bool> NavigateToStudentEnrollment(int thinkTime = Constants.DefaultThinkTime)
+
+        public void NavigateToStudentEnrollment(int thinkTime = Constants.DefaultThinkTime)
         {
             this.Execute("StudentEnrollment", driver =>
             {
@@ -247,7 +248,21 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 driver.WaitForPageToLoad();
                 return true;
             });
-            return true;
+        }
+
+        public void NavigateToResourceRequests(int thinkTime = Constants.DefaultThinkTime)
+        {
+            this.Execute("ResourceRequests", driver =>
+            {
+                driver.WaitUntilVisible(By.XPath("//button[@data-id='more_button']"));
+                driver.FindElement(By.XPath("//button[@data-id='more_button']")).Click();
+                Thread.Sleep(500);
+                driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.ResourceRequests]));
+                driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.ResourceRequests]));
+                driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.ResourceRequests])).Click();
+                driver.WaitForPageToLoad();
+                return true;
+            });
         }
 
         public BrowserCommandResult<bool> NavigateToQuickCreate(string windowName, int thinkTime = Constants.DefaultThinkTime)
@@ -320,8 +335,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 // All Drop Downs
                 Thread.Sleep(500);
                 ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0,document.body.scrollHeight)");
-                
-                
                 driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "employmenttype")), "Work From Home", TimeSpan.FromSeconds(2));
                 driver.SelectDropDownValue(By.XPath(Elements.Xpath["SelectIDContains"].Replace("arg", "typesofpositiontheofficehiresfor")), "Admin", TimeSpan.FromSeconds(2));
                 // LookUp Fields
@@ -345,7 +358,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             {
                 driver.WaitForPageToLoad();
                 Browser.ThinkTime(1000);
-                Assert.IsTrue(driver.FindElements(By.XPath($"//span[contains(text(), 'UMA ')]")).Count() > 0, "Cannot find drop-down field next to Account");
+                Assert.IsTrue(driver.FindElements(By.XPath($"//span[contains(text(), 'UMA ')]")).Count > 0, "Cannot find drop-down field next to Account");
                 driver.FindElement(By.XPath($"//span[contains(text(), 'UMA ')]")).Click();
                 Thread.Sleep(1000);
                 Assert.IsTrue(driver.FindElements(By.XPath($"//span[text()='UMA {formName}']")).Count > 0, $"Cannot find drop-down select field 'UMA {formName}'");

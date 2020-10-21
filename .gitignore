@@ -329,3 +329,5 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 /Microsoft.Dynamics365.UIAutomation.Sample/Reports
+/TestCases/Reports/Log_10_15_2020/Reports
+/TestCases/Reports

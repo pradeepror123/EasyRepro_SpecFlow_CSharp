@@ -36,22 +36,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
             //Console.WriteLine("driver opened and closed");
         }
 
-        [Given(@"CSA user logs-in and navigates to '(.*)' Page")]
-        public void GivenCSAUserLogs_InAndNavigatesToPage(string pageName)
-        {
-            Browser = createAccount.Login();
-            scenarioContext.Add("browser", Browser);
-            Browser.Navigation.NavigateToUMAApp();
-            if (pageName == "Employer")
-                createAccount.NavigateToNewEmployerPage();
-            else if (pageName == "Lead")
-                createLead.NavigateToNewLeadPage(Browser);
-            else if (pageName == "Job Order")
-                createJobOrder.NavigateToNewJobOrderPage(Browser);
-            else if (pageName == "Student Enrollment")
-                Browser.Navigation.NavigateToStudentEnrollment();
-        }
-
         [Given(@"(.*) logs-in and navigates to '(.*)' Page")]
         public void GivenUserLogs_InAndNavigatesToPage(string username, string pageName)
         {
@@ -59,14 +43,28 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
             scenarioContext.Add("user", username);
             scenarioContext.Add("browser", Browser);
             Browser.Navigation.NavigateToUMAApp();
-            if (pageName == "Employer")
-                createAccount.NavigateToNewEmployerPage();
-            else if (pageName == "Lead")
-                createLead.NavigateToNewLeadPage(Browser);
-            else if (pageName == "Job Order")
-                createJobOrder.NavigateToNewJobOrderPage(Browser);
-            else if (pageName == "Student Enrollment")
-                Browser.Navigation.NavigateToStudentEnrollment();
+            switch (pageName)
+            {
+                case "Employer":
+                    createAccount.NavigateToNewEmployerPage();
+                    break;
+                case "Lead":
+                    createLead.NavigateToNewLeadPage(Browser);
+                    break;
+                case "Job Order":
+                    createJobOrder.NavigateToNewJobOrderPage(Browser);
+                    break;
+                case "Student Enrollment":
+                    Browser.Navigation.NavigateToStudentEnrollment();
+                    break;
+                case "New Resource Address":
+                    Browser.Navigation.NavigateToStudentEnrollment();
+                    createStudentEnrollment.NavigateToStudentEnrollmentRecord(Browser);
+                    Browser.Navigation.NavigateToResourceRequests();
+                    createStudentEnrollment.NavigateToResourceUMARecord(Browser);
+                    createStudentEnrollment.NavigateToNewResourceAddress(Browser);
+                    break;
+            }
         }
 
         [When(@"User creates a New Employer '(.*)' Account and saves")]

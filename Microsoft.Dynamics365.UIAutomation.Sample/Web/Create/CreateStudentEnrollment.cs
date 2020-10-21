@@ -20,6 +20,18 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
         {
             this.xrmBrowser = xrmBrowser;
             xrmBrowser.StudentEnrollment.NavigateToEnrollmentRecord();
+            
+        }
+        public void NavigateToResourceUMARecord(Api.Browser xrmBrowser)
+        {
+            this.xrmBrowser = xrmBrowser;
+            xrmBrowser.StudentEnrollment.NavigateToResourceUMARecord();
+        }
+
+        public void NavigateToNewResourceAddress(Api.Browser xrmBrowser)
+        {
+            this.xrmBrowser = xrmBrowser;
+            xrmBrowser.StudentEnrollment.NavigateToNewResourceAddress();
         }
 
         public void ValidateEditableFields(Api.Browser xrmBrowser)

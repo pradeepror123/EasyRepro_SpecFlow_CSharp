@@ -151,6 +151,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuickCreate.feature</DependentUpon>
     </Compile>
+    <Compile Include="UMA_CRM_Features\ResourcesAddress.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourcesAddress.feature</DependentUpon>
+    </Compile>
     <Compile Include="UMA_CRM_Features\StudentEnrollment.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -353,6 +358,10 @@
     <None Include="UMA_CRM_Features\QuickCreate.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuickCreate.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UMA_CRM_Features\ResourcesAddress.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ResourcesAddress.feature.cs</LastGenOutput>
     </None>
     <None Include="UMA_CRM_Features\StudentEnrollment.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

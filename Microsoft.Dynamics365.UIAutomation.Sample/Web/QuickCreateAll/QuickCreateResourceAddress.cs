@@ -15,10 +15,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
     {
         public Api.Browser xrmBrowser = new Api.Browser(TestSettings.Options);
 
-        public void FillQuickCreateField(Api.Browser xrmBrowser, string fieldName)
+        public void FillQuickCreateField(Api.Browser xrmBrowser, string fieldName, string fieldText)
         {
             this.xrmBrowser = xrmBrowser;
-            xrmBrowser.QuickCreate.FillLookUpField(fieldName, "c");
+            xrmBrowser.QuickCreate.FillLookUpField(fieldName, fieldText);
         }
 
         public void QuickCreateSaveAndClose(Api.Browser xrmBrowser)

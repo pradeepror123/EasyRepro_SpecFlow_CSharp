@@ -39,8 +39,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
             Browser = scenarioContext.Get<Api.Browser>("browser");
             if (newFormName == "Resource Address")
             {
-                quickCRA.FillQuickCreateField(Browser, "Address Type");
-                quickCRA.FillQuickCreateField(Browser, "Address");
+                quickCRA.FillQuickCreateField(Browser, "Address Type", "a");
+                quickCRA.FillQuickCreateField(Browser, "Address", "m");
                 quickCRA.QuickCreateSaveAndClose(Browser);
             }
         }
