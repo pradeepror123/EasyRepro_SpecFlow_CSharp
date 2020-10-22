@@ -1,33 +1,31 @@
-﻿//using System;
-//using TechTalk.SpecFlow;
+﻿using Microsoft.Dynamics365.UIAutomation.Sample.Web;
+using Microsoft.Dynamics365.UIAutomation.Sample.Web.Create;
+using System;
+using TechTalk.SpecFlow;
 
-//namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
-//{
-//    [Binding]
-//    public class SpecFlowFeature1Steps
-//    {
-//        [Given(@"the first number is (.*)")]
-//        public void GivenTheFirstNumberIs(int p0)
-//        {
-//            ScenarioContext.Current.Pending();
-//        }
-        
-//        [Given(@"the second number is (.*)")]
-//        public void GivenTheSecondNumberIs(int p0)
-//        {
-//            ScenarioContext.Current.Pending();
-//        }
-        
-//        [When(@"the two numbers are added")]
-//        public void WhenTheTwoNumbersAreAdded()
-//        {
-//            ScenarioContext.Current.Pending();
-//        }
-        
-//        [Then(@"the result should be (.*)")]
-//        public void ThenTheResultShouldBe(int p0)
-//        {
-//            ScenarioContext.Current.Pending();
-//        }
-//    }
-//}
+namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
+{
+    [Binding]
+    public class ApplicationSteps
+    {
+        readonly ScenarioContext scenarioContext;
+        CreateAccount createAccount = new CreateAccount();
+        CreateLead createLead = new CreateLead();
+        CreateJobOrder createJobOrder = new CreateJobOrder();
+        CreateStudentEnrollment createStudentEnrollment = new CreateStudentEnrollment();
+
+        public Api.Browser Browser;
+
+        public ApplicationSteps(ScenarioContext scenarioContext)
+        {
+            this.scenarioContext = scenarioContext;
+        }
+
+        [Then(@"validate delete icon is displayed on selection of a record")]
+        public void ThenValidateDeleteIconIsDisplayedOnSelectionOfARecord()
+        {
+            Browser = scenarioContext.Get<Api.Browser>("browser");
+            Browser.Navigation.ValidateDeleteIcon();
+        }
+    }
+}

@@ -168,6 +168,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Leads]));
                 Browser.ThinkTime(thinkTime);
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.Leads])).Click();
+                Browser.ThinkTime(thinkTime);
                 driver.WaitForPageToLoad();
                 return true;
             });
@@ -181,6 +182,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.Employers]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Employers]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.Employers])).Click();
+                Browser.ThinkTime(thinkTime);
                 driver.WaitForPageToLoad();
                 return true;
             });
@@ -194,6 +196,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.JobOrders])).Click();
+                Browser.ThinkTime(thinkTime);
                 driver.WaitForPageToLoad();
                 return true;
             });
@@ -245,6 +248,21 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.StudentEnrollments]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.StudentEnrollments]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.StudentEnrollments])).Click();
+                Browser.ThinkTime(thinkTime);
+                driver.WaitForPageToLoad();
+                return true;
+            });
+        }
+
+        public void NavigateToApplicationPage(int thinkTime = Constants.DefaultThinkTime)
+        {
+            Browser.ThinkTime(thinkTime);
+            this.Execute("AccountPage", driver =>
+            {
+                driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.Applications]));
+                driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.Applications]));
+                driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.Applications])).Click();
+                Browser.ThinkTime(thinkTime);
                 driver.WaitForPageToLoad();
                 return true;
             });
@@ -260,6 +278,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Navigation.ResourceRequests]));
                 driver.WaitUntilAvailable(By.XPath(Elements.Xpath[Reference.Navigation.ResourceRequests]));
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Navigation.ResourceRequests])).Click();
+                Browser.ThinkTime(thinkTime);
                 driver.WaitForPageToLoad();
                 return true;
             });
@@ -305,6 +324,26 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 return true;
             });
             return true;    
+        }
+
+        public void ValidateDeleteIcon(int thinkTime = Constants.DefaultThinkTime)
+        {
+            Browser.ThinkTime(3000);
+            this.Execute("Deletion", driver =>
+            {
+                Assert.IsTrue(driver.FindElements(By.XPath("//div[@header-row-number='0']/div[@aria-label='Row checkbox']")).Count > 0,
+                    "No records are displayed to select");
+                driver.WaitUntilAvailable(By.XPath("//div[@header-row-number='0']/div[@aria-label='Row checkbox']"));
+                driver.FindElement(By.XPath("//div[@header-row-number='0']")).Click();
+                Browser.ThinkTime(1000);
+                Assert.IsTrue(driver.FindElements(By.XPath("//div[@header-row-number='0']/div[@aria-checked='true']")).Count > 0, 
+                    "Checkbox is not checked on the first row");
+                Browser.ThinkTime(1000);
+                Assert.IsTrue(driver.FindElements(By.XPath("//button[contains(@title, 'Delete')]//span[@aria-label='Delete']")).Count > 0,
+                    "Delete Button is not displayed on the ribbon");
+                driver.WaitForPageToLoad();
+                return true;
+            });
         }
 
         public String employerName;
@@ -381,6 +420,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 employerName = "Employer_" + num;
                 Thread.Sleep(1000);
                 driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "name")+ "[@aria-label='Employer Name']"), employerName, TimeSpan.FromSeconds(1));
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight)");
                 driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "telephone1")), "12345" + num, TimeSpan.FromSeconds(1));
                 driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_line1")), "123 New St", TimeSpan.FromSeconds(1));
                 driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_city")), "San Antonio", TimeSpan.FromSeconds(1));

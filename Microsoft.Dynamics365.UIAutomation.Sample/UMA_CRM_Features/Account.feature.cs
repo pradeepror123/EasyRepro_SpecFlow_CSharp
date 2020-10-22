@@ -185,67 +185,36 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Multiple_CADAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10104")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ARUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_ART@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Multiple_CADAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10104")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_ARTUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Multiple_CADAccounts")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10104")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_BDRUltimatemedical_Edu()
-        {
-#line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CertS@ultimatemedical.ed" +
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CRMGR@ultimatemedical.ed" +
             "u")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Multiple_CADAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10104")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
-        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CertSUltimatemedical_Edu()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRMGR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CRMGRUltimatemedical_Edu()
         {
 #line 23
-this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CRMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CRDIR@ultimatemedical.ed" +
+            "u")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Multiple_CADAccounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10104")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRDIR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRDIR@ultimatemedical.edu")]
+        public virtual void CreateEmployerCADAccountWithMultipleUsers_CRMTest_CRDIRUltimatemedical_Edu()
+        {
+#line 23
+this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CRDIR@ultimatemedical.edu", ((string[])(null)));
 #line hidden
         }
     }

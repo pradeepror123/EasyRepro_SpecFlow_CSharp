@@ -43,28 +43,19 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
             scenarioContext.Add("user", username);
             scenarioContext.Add("browser", Browser);
             Browser.Navigation.NavigateToUMAApp();
-            switch (pageName)
-            {
-                case "Employer":
-                    createAccount.NavigateToNewEmployerPage();
-                    break;
-                case "Lead":
-                    createLead.NavigateToNewLeadPage(Browser);
-                    break;
-                case "Job Order":
-                    createJobOrder.NavigateToNewJobOrderPage(Browser);
-                    break;
-                case "Student Enrollment":
-                    Browser.Navigation.NavigateToStudentEnrollment();
-                    break;
-                case "New Resource Address":
-                    Browser.Navigation.NavigateToStudentEnrollment();
-                    createStudentEnrollment.NavigateToStudentEnrollmentRecord(Browser);
-                    Browser.Navigation.NavigateToResourceRequests();
-                    createStudentEnrollment.NavigateToResourceUMARecord(Browser);
-                    createStudentEnrollment.NavigateToNewResourceAddress(Browser);
-                    break;
-            }
+            NavigateToPageName(pageName);
+        }
+
+        [Then(@"User navigates to '(.*)' Page")]
+        public void ThenCSAUserNavigatesToPage(string pageName)
+        {
+            Browser = scenarioContext.Get<Api.Browser>("browser");
+            if (pageName == "Job Order")
+                Browser.Navigation.NavigateToJobOrdersPage(500);
+            else if (pageName == "Lead")
+                Browser.Navigation.NavigateToLeadsPage(500);
+            else if (pageName == "Employer")
+                Browser.Navigation.NavigateToEmployersPage(500);
         }
 
         [When(@"User creates a New Employer '(.*)' Account and saves")]
@@ -90,6 +81,50 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         {
             Api.Browser a = scenarioContext.Get<Api.Browser>("browser");
             createAccount.LogOutUser(a);
+        }
+
+        public void NavigateToPageName(string pageName)
+        {
+            switch (pageName)
+            {
+                case "New Employer":
+                    createAccount.NavigateToNewEmployerPage();
+                    break;
+                case "Employer":
+                    createAccount.NavigateToEmployerPage();
+                    break;
+                case "New Lead":
+                    createLead.NavigateToNewLeadPage(Browser);
+                    break;
+                case "Lead":
+                    createLead.NavigateToLeadPage(Browser);
+                    break;
+                case "New Job Order":
+                    createJobOrder.NavigateToNewJobOrderPage(Browser);
+                    break;
+                case "Job Order":
+                    createJobOrder.NavigateToJobOrderPage(Browser);
+                    break;
+                case "Student Enrollment":
+                    Browser.Navigation.NavigateToStudentEnrollment();
+                    break;
+                case "Application":
+                    Browser.Navigation.NavigateToApplicationPage();
+                    break;
+                case "New Resource Address":
+                    Browser.Navigation.NavigateToStudentEnrollment();
+                    createStudentEnrollment.NavigateToStudentEnrollmentRecord(Browser);
+                    Browser.Navigation.NavigateToResourceRequests();
+                    createStudentEnrollment.NavigateToResourceUMARecord(Browser);
+                    createStudentEnrollment.NavigateToNewResourceAddress(Browser);
+                    break;
+                case "Resource Address":
+                    Browser.Navigation.NavigateToStudentEnrollment();
+                    createStudentEnrollment.NavigateToStudentEnrollmentRecord(Browser);
+                    Browser.Navigation.NavigateToResourceRequests();
+                    createStudentEnrollment.NavigateToResourceUMARecord(Browser);
+                    break;
+            }
         }
 
     }

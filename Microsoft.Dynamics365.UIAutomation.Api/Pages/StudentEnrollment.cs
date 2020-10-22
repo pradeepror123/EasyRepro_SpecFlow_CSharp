@@ -73,7 +73,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
                 Assert.IsNotNull(driver.FindElement(By.XPath(field)).GetAttribute("aria-readonly"), $"{field} does not have aria-readonly as true");
         }
 
-        public void NavigateToEnrollmentRecord()
+        public void NavigateToExistingEnrollmentRecord()
         {
             this.Execute("EnrollmentRecord", driver =>
             {

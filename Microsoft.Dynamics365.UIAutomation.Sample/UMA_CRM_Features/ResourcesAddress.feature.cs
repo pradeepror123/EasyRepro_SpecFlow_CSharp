@@ -92,11 +92,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access and creation of Address/Address Type fields on Resources Address")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Resources Address")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
         public virtual void ValidateAccessAndCreationOfAddressAddressTypeFieldsOnResourcesAddress()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate access and creation of Address/Address Type fields on Resources Address", null, new string[] {
-                        ""});
+                        "ResourcesAddress"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

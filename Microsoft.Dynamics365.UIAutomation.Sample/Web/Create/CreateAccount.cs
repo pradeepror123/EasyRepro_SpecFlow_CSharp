@@ -27,7 +27,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
                 xrmBrowser.GuidedHelp.CloseGuidedHelp();
             }
             catch{ }
-            
             return xrmBrowser;
         }
 
@@ -43,6 +42,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         {
             xrmBrowser.Navigation.NavigateToEmployersPage(500);
             xrmBrowser.Navigation.NavigateToNewForm(1000);
+        }
+
+        public void NavigateToEmployerPage()
+        {
+            xrmBrowser.Navigation.NavigateToEmployersPage(500);
         }
 
         //[TestMethod]

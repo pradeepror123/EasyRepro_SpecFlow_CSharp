@@ -101,7 +101,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
- testRunner.Given("User logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs-in and navigates to \'New Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
  testRunner.When("User creates a New Employer \'PBI\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
@@ -131,7 +131,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 16
- testRunner.Given("User logs-in and navigates to \'Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs-in and navigates to \'New Employer\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
  testRunner.When("User creates a New Employer \'CAD\' Account and saves", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18

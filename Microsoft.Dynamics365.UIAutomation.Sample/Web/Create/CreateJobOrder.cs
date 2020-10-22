@@ -29,6 +29,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
             xrmBrowser.Navigation.NavigateToNewForm(1000);
         }
 
+        public void NavigateToJobOrderPage(Api.Browser xrmBrowser)
+        {
+            this.xrmBrowser = xrmBrowser;
+            xrmBrowser.Navigation.NavigateToJobOrdersPage(500);
+        }
+
         public void ValidateCreatedJobOrder(Api.Browser xrmBrowser)
         {
             this.xrmBrowser = xrmBrowser;

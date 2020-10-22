@@ -44,8 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Application", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Application", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -86,6 +85,2394 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
+        }
+        
+        public virtual void ValidateAccessToDeleteAnApplication(string user, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Application",
+                    "DeleteRecordAccess"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate access to delete an Application", null, @__tags);
+#line 4
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 5
+ testRunner.Given(string.Format("{0} logs-in and navigates to \'Application\' Page", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ testRunner.Then("validate delete icon is displayed on selection of a record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 7
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_ALMGRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_ALMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_ARUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_ARTUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_ASDCADUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_ASDCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_AViPrUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_AViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_BDRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_CADMGRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_CADMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_CSMGRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_CSMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_CertSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_CAAMUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_CAAM@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_CARUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_CAR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_DIRALUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_DIRAL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_DIRCADUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_DIRCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_DIRCOMPLUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_DirUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_Dir@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_DIROPSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_DIROPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_EXAUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_EXA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_EXCUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_EXC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_EXTMGRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_EXTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_FDUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_FD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_GFRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_GFR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GDS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_GDSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_GDS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_GSCUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_GSC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_GSTMGRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_GSTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_GSTPUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_GSTP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_IMSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_IMS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_ISPUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_ISP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_IntPrepUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_IntPrep@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_MISUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_MIS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_OBSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_OBS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_PHTCSAUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_PHTCSA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_RSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_RS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RW@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_RWUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_RW@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_SrViPrUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_SrViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_OPSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_OPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_VERMGRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_VERMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_VPUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_VP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_VSUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_VS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_ViPrUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_ViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_WASUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_WAS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnApplication_CRMTest_CRMGRUltimatemedical_Edu()
+        {
+#line 4
+this.ValidateAccessToDeleteAnApplication("CRMTest_CRMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void ValidateAccessToDeleteAJobOrder(string user, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "JobOrder",
+                    "DeleteRecordAccess"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate access to delete a Job Order", null, @__tags);
+#line 53
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 54
+ testRunner.Given(string.Format("{0} logs-in and navigates to \'Job Order\' Page", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 55
+ testRunner.Then("validate delete icon is displayed on selection of a record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 56
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_ALMGRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_ALMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_ARUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_ARTUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_ASDCADUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_ASDCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_AViPrUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_AViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_BDRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_CADMGRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_CADMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_CSMGRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_CSMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_CertSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_CAAMUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_CAAM@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_CARUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_CAR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_DIRALUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_DIRAL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_DIRCADUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_DIRCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_DIRCOMPLUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_DirUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_Dir@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_DIROPSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_DIROPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_EXAUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_EXA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_EXCUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_EXC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_EXTMGRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_EXTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_FDUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_FD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_GFRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_GFR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GDS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_GDSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_GDS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_GSCUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_GSC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_GSTMGRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_GSTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_GSTPUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_GSTP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_IMSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_IMS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_ISPUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_ISP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_IntPrepUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_IntPrep@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_MISUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_MIS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_OBSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_OBS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_PHTCSAUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_PHTCSA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_RSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_RS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RW@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_RWUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_RW@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_SrViPrUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_SrViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_OPSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_OPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_VERMGRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_VERMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_VPUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_VP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_VSUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_VS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_ViPrUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_ViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_WASUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_WAS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Job Order: CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAJobOrder_CRMTest_CRMGRUltimatemedical_Edu()
+        {
+#line 53
+this.ValidateAccessToDeleteAJobOrder("CRMTest_CRMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void ValidateAccessToDeleteALead(string user, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Lead",
+                    "DeleteRecordAccess"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate access to delete a Lead", null, @__tags);
+#line 102
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 103
+ testRunner.Given(string.Format("{0} logs-in and navigates to \'Lead\' Page", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 104
+ testRunner.Then("validate delete icon is displayed on selection of a record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 105
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_ALMGRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_ALMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_ARUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_ARTUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_ASDCADUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_ASDCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_AViPrUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_AViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_BDRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_CADMGRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_CADMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_CSMGRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_CSMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_CertSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_CAAMUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_CAAM@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_CARUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_CAR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_DIRALUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_DIRAL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_DIRCADUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_DIRCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_DIRCOMPLUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_DirUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_Dir@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_DIROPSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_DIROPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_EXAUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_EXA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_EXCUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_EXC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_EXTMGRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_EXTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_FDUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_FD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_GFRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_GFR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GDS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_GDSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_GDS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_GSCUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_GSC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_GSTMGRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_GSTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_GSTPUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_GSTP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_IMSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_IMS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_ISPUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_ISP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_IntPrepUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_IntPrep@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_MISUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_MIS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_OBSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_OBS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_PHTCSAUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_PHTCSA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_RSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_RS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RW@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_RWUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_RW@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_SrViPrUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_SrViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_OPSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_OPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_VERMGRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_VERMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_VPUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_VP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_VSUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_VS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_ViPrUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_ViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_WASUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_WAS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete a Lead: CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteALead_CRMTest_CRMGRUltimatemedical_Edu()
+        {
+#line 102
+this.ValidateAccessToDeleteALead("CRMTest_CRMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void ValidateAccessToDeleteAnEmployer(string user, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Employer",
+                    "DeleteRecordAccess"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate access to delete an Employer", null, @__tags);
+#line 151
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 152
+ testRunner.Given(string.Format("{0} logs-in and navigates to \'Employer\' Page", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 153
+ testRunner.Then("validate delete icon is displayed on selection of a record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 154
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_ALMGRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_ALMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_ARUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_ARTUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_ASDCADUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_ASDCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_AViPrUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_AViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_BDRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_CADMGRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_CADMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_CSMGRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_CSMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_CertSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_CAAMUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_CAAM@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_CARUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_CAR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_DIRALUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_DIRAL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_DIRCADUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_DIRCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_DIRCOMPLUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_DirUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_Dir@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_DIROPSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_DIROPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_EXAUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_EXA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_EXCUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_EXC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_EXTMGRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_EXTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_FDUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_FD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_GFRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_GFR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GDS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_GDSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_GDS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_GSCUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_GSC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_GSTMGRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_GSTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_GSTPUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_GSTP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_IMSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_IMS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_ISPUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_ISP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_IntPrepUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_IntPrep@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_MISUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_MIS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_OBSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_OBS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_PHTCSAUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_PHTCSA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_RSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_RS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RW@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_RWUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_RW@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_SrViPrUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_SrViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_OPSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_OPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_VERMGRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_VERMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_VPUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_VP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_VSUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_VS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_ViPrUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_ViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_WASUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_WAS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRMGR@ultimatemedical.edu")]
+        public virtual void ValidateAccessToDeleteAnEmployer_CRMTest_CRMGRUltimatemedical_Edu()
+        {
+#line 151
+this.ValidateAccessToDeleteAnEmployer("CRMTest_CRMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
         }
     }
 }

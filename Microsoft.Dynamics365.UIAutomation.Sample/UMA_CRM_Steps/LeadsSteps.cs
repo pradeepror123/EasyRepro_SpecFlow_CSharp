@@ -22,7 +22,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
         public void WhenUserCreatesANewLeadEmployerContactAndSaves(string info)
         {
             createLead = new CreateLead();
-            empName = (scenarioContext.Count == 1) ? "a" : scenarioContext.Get<string>("EmployerName");
+            try { empName = scenarioContext.Get<string>("EmployerName");
+            } catch { empName = "a"; }
             accountName = createLead.FillLeadFormAndSave(empName, scenarioContext.Get<Api.Browser>("browser"), info);
         }
 

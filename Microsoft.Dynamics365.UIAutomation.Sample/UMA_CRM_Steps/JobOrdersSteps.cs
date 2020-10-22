@@ -29,16 +29,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
             createJobOrder.FillJobOrderFormAndSave(Browser, employerName, info);
         }
         
-        [Then(@"User navigates to '(.*)' Page")]
-        public void ThenCSAUserNavigatesToPage(string pageName)
-        {
-            Browser = scenarioContext.Get<Api.Browser>("browser");
-            if (pageName == "Job Order")
-                Browser.Navigation.NavigateToJobOrdersPage(500);
-            else if (pageName == "Lead")
-                Browser.Navigation.NavigateToLeadsPage(500);
-        }
-        
         [Then(@"User should be able to validate the created Job Order")]
         public void ThenUserShouldBeAbleToValidateTheCreatedJobOrder()
         {

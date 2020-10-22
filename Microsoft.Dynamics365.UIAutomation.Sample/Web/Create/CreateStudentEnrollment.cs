@@ -19,7 +19,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web.Create
         public void NavigateToStudentEnrollmentRecord(Api.Browser xrmBrowser)
         {
             this.xrmBrowser = xrmBrowser;
-            xrmBrowser.StudentEnrollment.NavigateToEnrollmentRecord();
+            xrmBrowser.StudentEnrollment.NavigateToExistingEnrollmentRecord();
             
         }
         public void NavigateToResourceUMARecord(Api.Browser xrmBrowser)

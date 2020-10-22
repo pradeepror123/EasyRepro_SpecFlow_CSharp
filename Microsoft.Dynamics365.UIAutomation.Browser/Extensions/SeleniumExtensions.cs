@@ -27,10 +27,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
 
         public static void EnterTextAndTab(this IWebDriver driver, By by, string value, TimeSpan timeout)
         {
-            ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight)");
-            Thread.Sleep((int)timeout.TotalMilliseconds);
-            driver.ScrollElement(by);
-            driver.ScrollUntilElementVisible(by);
+            SearchForElement(driver, by, timeout);
             var element = driver.FindElement(by);
             element.Click();
             driver.DoubleClick(element);
@@ -38,6 +35,17 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
             element.Clear();
             element.SendKeys(value);
             element.SendKeys(Keys.Tab);           
+        }
+
+        public static void SearchForElement(IWebDriver driver, By by, TimeSpan timeout)
+        {
+            while (driver.FindElements(by).Count == 0)
+            {
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight), "");
+                Thread.Sleep((int)timeout.TotalMilliseconds);
+                driver.ScrollElement(by);
+                driver.ScrollUntilElementVisible(by);
+            }
         }
 
         public static void SelectDropDownValue(this IWebDriver driver, By by, string value, TimeSpan timeout,bool click = true)

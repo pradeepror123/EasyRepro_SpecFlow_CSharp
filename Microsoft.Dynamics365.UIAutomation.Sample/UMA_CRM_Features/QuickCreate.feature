@@ -1,6 +1,6 @@
 ﻿Feature: Create Address Type and Address from Quick Create Window
 
-@AddressQuickCreate
+@ResourceAddressQuickCreate @10343 @QuickCreate
 Scenario Outline: Quick Create Resource Address
 	Given <User> logs-in and navigates to Quick Create 'Resource Address' Window
 	Then  User should be able to create 'Resource Address' with pre-existing data

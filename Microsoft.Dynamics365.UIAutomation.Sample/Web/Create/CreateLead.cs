@@ -31,9 +31,14 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         public void NavigateToNewLeadPage(Api.Browser xrmBrowser)
         {
             this.xrmBrowser = xrmBrowser;
-
             xrmBrowser.Navigation.NavigateToLeadsPage(500);
             xrmBrowser.Navigation.NavigateToNewForm(1000);
+        }
+
+        public void NavigateToLeadPage(Api.Browser xrmBrowser)
+        {
+            this.xrmBrowser = xrmBrowser;
+            xrmBrowser.Navigation.NavigateToLeadsPage(500);
         }
 
         public void ValidateCreatedLead(Api.Browser xrmBrowser, String employerName)
