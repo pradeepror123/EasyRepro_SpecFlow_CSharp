@@ -41,7 +41,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
         {
             while (driver.FindElements(by).Count == 0)
             {
-                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight), "");
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight)", "");
                 Thread.Sleep((int)timeout.TotalMilliseconds);
                 driver.ScrollElement(by);
                 driver.ScrollUntilElementVisible(by);
