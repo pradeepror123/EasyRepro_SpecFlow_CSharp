@@ -27,5 +27,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Steps
             Browser = scenarioContext.Get<Api.Browser>("browser");
             Browser.Navigation.ValidateDeleteIcon();
         }
+
+        [Then(@"validate the access restriction of '(.*)' button")]
+        public void ThenValidateTheAccessRestrictionOfButton(string buttonName)
+        {
+            Browser = scenarioContext.Get<Api.Browser>("browser");
+            Browser.Navigation.ValidateButton(buttonName);
+        }
+
     }
 }

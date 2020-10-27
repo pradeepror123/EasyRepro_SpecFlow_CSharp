@@ -328,9 +328,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
 
         public void ValidateDeleteIcon(int thinkTime = Constants.DefaultThinkTime)
         {
-            Browser.ThinkTime(3000);
             this.Execute("Deletion", driver =>
             {
+                Browser.ThinkTime(3000);
+                driver.WaitUntilClickable(By.XPath("//button[@title='Select All']"), "Select All button is not clickable");
                 Assert.IsTrue(driver.FindElements(By.XPath("//div[@header-row-number='0']/div[@aria-label='Row checkbox']")).Count > 0,
                     "No records are displayed to select");
                 driver.WaitUntilAvailable(By.XPath("//div[@header-row-number='0']/div[@aria-label='Row checkbox']"));
@@ -342,6 +343,18 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
                 Assert.IsTrue(driver.FindElements(By.XPath("//button[contains(@title, 'Delete')]//span[@aria-label='Delete']")).Count > 0,
                     "Delete Button is not displayed on the ribbon");
                 driver.WaitForPageToLoad();
+                return true;
+            });
+        }
+
+        public void ValidateButton(string buttonName,int thinkTime = Constants.DefaultThinkTime)
+        {
+            this.Execute("Deletion", driver =>
+            {
+                Browser.ThinkTime(3000);
+                driver.WaitUntilClickable(By.XPath("//button[@title='Select All']"), "Select All button is not clickable");
+                Assert.IsTrue(driver.FindElements(By.XPath($"//span[@aria-label='{buttonName}']")).Count > 0,
+                    $"{buttonName} button not available");
                 return true;
             });
         }

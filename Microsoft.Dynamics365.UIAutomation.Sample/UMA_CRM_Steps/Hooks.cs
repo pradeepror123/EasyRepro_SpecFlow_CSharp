@@ -39,7 +39,6 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
             if (!Directory.Exists(folderLocation))
                 Directory.CreateDirectory(folderLocation);          
             htmlFile = Path.Combine(folderLocation, "Reports", "index.html");
-
             var htmlReporter = new ExtentHtmlReporter(htmlFile);
             htmlReporter.Config.Theme = Theme.Standard;
             htmlReporter.Config.JS = "$('.brand-logo').text('').append('<img src=D:\\Users\\jloyzaga\\Documents\\FrameworkForJoe\\FrameworkForJoe\\Capgemini_logo_high_res-smaller-2.jpg>')";
