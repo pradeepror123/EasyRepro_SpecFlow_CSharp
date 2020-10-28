@@ -54,7 +54,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public static void TearDownReport()
         {
             _extent.Flush();            
-            Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", string.Format("\"{0}\"", htmlFile));            
+            // Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", string.Format("\"{0}\"", htmlFile));            
         }
 
         [BeforeFeature]
@@ -118,8 +118,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
                 filename.Append(DateTime.Now.ToString("dd-mm-yyyy HH_mm_ss"));
                 filename.Append(".png");
 
-                browser.TakeWindowScreenShot(filename.ToString(), ScreenshotImageFormat.Png);
-                scenario.CreateNode($"<div><span><a href='{@filename.ToString()}' target='_blank'>Screen Shot</a></span></div>"+ " ", errorMessage);
+                // browser.TakeWindowScreenShot(filename.ToString(), ScreenshotImageFormat.Png);
+                // scenario.CreateNode($"<div><span><a href='{@filename.ToString()}' target='_blank'>Screen Shot</a></span></div>"+ " ", errorMessage);
             }
         }
     }

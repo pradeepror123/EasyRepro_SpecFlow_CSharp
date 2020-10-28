@@ -230,6 +230,7 @@
     <Compile Include="SharedAPI\AzureInsights\UploadTelemetry.cs" />
     <Compile Include="UMA_CRM_Steps\PowerAppsRunsSteps.cs" />
     <Compile Include="UMA_CRM_Steps\QuickCreateSteps.cs" />
+    <Compile Include="UMA_CRM_Steps\ResourcesAddressesSteps.cs" />
     <Compile Include="UMA_CRM_Steps\StudentEnrollmentsSteps.cs" />
     <Compile Include="Web\AddConnection.cs" />
     <Compile Include="Web\BusinessProcessFlow\BusinessProcessFlow.cs" />

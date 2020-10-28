@@ -1,5 +1,5 @@
 ﻿@Account
-Feature: Creation, updation and deletion of Employer Accounts
+Feature: Accounts
 
 @Sample
 Scenario: Sample Scenario

@@ -18,7 +18,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CreationUpdationAndDeletionOfResourcesAddressFeature
+    public partial class ResourcesAddressesFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creation, updation and deletion of Resources Address", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Resources Addresses", null, ProgrammingLanguage.CSharp, new string[] {
                         "ResourcesAddress"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -60,9 +60,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creation, updation and deletion of Resources Address")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Resources Addresses")))
             {
-                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.CreationUpdationAndDeletionOfResourcesAddressFeature.FeatureSetup(null);
+                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.ResourcesAddressesFeature.FeatureSetup(null);
             }
         }
         
@@ -88,26 +88,1448 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
             testRunner.CollectScenarioErrors();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access and creation of Address/Address Type fields on Resources Address")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Resources Address")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
-        public virtual void ValidateAccessAndCreationOfAddressAddressTypeFieldsOnResourcesAddress()
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress(string user, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate access and creation of Address/Address Type fields on Resources Address", null, new string[] {
-                        "ResourcesAddress"});
+            string[] @__tags = new string[] {
+                    "ResourcesAddress",
+                    "Pre_ExistingData_AddressType_Address",
+                    "10343"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate existing Address/Address Type fields on Resources Address", null, @__tags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
- testRunner.Given("User logs-in and navigates to \'New Resource Address\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("{0} logs-in and navigates to \'New Resource Address\' Page", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.Then("User should be able to create \'Resource Address\' with pre-existing data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("User should be able to create \'Resource Address\' with \'pre-existing\' Address and " +
+                    "Address Type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 8
  testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_BDR@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_BDRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_GFR@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GFRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GFR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_FD@ul" +
+            "timatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_FDUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_FD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_IMS@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_IMSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_IMS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_AR@ul" +
+            "timatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ARUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_CAR@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CARUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CAR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_CAAM@" +
+            "ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CAAMUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CAAM@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_WAS@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_WASUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_WAS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_OBS@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_OBSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_OBS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_RS@ul" +
+            "timatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_RSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_RS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_IntPr" +
+            "ep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_IntPrepUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_IntPrep@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_EXA@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_EXAUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_EXA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_PHTCS" +
+            "A@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_PHTCSAUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_PHTCSA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_EXC@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_EXCUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_EXC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_CertS" +
+            "@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CertSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_VS@ul" +
+            "timatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_VSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_VS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_VP@ul" +
+            "timatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_VPUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_VP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_GSC@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GSCUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GSC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_ISP@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ISPUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ISP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_GSTP@" +
+            "ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GSTPUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GSTP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_ALMGR" +
+            "@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ALMGRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ALMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_EXTMG" +
+            "R@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_EXTMGRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_EXTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_CSMGR" +
+            "@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CSMGRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CSMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_DIRAL" +
+            "@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIRALUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIRAL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_Dir@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DirUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_Dir@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_SrViP" +
+            "r@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_SrViPrUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_SrViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_GSTMG" +
+            "R@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GSTMGRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GSTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_OPS@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_OPSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_OPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_AViPr" +
+            "@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPr@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_AViPrUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_AViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_ASDCA" +
+            "D@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ASDCADUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ASDCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_CADMG" +
+            "R@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CADMGRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CADMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_ART@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ARTUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_DIRCO" +
+            "MPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIRCOMPLUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_ViPr@" +
+            "ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ViPrUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_VERMG" +
+            "R@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_VERMGRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_VERMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_DIRCA" +
+            "D@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIRCADUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIRCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_CRMGR" +
+            "@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRMGR@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CRMGRUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CRMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_DIROP" +
+            "S@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIROPSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIROPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_GDS@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GDS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GDSUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GDS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_MIS@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_MISUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_MIS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate existing Address/Address Type fields on Resources Address: CRMTest_RW@ul" +
+            "timatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Pre_ExistingData_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RW@ultimatemedical.edu")]
+        public virtual void ValidateExistingAddressAddressTypeFieldsOnResourcesAddress_CRMTest_RWUltimatemedical_Edu()
+        {
+#line 5
+this.ValidateExistingAddressAddressTypeFieldsOnResourcesAddress("CRMTest_RW@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress(string user, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "ResourcesAddress",
+                    "New_AddressType_Address",
+                    "10343"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate new Address/Address Type fields on Resources Address", null, @__tags);
+#line 54
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 55
+ testRunner.Given(string.Format("{0} logs-in and navigates to \'New Resource Address\' Page", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 56
+ testRunner.Then("User should be able to create \'Resource Address\' with \'new\' Address and Address T" +
+                    "ype", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 57
+ testRunner.And("User should log-out of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_BDR@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_BDRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_BDR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_GFR@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GFRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GFR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_FD@ultimat" +
+            "emedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_FDUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_FD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_IMS@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_IMSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_IMS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_AR@ultimat" +
+            "emedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ARUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_AR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_CAR@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CARUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CAR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_CAAM@ultim" +
+            "atemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CAAMUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CAAM@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_WAS@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_WASUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_WAS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_OBS@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_OBSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_OBS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_RS@ultimat" +
+            "emedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_RSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_RS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_IntPrep@ul" +
+            "timatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_IntPrepUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_IntPrep@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_EXA@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_EXAUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_EXA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_PHTCSA@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_PHTCSAUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_PHTCSA@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_EXC@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_EXCUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_EXC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_CertS@ulti" +
+            "matemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CertSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CertS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_VS@ultimat" +
+            "emedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_VSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_VS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_VP@ultimat" +
+            "emedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_VPUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_VP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_GSC@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GSCUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GSC@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_ISP@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ISPUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ISP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_GSTP@ultim" +
+            "atemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GSTPUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GSTP@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_ALMGR@ulti" +
+            "matemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ALMGRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ALMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_EXTMGR@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_EXTMGRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_EXTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_CSMGR@ulti" +
+            "matemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CSMGRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CSMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_DIRAL@ulti" +
+            "matemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIRALUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIRAL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_Dir@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DirUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_Dir@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_SrViPr@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_SrViPrUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_SrViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_GSTMGR@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GSTMGRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GSTMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_OPS@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_OPSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_OPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_AViPr@ulti" +
+            "matemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPr@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_AViPrUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_AViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_ASDCAD@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ASDCADUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ASDCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_CADMGR@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CADMGRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CADMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_ART@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ART@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ART@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ARTUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ART@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_DIRCOMPL@u" +
+            "ltimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIRCOMPLUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_ViPr@ultim" +
+            "atemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_ViPrUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_ViPr@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_VERMGR@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_VERMGRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_VERMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_DIRCAD@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIRCADUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIRCAD@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_CRMGR@ulti" +
+            "matemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CRMGR@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CRMGR@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_CRMGRUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_CRMGR@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_DIROPS@ult" +
+            "imatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_DIROPSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_DIROPS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_GDS@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GDS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GDS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_GDSUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_GDS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_MIS@ultima" +
+            "temedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_MISUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_MIS@ultimatemedical.edu", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate new Address/Address Type fields on Resources Address: CRMTest_RW@ultimat" +
+            "emedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Resources Addresses")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourcesAddress")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("New_AddressType_Address")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RW@ultimatemedical.edu")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RW@ultimatemedical.edu")]
+        public virtual void ValidateNewAddressAddressTypeFieldsOnResourcesAddress_CRMTest_RWUltimatemedical_Edu()
+        {
+#line 54
+this.ValidateNewAddressAddressTypeFieldsOnResourcesAddress("CRMTest_RW@ultimatemedical.edu", ((string[])(null)));
+#line hidden
         }
     }
 }

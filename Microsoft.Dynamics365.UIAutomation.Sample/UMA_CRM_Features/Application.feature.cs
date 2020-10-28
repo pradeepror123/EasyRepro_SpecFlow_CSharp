@@ -18,7 +18,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class ApplicationFeature
+    public partial class ApplicationsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Application", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Applications", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Application")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Applications")))
             {
-                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.ApplicationFeature.FeatureSetup(null);
+                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.ApplicationsFeature.FeatureSetup(null);
             }
         }
         
@@ -113,7 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ALMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -128,7 +128,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_ALMGR@ultimatemedical.edu", ((
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -143,7 +143,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_AR@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ART@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -158,7 +158,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_ART@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ASDCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -173,7 +173,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_ASDCAD@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_AViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -188,7 +188,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_AViPr@ultimatemedical.edu", ((
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -203,7 +203,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_BDR@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CADMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -218,7 +218,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_CADMGR@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CSMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -233,7 +233,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_CSMGR@ultimatemedical.edu", ((
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CertS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -248,7 +248,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_CertS@ultimatemedical.edu", ((
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CAAM@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -263,7 +263,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_CAAM@ultimatemedical.edu", ((s
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CAR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -278,7 +278,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_CAR@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIRAL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -293,7 +293,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_DIRAL@ultimatemedical.edu", ((
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIRCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -308,7 +308,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_DIRCAD@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIRCOMPL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -323,7 +323,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_DIRCOMPL@ultimatemedical.edu",
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_Dir@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -338,7 +338,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_Dir@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_DIROPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -353,7 +353,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_DIROPS@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_EXA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -368,7 +368,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_EXA@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_EXC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -383,7 +383,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_EXC@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_EXTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -398,7 +398,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_EXTMGR@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_FD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -413,7 +413,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_FD@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GFR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -428,7 +428,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_GFR@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GDS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -443,7 +443,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_GDS@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GSC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -458,7 +458,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_GSC@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GSTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -473,7 +473,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_GSTMGR@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_GSTP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -488,7 +488,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_GSTP@ultimatemedical.edu", ((s
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_IMS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -503,7 +503,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_IMS@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ISP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -518,7 +518,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_ISP@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_IntPrep@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -533,7 +533,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_IntPrep@ultimatemedical.edu", 
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_MIS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -548,7 +548,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_MIS@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_OBS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -563,7 +563,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_OBS@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_PHTCSA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -578,7 +578,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_PHTCSA@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_RS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -593,7 +593,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_RS@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_RW@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -608,7 +608,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_RW@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_SrViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -623,7 +623,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_SrViPr@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_OPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -638,7 +638,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_OPS@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_VERMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -653,7 +653,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_VERMGR@ultimatemedical.edu", (
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_VP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -668,7 +668,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_VP@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_VS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -683,7 +683,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_VS@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_ViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -698,7 +698,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_ViPr@ultimatemedical.edu", ((s
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_WAS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -713,7 +713,7 @@ this.ValidateAccessToDeleteAnApplication("CRMTest_WAS@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Application: CRMTest_CRMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -752,7 +752,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ALMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -767,7 +767,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_ALMGR@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -782,7 +782,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_AR@ultimatemedical.edu", ((string
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ART@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -797,7 +797,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_ART@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ASDCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -812,7 +812,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_ASDCAD@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_AViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -827,7 +827,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_AViPr@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -842,7 +842,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_BDR@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CADMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -857,7 +857,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_CADMGR@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CSMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -872,7 +872,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_CSMGR@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CertS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -887,7 +887,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_CertS@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CAAM@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -902,7 +902,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_CAAM@ultimatemedical.edu", ((stri
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CAR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -917,7 +917,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_CAR@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIRAL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -932,7 +932,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_DIRAL@ultimatemedical.edu", ((str
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIRCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -947,7 +947,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_DIRCAD@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIRCOMPL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -962,7 +962,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_DIRCOMPL@ultimatemedical.edu", ((
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_Dir@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -977,7 +977,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_Dir@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_DIROPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -992,7 +992,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_DIROPS@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_EXA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1007,7 +1007,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_EXA@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_EXC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1022,7 +1022,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_EXC@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_EXTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1037,7 +1037,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_EXTMGR@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_FD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1052,7 +1052,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_FD@ultimatemedical.edu", ((string
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GFR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1067,7 +1067,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_GFR@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GDS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1082,7 +1082,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_GDS@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GSC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1097,7 +1097,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_GSC@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GSTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1112,7 +1112,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_GSTMGR@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_GSTP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1127,7 +1127,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_GSTP@ultimatemedical.edu", ((stri
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_IMS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1142,7 +1142,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_IMS@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ISP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1157,7 +1157,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_ISP@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_IntPrep@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1172,7 +1172,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_IntPrep@ultimatemedical.edu", ((s
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_MIS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1187,7 +1187,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_MIS@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_OBS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1202,7 +1202,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_OBS@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_PHTCSA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1217,7 +1217,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_PHTCSA@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_RS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1232,7 +1232,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_RS@ultimatemedical.edu", ((string
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_RW@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1247,7 +1247,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_RW@ultimatemedical.edu", ((string
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_SrViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1262,7 +1262,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_SrViPr@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_OPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1277,7 +1277,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_OPS@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_VERMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1292,7 +1292,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_VERMGR@ultimatemedical.edu", ((st
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_VP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1307,7 +1307,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_VP@ultimatemedical.edu", ((string
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_VS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1322,7 +1322,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_VS@ultimatemedical.edu", ((string
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_ViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1337,7 +1337,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_ViPr@ultimatemedical.edu", ((stri
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_WAS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1352,7 +1352,7 @@ this.ValidateAccessToDeleteAnEmployer("CRMTest_WAS@ultimatemedical.edu", ((strin
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate access to delete an Employer: CRMTest_CRMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Employer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DeleteRecordAccess")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10488")]
@@ -1392,7 +1392,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_ALMGR@ultimatemedica" +
             "l.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1408,7 +1408,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_ALMGR@ultimatemedical
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_AR@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1424,7 +1424,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_AR@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_ART@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1440,7 +1440,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_ART@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_ASDCAD@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1456,7 +1456,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_ASDCAD@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_AViPr@ultimatemedica" +
             "l.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1472,7 +1472,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_AViPr@ultimatemedical
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_BDR@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1488,7 +1488,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_BDR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_CADMGR@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1504,7 +1504,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_CADMGR@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_CSMGR@ultimatemedica" +
             "l.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1520,7 +1520,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_CSMGR@ultimatemedical
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_CertS@ultimatemedica" +
             "l.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1536,7 +1536,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_CertS@ultimatemedical
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_CAAM@ultimatemedical" +
             ".edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1552,7 +1552,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_CAAM@ultimatemedical.
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_CAR@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1568,7 +1568,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_CAR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_DIRAL@ultimatemedica" +
             "l.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1584,7 +1584,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_DIRAL@ultimatemedical
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_DIRCAD@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1600,7 +1600,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_DIRCAD@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_DIRCOMPL@ultimatemed" +
             "ical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1616,7 +1616,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_DIRCOMPL@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_Dir@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1632,7 +1632,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_Dir@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_DIROPS@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1648,7 +1648,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_DIROPS@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_EXA@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1664,7 +1664,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_EXA@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_EXC@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1680,7 +1680,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_EXC@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_EXTMGR@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1696,7 +1696,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_EXTMGR@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_FD@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1712,7 +1712,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_FD@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_GFR@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1728,7 +1728,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_GFR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_GDS@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1744,7 +1744,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_GDS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_GSC@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1760,7 +1760,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_GSC@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_GSTMGR@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1776,7 +1776,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_GSTMGR@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_GSTP@ultimatemedical" +
             ".edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1792,7 +1792,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_GSTP@ultimatemedical.
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_IMS@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1808,7 +1808,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_IMS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_ISP@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1824,7 +1824,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_ISP@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_IntPrep@ultimatemedi" +
             "cal.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1840,7 +1840,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_IntPrep@ultimatemedic
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_MIS@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1856,7 +1856,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_MIS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_OBS@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1872,7 +1872,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_OBS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_PHTCSA@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1888,7 +1888,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_PHTCSA@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_RS@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1904,7 +1904,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_RS@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_RW@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1920,7 +1920,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_RW@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_SrViPr@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1936,7 +1936,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_SrViPr@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_OPS@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1952,7 +1952,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_OPS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_VERMGR@ultimatemedic" +
             "al.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1968,7 +1968,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_VERMGR@ultimatemedica
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_VP@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -1984,7 +1984,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_VP@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_VS@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2000,7 +2000,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_VS@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_ViPr@ultimatemedical" +
             ".edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2016,7 +2016,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_ViPr@ultimatemedical.
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_WAS@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2032,7 +2032,7 @@ this.ValidateExportToExcelAccessOnApplicationPage("CRMTest_WAS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Application Page: CRMTest_CRMGR@ultimatemedica" +
             "l.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2072,7 +2072,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_ALMGR@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2087,7 +2087,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_ALMGR@ultimatemedical.ed
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2103,7 +2103,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_AR@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_ART@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2119,7 +2119,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_ART@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_ASDCAD@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2135,7 +2135,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_ASDCAD@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_AViPr@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2151,7 +2151,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_AViPr@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_BDR@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2167,7 +2167,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_BDR@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_CADMGR@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2183,7 +2183,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_CADMGR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_CSMGR@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2199,7 +2199,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_CSMGR@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_CertS@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2215,7 +2215,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_CertS@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_CAAM@ultimatemedical.ed" +
             "u")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2231,7 +2231,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_CAAM@ultimatemedical.edu
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_CAR@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2247,7 +2247,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_CAR@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_DIRAL@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2263,7 +2263,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_DIRAL@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_DIRCAD@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2279,7 +2279,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_DIRCAD@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_DIRCOMPL@ultimatemedica" +
             "l.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2295,7 +2295,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_DIRCOMPL@ultimatemedical
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_Dir@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2311,7 +2311,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_Dir@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_DIROPS@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2327,7 +2327,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_DIROPS@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_EXA@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2343,7 +2343,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_EXA@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_EXC@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2359,7 +2359,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_EXC@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_EXTMGR@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2374,7 +2374,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_EXTMGR@ultimatemedical.e
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_FD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2390,7 +2390,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_FD@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_GFR@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2406,7 +2406,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_GFR@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_GDS@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2422,7 +2422,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_GDS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_GSC@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2438,7 +2438,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_GSC@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_GSTMGR@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2454,7 +2454,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_GSTMGR@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_GSTP@ultimatemedical.ed" +
             "u")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2470,7 +2470,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_GSTP@ultimatemedical.edu
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_IMS@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2486,7 +2486,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_IMS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_ISP@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2502,7 +2502,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_ISP@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_IntPrep@ultimatemedical" +
             ".edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2518,7 +2518,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_IntPrep@ultimatemedical.
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_MIS@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2534,7 +2534,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_MIS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_OBS@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2550,7 +2550,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_OBS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_PHTCSA@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2565,7 +2565,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_PHTCSA@ultimatemedical.e
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_RS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2580,7 +2580,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_RS@ultimatemedical.edu",
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_RW@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2596,7 +2596,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_RW@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_SrViPr@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2612,7 +2612,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_SrViPr@ultimatemedical.e
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_OPS@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2628,7 +2628,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_OPS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_VERMGR@ultimatemedical." +
             "edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2643,7 +2643,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_VERMGR@ultimatemedical.e
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_VP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2658,7 +2658,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_VP@ultimatemedical.edu",
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_VS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2674,7 +2674,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_VS@ultimatemedical.edu",
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_ViPr@ultimatemedical.ed" +
             "u")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2690,7 +2690,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_ViPr@ultimatemedical.edu
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_WAS@ultimatemedical.edu" +
             "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]
@@ -2706,7 +2706,7 @@ this.ValidateExportToExcelAccessOnEmployerPage("CRMTest_WAS@ultimatemedical.edu"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Export to Excel access on Employer Page: CRMTest_CRMGR@ultimatemedical.e" +
             "du")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Applications")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExportToExcel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10677")]

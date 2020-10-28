@@ -91,7 +91,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         {
             string[] @__tags = new string[] {
                     "StudentEnrollment",
-                    "ValidateAccessToFields"};
+                    "ValidateAccessToFields",
+                    "10625"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -116,6 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_Dir@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_Dir@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_DirUltimatemedical_Edu()
@@ -131,6 +133,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_Dir@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_MIS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_MIS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_MISUltimatemedical_Edu()
@@ -146,6 +149,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_MIS@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_BDR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_BDR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_BDRUltimatemedical_Edu()
@@ -161,6 +165,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_BDR@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GFR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GFR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_GFRUltimatemedical_Edu()
@@ -176,6 +181,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_GFR@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_FD@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_FD@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_FDUltimatemedical_Edu()
@@ -191,6 +197,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_FD@ultimatemedic
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IMS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IMS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_IMSUltimatemedical_Edu()
@@ -206,6 +213,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_IMS@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_ARUltimatemedical_Edu()
@@ -221,6 +229,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_AR@ultimatemedic
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_CARUltimatemedical_Edu()
@@ -236,6 +245,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_CAR@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CAAM@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CAAM@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_CAAMUltimatemedical_Edu()
@@ -251,6 +261,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_CAAM@ultimatemed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_WAS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_WAS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_WASUltimatemedical_Edu()
@@ -266,6 +277,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_WAS@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OBS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OBS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_OBSUltimatemedical_Edu()
@@ -281,6 +293,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_OBS@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_RS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_RS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_RSUltimatemedical_Edu()
@@ -296,6 +309,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_RS@ultimatemedic
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_IntPrep@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_IntPrep@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_IntPrepUltimatemedical_Edu()
@@ -311,6 +325,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_IntPrep@ultimate
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXA@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXA@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_EXAUltimatemedical_Edu()
@@ -326,6 +341,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_EXA@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_PHTCSA@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_PHTCSA@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_PHTCSAUltimatemedical_Edu()
@@ -341,6 +357,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_PHTCSA@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXC@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXC@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_EXCUltimatemedical_Edu()
@@ -356,6 +373,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_EXC@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CertS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CertS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_CertSUltimatemedical_Edu()
@@ -371,6 +389,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_CertS@ultimateme
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_VSUltimatemedical_Edu()
@@ -386,6 +405,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_VS@ultimatemedic
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VP@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VP@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_VPUltimatemedical_Edu()
@@ -401,6 +421,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_VP@ultimatemedic
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSC@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSC@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_GSCUltimatemedical_Edu()
@@ -416,6 +437,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_GSC@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ISP@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ISP@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_ISPUltimatemedical_Edu()
@@ -431,6 +453,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_ISP@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTP@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTP@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_GSTPUltimatemedical_Edu()
@@ -446,6 +469,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_GSTP@ultimatemed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ALMGR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ALMGR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_ALMGRUltimatemedical_Edu()
@@ -461,6 +485,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_ALMGR@ultimateme
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_EXTMGR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_EXTMGR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_EXTMGRUltimatemedical_Edu()
@@ -476,6 +501,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_EXTMGR@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CSMGR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CSMGR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_CSMGRUltimatemedical_Edu()
@@ -491,6 +517,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_CSMGR@ultimateme
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_CADMGR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_CADMGR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_CADMGRUltimatemedical_Edu()
@@ -506,6 +533,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_CADMGR@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ASDCAD@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ASDCAD@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_ASDCADUltimatemedical_Edu()
@@ -521,6 +549,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_ASDCAD@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_GSTMGR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_GSTMGR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_GSTMGRUltimatemedical_Edu()
@@ -536,6 +565,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_GSTMGR@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_VERMGR@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_VERMGR@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_VERMGRUltimatemedical_Edu()
@@ -551,6 +581,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_VERMGR@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRAL@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRAL@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_DIRALUltimatemedical_Edu()
@@ -566,6 +597,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_DIRAL@ultimateme
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCAD@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCAD@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_DIRCADUltimatemedical_Edu()
@@ -581,6 +613,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_DIRCAD@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIRCOMPL@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_DIRCOMPLUltimatemedical_Edu()
@@ -596,6 +629,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_DIRCOMPL@ultimat
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_DIROPS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_DIROPS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_DIROPSUltimatemedical_Edu()
@@ -611,6 +645,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_DIROPS@ultimatem
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_OPS@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_OPS@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_OPSUltimatemedical_Edu()
@@ -626,6 +661,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_OPS@ultimatemedi
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_AViPr@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_AViPr@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_AViPrUltimatemedical_Edu()
@@ -641,6 +677,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_AViPr@ultimateme
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_ViPr@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_ViPr@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_ViPrUltimatemedical_Edu()
@@ -656,6 +693,7 @@ this.ValidateAccessToStudentEnrollmentFormFieldsByRole("CRMTest_ViPr@ultimatemed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student Enrollments")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("StudentEnrollment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ValidateAccessToFields")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10625")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CRMTest_SrViPr@ultimatemedical.edu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:User", "CRMTest_SrViPr@ultimatemedical.edu")]
         public virtual void ValidateAccessToStudentEnrollmentFormFieldsByRole_CRMTest_SrViPrUltimatemedical_Edu()

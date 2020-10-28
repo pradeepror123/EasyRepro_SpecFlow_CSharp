@@ -1,4 +1,4 @@
-﻿Feature: Application
+﻿Feature: Applications
 
 @Application @DeleteRecordAccess @10488
 Scenario Outline: Validate access to delete an Application

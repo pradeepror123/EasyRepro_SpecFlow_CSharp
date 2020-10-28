@@ -18,7 +18,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CreationUpdationAndDeletionOfEmployerAccountsFeature
+    public partial class AccountsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creation, updation and deletion of Employer Accounts", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Accounts", null, ProgrammingLanguage.CSharp, new string[] {
                         "Account"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -60,9 +60,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creation, updation and deletion of Employer Accounts")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Accounts")))
             {
-                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.CreationUpdationAndDeletionOfEmployerAccountsFeature.FeatureSetup(null);
+                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.AccountsFeature.FeatureSetup(null);
             }
         }
         
@@ -90,7 +90,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Sample Scenario")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Sample")]
         public virtual void SampleScenario()
@@ -108,7 +108,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CAD_Account1")]
@@ -134,7 +134,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer PBI Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("PBI_Account")]
@@ -187,7 +187,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CRMGR@ultimatemedical.ed" +
             "u")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Multiple_CADAccounts")]
@@ -204,7 +204,7 @@ this.CreateEmployerCADAccountWithMultipleUsers("CRMTest_CRMGR@ultimatemedical.ed
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Employer CAD Account with multiple Users: CRMTest_CRDIR@ultimatemedical.ed" +
             "u")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Employer Accounts")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Accounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EmployerAccounts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Multiple_CADAccounts")]

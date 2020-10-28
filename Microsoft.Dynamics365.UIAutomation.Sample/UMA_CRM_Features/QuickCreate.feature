@@ -1,4 +1,4 @@
-﻿Feature: Create Address Type and Address from Quick Create Window
+﻿Feature: Quick Create Windows
 
 @ResourceAddressQuickCreate @10343 @QuickCreate
 Scenario Outline: Quick Create Resource Address

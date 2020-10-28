@@ -25,37 +25,62 @@ namespace Microsoft.Dynamics365.UIAutomation.Api
             // SwitchToQuickCreate();
         }
 
-        public BrowserCommandResult<bool> FillLookUpField(String field, String text)
+        public void FillLookUpField(String field, String text)
         {
             this.Execute("QuickCreate", driver =>
+            {
+                driver.LookUpField_SelectFirst(field, text);
+                return true;
+            });
+        }
+
+        public void CreateNewSaveQCForm(String field)
+        {
+            this.Execute("QCNew", driver =>
             {
                 Browser.ThinkTime(1000);
                 driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).Click();
                 Browser.ThinkTime(1000);
-                driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(text, true);
-                Browser.ThinkTime(2000);
-                if (driver.FindElements(By.XPath("//div[contains(@aria-label, 'Lookup results')]//span[contains(text(), 'Insufficient Permissions')]")).Count > 0)
-                    Assert.Fail($"User has Insufficient Permissions on {field} field");
-                Browser.ThinkTime(1000);
-                // driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(Keys.Escape);
-                String resultList = driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")).Text;
-                driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")).Click();
-                Browser.ThinkTime(1000);
-                Assert.IsTrue(driver.IsVisible(By.XPath($"//div[@title='{resultList}']")));
-                Browser.ThinkTime(2000);
+                Assert.IsTrue(driver.FindElements(By.XPath($"//button[@aria-label='New {field}']")).Count > 0, $"Cannot find New {field} button");
+                driver.FindElement(By.XPath($"//button[@aria-label='New {field}']")).Click();
+                driver.WaitUntilVisible(By.XPath($"//h1[contains(text(), '{field}')]"));
+                Random rand = new Random();
+                int num = rand.Next(10000, 100000);
+                string addressTypeName = "Test_" + field.Replace(" ", "") + "_" + num;
+                if (field == "Address Type")
+                    driver.EnterTextAndTab(By.XPath("//input[@aria-label='Name']"), addressTypeName, TimeSpan.FromSeconds(1));
+                else
+                    FillQCAddressForm();
+                SaveAndClose();
                 return true;
             });
-            return true;
+        }
 
+        public void FillQCAddressForm()
+        {
+            this.Execute("AddressForm", driver =>
+            {
+                string addressTypeSelected = driver.FindElement(By.XPath("//div[contains(@title, 'Test_AddressType')]")).GetAttribute("title");
+                string lastchars = addressTypeSelected.Substring(addressTypeSelected.Length - 5);
+                driver.LookUpField_SelectFirst("Address Type", addressTypeSelected);
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_line1")), lastchars + " NW 1st St", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_city")), "Florida City", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_postalcode")), "33034", TimeSpan.FromSeconds(1));
+                driver.EnterTextAndTab(By.XPath(Elements.Xpath["InputIDContains"].Replace("arg", "address1_stateorprovince")), "Florida", TimeSpan.FromSeconds(1));
+                return true;
+            });
         }
 
         public void SaveAndClose()
         {
            this.Execute("SaveClose", driver =>
            {
+               Browser.ThinkTime(500);
+               if (driver.FindElements(By.XPath("//button[@id='quickCreateSaveAndCloseBtn']")).Count > 0)
+                   driver.FindAvailable(By.XPath("//button[@id='quickCreateSaveAndCloseBtn']")).Click();
+               else if (driver.FindElements(By.XPath("//button[@aria-label='Save & Close']")).Count > 0)
+                   driver.FindAvailable(By.XPath("//button[@aria-label='Save & Close']")).Click();
                Browser.ThinkTime(1000);
-               driver.FindAvailable(By.XPath("//button[@aria-label='Save & Close']")).Click();
-               Browser.ThinkTime(2000);
                return true;
            });
         }

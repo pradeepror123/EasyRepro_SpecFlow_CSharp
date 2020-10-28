@@ -1,6 +1,6 @@
 ﻿Feature: Student Enrollments
 
-@StudentEnrollment @ValidateAccessToFields
+@StudentEnrollment @ValidateAccessToFields @10625
 Scenario Outline: Validate access to Student Enrollment form fields by Role
 	Given <User> logs-in and navigates to 'Student Enrollment' Page
 	Then validate the accessibility of fields on the form

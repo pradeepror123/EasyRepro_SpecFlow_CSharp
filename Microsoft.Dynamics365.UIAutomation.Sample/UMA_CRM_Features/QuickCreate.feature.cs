@@ -18,7 +18,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CreateAddressTypeAndAddressFromQuickCreateWindowFeature
+    public partial class QuickCreateWindowsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Create Address Type and Address from Quick Create Window", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Quick Create Windows", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Create Address Type and Address from Quick Create Window")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Quick Create Windows")))
             {
-                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.CreateAddressTypeAndAddressFromQuickCreateWindowFeature.FeatureSetup(null);
+                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.QuickCreateWindowsFeature.FeatureSetup(null);
             }
         }
         
@@ -111,7 +111,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_BDR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -126,7 +126,7 @@ this.QuickCreateResourceAddress("CRMTest_BDR@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_GFR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -141,7 +141,7 @@ this.QuickCreateResourceAddress("CRMTest_GFR@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_FD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -156,7 +156,7 @@ this.QuickCreateResourceAddress("CRMTest_FD@ultimatemedical.edu", ((string[])(nu
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_IMS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -171,7 +171,7 @@ this.QuickCreateResourceAddress("CRMTest_IMS@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_AR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -186,7 +186,7 @@ this.QuickCreateResourceAddress("CRMTest_AR@ultimatemedical.edu", ((string[])(nu
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_CAR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -201,7 +201,7 @@ this.QuickCreateResourceAddress("CRMTest_CAR@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_CAAM@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -216,7 +216,7 @@ this.QuickCreateResourceAddress("CRMTest_CAAM@ultimatemedical.edu", ((string[])(
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_WAS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -231,7 +231,7 @@ this.QuickCreateResourceAddress("CRMTest_WAS@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_OBS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -246,7 +246,7 @@ this.QuickCreateResourceAddress("CRMTest_OBS@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_RS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -261,7 +261,7 @@ this.QuickCreateResourceAddress("CRMTest_RS@ultimatemedical.edu", ((string[])(nu
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_IntPrep@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -276,7 +276,7 @@ this.QuickCreateResourceAddress("CRMTest_IntPrep@ultimatemedical.edu", ((string[
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_EXA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -291,7 +291,7 @@ this.QuickCreateResourceAddress("CRMTest_EXA@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_PHTCSA@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -306,7 +306,7 @@ this.QuickCreateResourceAddress("CRMTest_PHTCSA@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_EXC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -321,7 +321,7 @@ this.QuickCreateResourceAddress("CRMTest_EXC@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_CertS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -336,7 +336,7 @@ this.QuickCreateResourceAddress("CRMTest_CertS@ultimatemedical.edu", ((string[])
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_VS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -351,7 +351,7 @@ this.QuickCreateResourceAddress("CRMTest_VS@ultimatemedical.edu", ((string[])(nu
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_VP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -366,7 +366,7 @@ this.QuickCreateResourceAddress("CRMTest_VP@ultimatemedical.edu", ((string[])(nu
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_GSC@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -381,7 +381,7 @@ this.QuickCreateResourceAddress("CRMTest_GSC@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_ISP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -396,7 +396,7 @@ this.QuickCreateResourceAddress("CRMTest_ISP@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_GSTP@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -411,7 +411,7 @@ this.QuickCreateResourceAddress("CRMTest_GSTP@ultimatemedical.edu", ((string[])(
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_ALMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -426,7 +426,7 @@ this.QuickCreateResourceAddress("CRMTest_ALMGR@ultimatemedical.edu", ((string[])
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_EXTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -441,7 +441,7 @@ this.QuickCreateResourceAddress("CRMTest_EXTMGR@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_CSMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -456,7 +456,7 @@ this.QuickCreateResourceAddress("CRMTest_CSMGR@ultimatemedical.edu", ((string[])
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_CADMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -471,7 +471,7 @@ this.QuickCreateResourceAddress("CRMTest_CADMGR@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_ASDCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -486,7 +486,7 @@ this.QuickCreateResourceAddress("CRMTest_ASDCAD@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_GSTMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -501,7 +501,7 @@ this.QuickCreateResourceAddress("CRMTest_GSTMGR@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_VERMGR@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -516,7 +516,7 @@ this.QuickCreateResourceAddress("CRMTest_VERMGR@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_Dir@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -531,7 +531,7 @@ this.QuickCreateResourceAddress("CRMTest_Dir@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_DIRAL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -546,7 +546,7 @@ this.QuickCreateResourceAddress("CRMTest_DIRAL@ultimatemedical.edu", ((string[])
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_DIRCAD@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -561,7 +561,7 @@ this.QuickCreateResourceAddress("CRMTest_DIRCAD@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_DIRCOMPL@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -576,7 +576,7 @@ this.QuickCreateResourceAddress("CRMTest_DIRCOMPL@ultimatemedical.edu", ((string
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_DIROPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -591,7 +591,7 @@ this.QuickCreateResourceAddress("CRMTest_DIROPS@ultimatemedical.edu", ((string[]
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_OPS@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -606,7 +606,7 @@ this.QuickCreateResourceAddress("CRMTest_OPS@ultimatemedical.edu", ((string[])(n
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_AViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -621,7 +621,7 @@ this.QuickCreateResourceAddress("CRMTest_AViPr@ultimatemedical.edu", ((string[])
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_ViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]
@@ -636,7 +636,7 @@ this.QuickCreateResourceAddress("CRMTest_ViPr@ultimatemedical.edu", ((string[])(
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quick Create Resource Address: CRMTest_SrViPr@ultimatemedical.edu")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Create Address Type and Address from Quick Create Window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Quick Create Windows")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ResourceAddressQuickCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("10343")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("QuickCreate")]

@@ -1,5 +1,5 @@
 ﻿@Lead
-Feature: Creation, updation and deletion of Leads
+Feature: Leads
 
 @LeadCreation_PreEx
 Scenario: Create Lead with Pre-Existing Employer & Contact

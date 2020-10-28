@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
@@ -59,6 +60,24 @@ namespace Microsoft.Dynamics365.UIAutomation.Browser
             var element = driver.FindElement(by);
             SelectElement select = new SelectElement(element);
             select.SelectByText(value);
+        }
+
+        public static void LookUpField_SelectFirst(this IWebDriver driver, string field, string value)
+        {
+            Thread.Sleep(1000);
+            driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).Click();
+            Thread.Sleep(1000);
+            driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(value, true);
+            Thread.Sleep(1000);
+            if (driver.FindElements(By.XPath("//*[contains(text(), 'Insufficient Permissions')]")).Count > 0)
+                Assert.Fail($"User has Insufficient Permissions on {field} field");
+            Thread.Sleep(500);
+            // driver.FindElement(By.XPath($"//input[@aria-label='{field}, Lookup']")).SendKeys(Keys.Escape);
+            String resultList = driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")).Text;
+            driver.FindElement(By.XPath("(//ul[contains(@aria-label,'Lookup Search Results')]/li)[1]")).Click();
+            Thread.Sleep(1000);
+            Assert.IsTrue(driver.IsVisible(By.XPath($"//div[@title='{resultList}']")));
+            Thread.Sleep(1000);
         }
 
         public static void Wait<TResult>(this IWebDriver driver, Func<IWebDriver, TResult> condition, int seconds = 20)

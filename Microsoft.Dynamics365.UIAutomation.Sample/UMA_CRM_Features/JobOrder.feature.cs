@@ -18,7 +18,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CreationUpdationAndDeletionOfJobOrdersFeature
+    public partial class JobOrdersFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creation, updation and deletion of Job Orders", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Job Orders", null, ProgrammingLanguage.CSharp, new string[] {
                         "JobOrder"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -60,9 +60,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creation, updation and deletion of Job Orders")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Job Orders")))
             {
-                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.CreationUpdationAndDeletionOfJobOrdersFeature.FeatureSetup(null);
+                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.JobOrdersFeature.FeatureSetup(null);
             }
         }
         
@@ -90,7 +90,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Job Order on PBI Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Job Orders")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Job Orders")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrders_PBI")]
         public virtual void CreateJobOrderOnPBIAccount()
@@ -120,7 +120,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Job Order on CAD Account")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Job Orders")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Job Orders")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrder")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("JobOrders_CAD")]
         public virtual void CreateJobOrderOnCADAccount()

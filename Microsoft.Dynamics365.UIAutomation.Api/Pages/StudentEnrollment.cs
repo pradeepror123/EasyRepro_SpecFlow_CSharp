@@ -78,10 +78,11 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
             this.Execute("EnrollmentRecord", driver =>
             {
                 Thread.Sleep(2000);
-                driver.WaitUntilClickable(By.XPath("//a[contains(text(),'Advanced')]"));
-                driver.FindElement(By.XPath("//a[contains(text(),'Advanced')]")).Click();
-                Thread.Sleep(3000);
-                Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'Advanced Elementary')]")), "Cannot navigate to Advanced Elementary Student Enrollment Record");
+                driver.WaitUntilClickable(By.XPath("//div[@role='gridcell']/a"));
+                driver.FindAvailable(By.XPath("//div[@role='gridcell']/a")).Click();
+                Thread.Sleep(5000);
+                driver.WaitUntilClickable(By.XPath("//span[contains(text(), 'Student Enrollment')]"));
+                Assert.IsTrue(driver.IsVisible(By.XPath("//span[contains(text(), 'Student Enrollment')]")), "Cannot navigate to Student Enrollment Record");
                 return true;
             });
         }
@@ -91,9 +92,10 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
             this.Execute("ResourceUMA", driver =>
             {
                 Thread.Sleep(2000);
-                driver.FindElement(By.XPath("//a[contains(text(),'Advanced')]")).Click();
-                Thread.Sleep(4000);
-                Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'Advanced Elementary')]")), "Cannot navigate to Advanced Elementary Student Enrollment Record");
+                driver.FindAvailable(By.XPath("//div[@role='gridcell']/a")).Click();
+                Thread.Sleep(7000);
+                driver.WaitUntilClickable(By.XPath("//span[contains(text(), 'Resource UMA')]"));
+                Assert.IsTrue(driver.IsVisible(By.XPath("//span[contains(text(), 'Resource UMA')]")), "Cannot navigate to Resource UMA Record");
                 return true;
             });
         }
@@ -102,12 +104,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.Pages
         {
             this.Execute("ResourceAddress", driver =>
             {
-                Thread.Sleep(2000);
-                driver.FindElement(By.XPath("//li[@aria-label='Addresses']")).Click();
-                Thread.Sleep(2000);
-                driver.FindElement(By.XPath("//button[@aria-label='New Resource Address']")).Click();
+                Thread.Sleep(3000);
+                driver.FindAvailable(By.XPath("//li[@aria-label='Addresses']")).Click();
                 Thread.Sleep(4000);
-                Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'New Resource Address')]")), "Cannot navigate to 'New Resource Address'");
+                driver.FindAvailable(By.XPath("//button[@aria-label='New Resource Address']")).Click();
+                Thread.Sleep(3000);
+                Assert.IsTrue(driver.IsVisible(By.XPath("//h1[contains(text(), 'New Resource Address')]")), "Cannot navigate to New Resource Address");
                 return true;
             });
         }

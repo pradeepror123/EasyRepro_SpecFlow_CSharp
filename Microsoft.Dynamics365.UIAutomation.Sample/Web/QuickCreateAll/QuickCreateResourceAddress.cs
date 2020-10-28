@@ -21,6 +21,12 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             xrmBrowser.QuickCreate.FillLookUpField(fieldName, fieldText);
         }
 
+        public void CreateNewAndSaveQCForm(Api.Browser xrmBrowser, string fieldName)
+        {
+            this.xrmBrowser = xrmBrowser;
+            xrmBrowser.QuickCreate.CreateNewSaveQCForm(fieldName);
+        }
+
         public void QuickCreateSaveAndClose(Api.Browser xrmBrowser)
         {
             xrmBrowser.QuickCreate.SaveAndClose();

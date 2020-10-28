@@ -18,7 +18,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CreationUpdationAndDeletionOfLeadsFeature
+    public partial class LeadsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creation, updation and deletion of Leads", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Leads", null, ProgrammingLanguage.CSharp, new string[] {
                         "Lead"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -60,9 +60,9 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creation, updation and deletion of Leads")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Leads")))
             {
-                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.CreationUpdationAndDeletionOfLeadsFeature.FeatureSetup(null);
+                global::Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features.LeadsFeature.FeatureSetup(null);
             }
         }
         
@@ -90,7 +90,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.UMA_CRM_Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead with Pre-Existing Employer & Contact")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Leads")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_PreEx")]
         public virtual void CreateLeadWithPre_ExistingEmployerContact()
@@ -114,7 +114,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead without Pre-Existing Employer & Contact")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Leads")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_NoPreEx")]
         public virtual void CreateLeadWithoutPre_ExistingEmployerContact()
@@ -138,7 +138,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead with Generated PBI Employer & Contact")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Leads")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_PBI")]
         public virtual void CreateLeadWithGeneratedPBIEmployerContact()
@@ -168,7 +168,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Lead with Generated CAD Employer & Contact")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Leads")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadCreation_CAD")]
         public virtual void CreateLeadWithGeneratedCADEmployerContact()
@@ -199,7 +199,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create and Qualify a Lead to convert to Job Order with Pre-Existing PBI Employer " +
             "& Contact")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Leads")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadToJobOrder_PBI")]
         public virtual void CreateAndQualifyALeadToConvertToJobOrderWithPre_ExistingPBIEmployerContact()
@@ -233,7 +233,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create and Qualify a Lead to convert to Job Order with Pre-Existing CAD Employer " +
             "& Contact")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creation, updation and deletion of Leads")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Leads")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Lead")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("LeadToJobOrder_CAD")]
         public virtual void CreateAndQualifyALeadToConvertToJobOrderWithPre_ExistingCADEmployerContact()
